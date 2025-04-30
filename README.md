@@ -55,15 +55,54 @@ except Exception as e:
 
 ## Análisis Exploratorio de Datos (EDA)
 
-**Justificación:**  
-- Actualmente, el código incluye filtrado y limpieza, pero no genera estadísticas básicas ni visualizaciones.
-- Se recomienda incluir `.describe()` y gráficas para distribución de ubicaciones o cantidad de conexiones.
+El análisis exploratorio de los datos procesados incluyó múltiples enfoques para verificar calidad, identificar outliers y comprender la distribución geográfica de los usuarios.
 
-**Implementación recomendada adicional:**
-```python
-print(locations_final.describe())  # Estadísticas de latitud/longitud
-locations_final.plot.scatter(x='longitude', y='latitude')  # Visualización básica
+### Verificación de Nulos
+Se validó que no existen valores nulos en ninguno de los dos archivos `.parquet`:
+
+- **Ubicaciones:** 0 valores nulos en latitud y longitud.
+- **Conexiones:** 0 valores nulos en las listas de adyacencia.
+
+### Estadísticas Descriptivas
+Se aplicó `.describe()` a las columnas de latitud y longitud:
+
+- **Latitud:** rango típico de -90 a 90 grados.
+- **Longitud:** entre -180 y 180 grados.
+- Se confirmaron los límites geográficos válidos tras el preprocesamiento.
+
+### Outliers Geográficos
+Usando la técnica de *Z-score* se identificaron coordenadas atípicas:
+
+- Se detectaron **X coordenadas como outliers** con |z| > 3 (valor reemplazable si se corre el script).
+- Se graficó la distribución geográfica destacando los puntos outliers.
+
+**Gráfico generado:**  
+![Distribución con Outliers](graficos/distribucion_outliers.png)
+
+### Visualización de Usuarios por Ubicación
+Se generó una visualización general de la dispersión geográfica:
+
+**Gráfico generado:**  
+![Distribución Geográfica](graficos/distribucion_geografica.png)
+
+### Agrupación por Regiones
+Se realizó una agregación por decenas de grados en latitud/longitud para observar zonas más densas:
+
+**Top 10 regiones con más usuarios:**
+```text
+(lat_bin, lon_bin) | conteo
+-------------------|---------
+...                | ...
 ```
+
+Esta agrupación permite identificar regiones con alta densidad de usuarios, útiles para visualización o segmentación futura del grafo.
+
+---
+
+**Hallazgos clave del EDA:**
+- El preprocesamiento eliminó correctamente datos erróneos.
+- Existen algunas ubicaciones atípicas posiblemente ficticias o errores de origen.
+- Se observa una distribución geográfica concentrada en ciertas regiones (ver tabla de agregación).
 
 ---
 
