@@ -109,7 +109,7 @@ Top 10 regiones con más usuarios:
 - La visualización espacial permite inferir potenciales **hubs** o núcleos de usuarios, útiles para análisis posteriores de **centralidad o comunidad**.
 ---
 
-## ▶ Ejecución del Script
+##  Ejecución del Script
 
 ### Requisitos
 - Python 3.11
