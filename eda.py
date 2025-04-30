@@ -29,43 +29,43 @@ def main():
         # --------------------------
         # 1. Cargar datos procesados
         # --------------------------
-        log.info("📦 Cargando archivos Parquet procesados...")
+        log.info(" Cargando archivos Parquet procesados...")
         ubicaciones = pl.read_parquet("ubicaciones_limpias.parquet")
         conexiones = pl.read_parquet("usuarios_conexiones.parquet")
 
-        log.info(f"✅ Ubicaciones cargadas: {ubicaciones.shape}")
-        log.info(f"✅ Conexiones cargadas: {conexiones.shape}")
+        log.info(f" Ubicaciones cargadas: {ubicaciones.shape}")
+        log.info(f" Conexiones cargadas: {conexiones.shape}")
 
         # --------------------------
         # 2. Verificar valores nulos
         # --------------------------
-        log.info("🔍 Verificando valores nulos...")
+        log.info(" Verificando valores nulos...")
         log.info(f"Nulos en ubicaciones:\n{ubicaciones.null_count()}")
         log.info(f"Nulos en conexiones:\n{conexiones.null_count()}")
 
         # --------------------------
         # 3. Estadísticas Descriptivas
         # --------------------------
-        log.info("📊 Generando estadísticas descriptivas...")
+        log.info(" Generando estadísticas descriptivas...")
         stats = ubicaciones.describe()
         log.info(f"Resumen estadístico:\n{stats}")
 
         # --------------------------
         # 4. Outliers Geográficos (Z-score)
         # --------------------------
-        log.info("📌 Detectando outliers geográficos con Z-score...")
+        log.info(" Detectando outliers geográficos con Z-score...")
 
         df_geo = ubicaciones.to_pandas()
         df_geo["z_lat"] = zscore(df_geo["latitude"])
         df_geo["z_lon"] = zscore(df_geo["longitude"])
         df_outliers = df_geo[(df_geo["z_lat"].abs() > 3) | (df_geo["z_lon"].abs() > 3)]
 
-        log.info(f"🚨 Outliers detectados: {df_outliers.shape[0]}")
+        log.info(f" Outliers detectados: {df_outliers.shape[0]}")
         
         # --------------------------
         # 5. Gráfico de Outliers Geográficos
         # --------------------------
-        log.info("🖼️ Generando gráfico de outliers geográficos...")
+        log.info(" Generando gráfico de outliers geográficos...")
         plt.figure(figsize=(10, 6))
         sns.scatterplot(
             data=df_geo, x="longitude", y="latitude", s=1, alpha=0.3, label="Normal"
@@ -79,12 +79,12 @@ def main():
         plt.legend()
         plt.savefig("graficos/distribucion_outliers.png", dpi=300)
         plt.close()
-        log.info("📁 Guardado: graficos/distribucion_outliers.png")
+        log.info(" Guardado: graficos/distribucion_outliers.png")
 
         # --------------------------
         # 6. Mapa geográfico general
         # --------------------------
-        log.info("🗺️ Generando gráfico de distribución general...")
+        log.info(" Generando gráfico de distribución general...")
         plt.figure(figsize=(10, 6))
         sns.scatterplot(
             x=ubicaciones["longitude"],
@@ -96,12 +96,12 @@ def main():
         plt.ylabel("Latitud")
         plt.savefig("graficos/distribucion_geografica.png", dpi=300)
         plt.close()
-        log.info("📁 Guardado: graficos/distribucion_geografica.png")
+        log.info(" Guardado: graficos/distribucion_geografica.png")
 
         # --------------------------
         # 7. Tabla de distribución geográfica resumida
         # --------------------------
-        log.info("📦 Generando resumen de distribución geográfica...")
+        log.info(" Generando resumen de distribución geográfica...")
 
         geo_bins = (
             ubicaciones
@@ -114,12 +114,12 @@ def main():
             .sort("conteo", descending=True)
         )
 
-        log.info("📌 Top 10 regiones más densas:\n%s", geo_bins.head(10))
+        log.info(" Top 10 regiones más densas:\n%s", geo_bins.head(10))
 
-        log.info("✅ Análisis exploratorio completado con éxito.")
+        log.info(" Análisis exploratorio completado con éxito.")
 
     except Exception as e:
-        log.exception("❌ Error crítico durante el análisis EDA.")
+        log.exception(" Error crítico durante el análisis EDA.")
         sys.exit(1)
 
 # --------------------------
