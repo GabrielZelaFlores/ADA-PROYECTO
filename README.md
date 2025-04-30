@@ -53,7 +53,7 @@ except Exception as e:
 
 ---
 
-## 📊 Análisis Exploratorio de Datos (EDA)
+##  Análisis Exploratorio de Datos (EDA)
 
 Esta fase se encargó de validar, analizar y visualizar los datos geográficos de los usuarios, con el objetivo de comprender su distribución espacial y detectar valores anómalos.
 
@@ -126,7 +126,7 @@ python preprocesamiento_red_social.py
 
 ---
 
-## 📌 Archivos Clave
+##  Archivos Clave
 
 | Archivo                        | Descripción                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------|
