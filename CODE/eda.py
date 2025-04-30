@@ -7,12 +7,15 @@ import os
 import sys
 import logging
 from scipy.stats import zscore
+from logger_config import setup_logger
 # --------------------------
 # Configurar logging
 # --------------------------
-
-from logger_config import setup_logger
-
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%H:%M:%S"
+)
 log = setup_logger()
 
 # --------------------------
