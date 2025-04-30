@@ -6,13 +6,9 @@ from pathlib import Path
 # --------------------------
 # Configurar logging
 # --------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',  # <- Corrige aquí el formato
-    datefmt='%H:%M:%S'
-)
-log = logging.getLogger(__name__)
+from logger_config import setup_logger
 
+log = setup_logger()
 
 # --------------------------
 # Función principal
