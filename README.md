@@ -77,7 +77,7 @@ Se aplicó Z-score para detectar coordenadas anómalas:
 - Se encontraron múltiples valores fuera del patrón geográfico general.
 
 **Gráfico generado:**  
-![Distribución con Outliers](graficos/distribucion_outliers.png)
+Rename distribucion_outliers.png to GRAFICOS/distribucion_outliers.png
 
 ### Visualización de la Distribución General
 Se generó un gráfico de dispersión que muestra la distribución de los usuarios sobre el espacio geográfico:
