@@ -1,0 +1,8 @@
+polars
+pandas
+matplotlib
+seaborn
+networkx
+scipy
+
+pip install -r requirements.txt
