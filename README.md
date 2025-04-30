@@ -7,13 +7,13 @@
 
 ---
 
-## 🧠 Objetivo del Proyecto
+##  Objetivo del Proyecto
 
 Analizar y visualizar la estructura del grafo de una red social compuesta por 10 millones de usuarios. El análisis busca descubrir patrones relevantes, comunidades y propiedades estructurales del grafo usando técnicas de preprocesamiento, visualización y análisis de redes.
 
 ---
 
-## 📂 Datos Utilizados
+##  Datos Utilizados
 
 - `10_million_location.txt`: Contiene coordenadas (latitud, longitud) de cada usuario.
 - `10_million_user.txt`: Contiene la lista de adyacencia (usuarios seguidos por cada nodo).
@@ -130,7 +130,7 @@ Este `README.md` explica:
 
 ---
 
-## ▶️ Ejecución del Script
+## ▶ Ejecución del Script
 
 ### Requisitos
 - Python 3.11
@@ -147,7 +147,7 @@ python preprocesamiento_red_social.py
 
 ---
 
-## 📌 Archivos Clave
+##  Archivos Clave
 
 | Archivo | Descripción |
 |--------|-------------|
@@ -157,14 +157,14 @@ python preprocesamiento_red_social.py
 
 ---
 
-## 📈 Próximos Pasos
+##  Próximos Pasos
 - Construcción del grafo con `networkx`.
 - Cálculo de métricas: nodos, aristas, grado.
 - Visualización de comunidades con algoritmos Louvain o Girvan-Newman.
 
 ---
 
-## 🔗 Referencias
+##  Referencias
 
 - [Polars Documentation](https://pola-rs.github.io/polars/)
 - [Dataset: Red Social 'X'](https://drive.google.com/drive/folders/1XvzgZ3NKo3EruGOHDirM6bQwfc8fejpl?usp=sharing)
