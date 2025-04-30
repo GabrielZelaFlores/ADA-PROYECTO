@@ -86,12 +86,20 @@ Se generó un gráfico de dispersión que muestra la distribución de los usuari
 ### Regiones con Mayor Concentración de Usuarios
 Se agruparon las ubicaciones por bloques de 10 grados (binning) y se generó una tabla con las regiones más densamente pobladas:
 
-```text
 Top 10 regiones con más usuarios:
 (lat_bin, lon_bin) | conteo
--------------------|--------
-...                | ...
-```
+-------------------|---------
+(3.0, -10.0)       | 1,473,614
+(3.0, -12.0)       |   932,031
+(4.0, -8.0)        |   884,929
+(3.0, -9.0)        |   654,021
+(5.0, -1.0)        |   550,563
+(4.0, -9.0)        |   550,408
+(3.0, -8.0)        |   530,952
+(5.0, 0.0)         |   294,046
+(4.0, -12.0)       |   274,908
+(4.0, -13.0)       |   245,615
+
 
 ### Hallazgos Clave
 - La mayoría de usuarios se concentran en unas pocas regiones del mundo.
