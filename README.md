@@ -53,58 +53,56 @@ except Exception as e:
 
 ---
 
-## Análisis Exploratorio de Datos (EDA)
+---
 
-El análisis exploratorio de los datos procesados incluyó múltiples enfoques para verificar calidad, identificar outliers y comprender la distribución geográfica de los usuarios.
+## 📊 Análisis Exploratorio de Datos (EDA)
 
-### Verificación de Nulos
-Se validó que no existen valores nulos en ninguno de los dos archivos `.parquet`:
+Esta fase se encargó de validar, analizar y visualizar los datos geográficos de los usuarios, con el objetivo de comprender su distribución espacial y detectar valores anómalos.
 
-- **Ubicaciones:** 0 valores nulos en latitud y longitud.
-- **Conexiones:** 0 valores nulos en las listas de adyacencia.
+### Carga y Verificación
+- Se cargaron los archivos `.parquet` procesados.
+- Se confirmó que **no existen valores nulos** en latitud, longitud o conexiones.
 
 ### Estadísticas Descriptivas
-Se aplicó `.describe()` a las columnas de latitud y longitud:
+Se generó un resumen estadístico de las coordenadas:
 
-- **Latitud:** rango típico de -90 a 90 grados.
-- **Longitud:** entre -180 y 180 grados.
-- Se confirmaron los límites geográficos válidos tras el preprocesamiento.
+- Rango válido de latitud: entre -90 y 90 grados.
+- Rango válido de longitud: entre -180 y 180 grados.
+- Se identificaron valores extremos para ser tratados como posibles outliers.
 
-### Outliers Geográficos
-Usando la técnica de *Z-score* se identificaron coordenadas atípicas:
+### Detección de Outliers Geográficos
+Se aplicó Z-score para detectar coordenadas anómalas:
 
-- Se detectaron **X coordenadas como outliers** con |z| > 3 (valor reemplazable si se corre el script).
-- Se graficó la distribución geográfica destacando los puntos outliers.
+- Se consideraron outliers aquellas ubicaciones con |z| > 3.
+- Se encontraron múltiples valores fuera del patrón geográfico general.
 
 **Gráfico generado:**  
 ![Distribución con Outliers](graficos/distribucion_outliers.png)
 
-### Visualización de Usuarios por Ubicación
-Se generó una visualización general de la dispersión geográfica:
+### Visualización de la Distribución General
+Se generó un gráfico de dispersión que muestra la distribución de los usuarios sobre el espacio geográfico:
 
 **Gráfico generado:**  
 ![Distribución Geográfica](graficos/distribucion_geografica.png)
 
-### Agrupación por Regiones
-Se realizó una agregación por decenas de grados en latitud/longitud para observar zonas más densas:
+### Regiones con Mayor Concentración de Usuarios
+Se agruparon las ubicaciones por bloques de 10 grados (binning) y se generó una tabla con las regiones más densamente pobladas:
 
-**Top 10 regiones con más usuarios:**
 ```text
+Top 10 regiones con más usuarios:
 (lat_bin, lon_bin) | conteo
--------------------|---------
+-------------------|--------
 ...                | ...
 ```
 
-Esta agrupación permite identificar regiones con alta densidad de usuarios, útiles para visualización o segmentación futura del grafo.
+### Hallazgos Clave
+- La mayoría de usuarios se concentran en unas pocas regiones del mundo.
+- Los valores nulos fueron correctamente manejados en el preprocesamiento.
+- Se identificaron y graficaron coordenadas geográficas atípicas para análisis futuro.
+- La distribución sugiere potenciales hubs de conectividad en el grafo.
 
 ---
 
-**Hallazgos clave del EDA:**
-- El preprocesamiento eliminó correctamente datos erróneos.
-- Existen algunas ubicaciones atípicas posiblemente ficticias o errores de origen.
-- Se observa una distribución geográfica concentrada en ciertas regiones (ver tabla de agregación).
-
----
 
 ## Legibilidad y Calidad del Código
 
