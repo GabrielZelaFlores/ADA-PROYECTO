@@ -7,16 +7,13 @@ import os
 import sys
 import logging
 from scipy.stats import zscore
-
 # --------------------------
 # Configurar logging
 # --------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%H:%M:%S"
-)
-log = logging.getLogger(__name__)
+
+from logger_config import setup_logger
+
+log = setup_logger()
 
 # --------------------------
 # Función principal
@@ -116,7 +113,7 @@ def main():
 
         log.info(" Top 10 regiones más densas:\n%s", geo_bins.head(10))
 
-        log.info(" Análisis exploratorio completado con éxito.")
+        log.info(" Análisis completado con éxito.")
 
     except Exception as e:
         log.exception(" Error crítico durante el análisis EDA.")
