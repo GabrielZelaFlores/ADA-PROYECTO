@@ -109,31 +109,6 @@ Top 10 regiones con más usuarios:
 - La visualización espacial permite inferir potenciales **hubs** o núcleos de usuarios, útiles para análisis posteriores de **centralidad o comunidad**.
 ---
 
-
-## Legibilidad y Calidad del Código
-
-**Justificación:**  
-- Código bien comentado, modularizado (función `main()`), y organizado por secciones.
-- Claramente estructurado con mensajes de logging que indican cada paso.
-
-**Ejemplo:**
-```python
-log.info("📍 Cargando ubicaciones en modo streaming (lazy)...")
-```
-
----
-
-## Documentación y Presentación
-
-**Justificación:**  
-Este `README.md` explica:
-- Objetivo del proyecto.
-- Detalles del dataset.
-- Cómo el código cumple con cada criterio de evaluación.
-- Qué fragmentos específicos respaldan los puntos evaluados.
-
----
-
 ## ▶ Ejecución del Script
 
 ### Requisitos
@@ -146,8 +121,16 @@ python preprocesamiento_red_social.py
 ```
 
 ### Salidas esperadas
-- `ubicaciones_limpias.parquet`
-- `usuarios_conexiones.parquet`
+13:25:36 - INFO - 📍 Cargando ubicaciones en modo streaming (lazy)...
+13:25:36 - INFO - 👥 Cargando usuarios (adyacencias) en modo streaming (lazy)...
+13:25:36 - INFO - 🧹 Validando datos de ubicación...
+13:25:36 - INFO - 🔗 Procesando listas de conexiones...
+13:25:36 - INFO - ⚙️ Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+13:25:36 - INFO - ✅ Ubicaciones válidas: (10000000, 2)
+13:25:36 - INFO - ⚙️ Ejecutando procesamiento de usuarios...
+13:25:36 - INFO - ✅ Usuarios procesados: (10000000, 1)
+13:25:36 - INFO - 💾 Guardando archivos .parquet...
+13:25:49 - INFO - ✅ Preprocesamiento terminado (eficiente y escalable).
 
 ---
 
