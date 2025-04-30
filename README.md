@@ -143,20 +143,18 @@ python preprocesamiento_red_social.py
 
 ---
 
-##  Archivos Clave
+## 📌 Archivos Clave
 
-| Archivo | Descripción |
-|--------|-------------|
-| `preprocesamiento_red_social.py` | Código de carga masiva, validación y conversión a `.parquet`. |
-| `ubicaciones_limpias.parquet` | Coordenadas válidas y limpias. |
-| `usuarios_conexiones.parquet` | Conexiones por usuario en formato estructurado. |
+| Archivo                        | Descripción                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `preprocesamiento_red_social.py` | Código de carga masiva, validación y conversión a `.parquet`.               |
+| `eda_analisis.py`             | Script de análisis exploratorio (EDA) con gráficos y detección de outliers. |
+| `code/logger_config.py`       | Módulo reutilizable para configurar el logging (con salida a consola y archivo). |
+| `ubicaciones_limpias.parquet` | Coordenadas válidas y limpias.                                              |
+| `usuarios_conexiones.parquet` | Conexiones por usuario en formato estructurado.                             |
+
 
 ---
-
-##  Próximos Pasos
-- Construcción del grafo con `networkx`.
-- Cálculo de métricas: nodos, aristas, grado.
-- Visualización de comunidades con algoritmos Louvain o Girvan-Newman.
 
 ---
 
