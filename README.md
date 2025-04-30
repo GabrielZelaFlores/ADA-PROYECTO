@@ -55,6 +55,8 @@ except Exception as e:
 
 ---
 
+---
+
 ## 📊 Análisis Exploratorio de Datos (EDA)
 
 Esta fase se encargó de validar, analizar y visualizar los datos geográficos de los usuarios, con el objetivo de comprender su distribución espacial y detectar valores anómalos.
@@ -77,13 +79,13 @@ Se aplicó Z-score para detectar coordenadas anómalas:
 - Se encontraron múltiples valores fuera del patrón geográfico general.
 
 **Gráfico generado:**  
-Rename distribucion_outliers.png to GRAFICOS/distribucion_outliers.png
+![Distribución con Outliers](graficos/distribucion_outliers.png)
 
 ### Visualización de la Distribución General
 Se generó un gráfico de dispersión que muestra la distribución de los usuarios sobre el espacio geográfico:
 
 **Gráfico generado:**  
-![Distribución con Outliers](GRAFICOS/distribucion_outliers.png)
+![Distribución Geográfica](graficos/distribucion_geografica.png)
 
 ### Regiones con Mayor Concentración de Usuarios
 Se agruparon las ubicaciones por bloques de 10 grados (binning) y se generó una tabla con las regiones más densamente pobladas:
