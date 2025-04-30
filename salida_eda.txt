@@ -1,5 +1,8 @@
---- Valores Nulos ---
-Ubicaciones:
+14:00:05 - INFO -  Cargando archivos Parquet procesados...
+14:00:08 - INFO -  Ubicaciones cargadas: (10000000, 2)
+14:00:08 - INFO -  Conexiones cargadas: (10000000, 1)
+14:00:08 - INFO -  Verificando valores nulos...
+14:00:08 - INFO - Nulos en ubicaciones:
 shape: (1, 2)
 ┌──────────┬───────────┐
 │ latitude ┆ longitude │
@@ -8,8 +11,7 @@ shape: (1, 2)
 ╞══════════╪═══════════╡
 │ 0        ┆ 0         │
 └──────────┴───────────┘
-
-Usuarios:
+14:00:08 - INFO - Nulos en conexiones:
 shape: (1, 1)
 ┌─────────────┐
 │ connections │
@@ -18,8 +20,8 @@ shape: (1, 1)
 ╞═════════════╡
 │ 0           │
 └─────────────┘
-
---- Estadísticas Descriptivas de Ubicaciones ---
+14:00:08 - INFO -  Generando estadísticas descriptivas...
+14:00:08 - INFO - Resumen estadístico:
 shape: (9, 3)
 ┌────────────┬────────────┬────────────┐
 │ statistic  ┆ latitude   ┆ longitude  │
@@ -36,26 +38,16 @@ shape: (9, 3)
 │ 75%        ┆ 41.993704  ┆ 1.193134   │
 │ max        ┆ 72.998851  ┆ 177.999286 │
 └────────────┴────────────┴────────────┘
-
---- Outliers geográficos (|z| > 3): 314110 encontrados ---
-         latitude   longitude     z_lat     z_lon
-0      -83.168664  134.850670 -6.291812  2.356388
-1      -83.290624  134.341523 -6.298427  2.349727
-2      -83.169196  134.229867 -6.291841  2.348266
-3      -83.548065  134.995517 -6.312390  2.358283
-4      -83.220744  134.659429 -6.294637  2.353886
-...           ...         ...       ...       ...
-318299 -22.625238  -42.878766 -3.008023  0.031045
-318300 -22.627707  -42.101504 -3.008157  0.041214
-318301 -22.681005  -42.528591 -3.011048  0.035627
-318302 -22.913818  -42.352143 -3.023675  0.037935
-318303 -22.517264  -42.084571 -3.002167  0.041436
-
-[314110 rows x 4 columns]
-c:\Users\jhuam\OneDrive\Desktop\5toSemestre\social_network_data\eda.py:64: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+14:00:08 - INFO -  Detectando outliers geográficos con Z-score...
+14:00:08 - INFO -  Outliers detectados: 314110
+14:00:08 - INFO -  Generando gráfico de outliers geográficos...
+c:\Users\jhuam\OneDrive\Desktop\5toSemestre\social_network_data\eda.py:80: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
   plt.savefig("graficos/distribucion_outliers.png", dpi=300)
-
---- Resumen de Distribución Geográfica ---
+14:00:22 - INFO -  Guardado: graficos/distribucion_outliers.png
+14:00:22 - INFO -  Generando gráfico de distribución general...
+14:00:30 - INFO -  Guardado: graficos/distribucion_geografica.png
+14:00:30 - INFO -  Generando resumen de distribución geográfica...
+14:00:30 - INFO -  Top 10 regiones más densas:
 shape: (10, 3)
 ┌─────────┬─────────┬─────────┐
 │ lat_bin ┆ lon_bin ┆ conteo  │
@@ -73,3 +65,4 @@ shape: (10, 3)
 │ 4.0     ┆ -12.0   ┆ 274908  │
 │ 4.0     ┆ -13.0   ┆ 245615  │
 └─────────┴─────────┴─────────┘
+14:00:30 - INFO -  Análisis exploratorio completado con éxito.
