@@ -83,7 +83,7 @@ Se aplicó Z-score para detectar coordenadas anómalas:
 Se generó un gráfico de dispersión que muestra la distribución de los usuarios sobre el espacio geográfico:
 
 **Gráfico generado:**  
-![Distribución Geográfica](graficos/distribucion_geografica.png)
+![Distribución Geográfica](GRAFICOS/distribucion_geografica.png)
 
 ### Regiones con Mayor Concentración de Usuarios
 Se agruparon las ubicaciones por bloques de 10 grados (binning) y se generó una tabla con las regiones más densamente pobladas:
