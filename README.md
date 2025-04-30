@@ -102,11 +102,11 @@ Top 10 regiones con más usuarios:
 
 
 ### Hallazgos Clave
--La mayoría de usuarios se concentran en regiones específicas del mapa geográfico, particularmente en torno a latitudes entre 3° y 5°, y longitudes entre -13° y 0°.
--No se encontraron valores nulos en los archivos procesados, pero sí se detectaron entradas con coordenadas (0, 0) que fueron tratadas como inválidas.
--Se identificaron 314,110 outliers geográficos usando Z-score, lo que puede indicar errores de geolocalización o comportamientos anómalos en la red.
--La visualización espacial permite inferir potenciales hubs o núcleos de usuarios, útiles para análisis posteriores de centralidad o comunidad.
 
+- La mayoría de usuarios se concentran en regiones específicas del mapa geográfico, particularmente en torno a latitudes entre **3° y 5°**, y longitudes entre **-13° y 0°**.
+- No se encontraron valores nulos en los archivos procesados, pero sí se detectaron entradas con coordenadas **(0, 0)** que fueron tratadas como inválidas.
+- Se identificaron **314,110 outliers geográficos** usando Z-score, lo que puede indicar errores de geolocalización o comportamientos anómalos en la red.
+- La visualización espacial permite inferir potenciales **hubs** o núcleos de usuarios, útiles para análisis posteriores de **centralidad o comunidad**.
 ---
 
 
