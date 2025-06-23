@@ -1,7 +1,7 @@
 # Como ejecutar todo
 ## Pasos previos
 - La estructura del proyecto es la misma que esta carpeta, debes tener la carpeta "data" y "graficos"
-- En la carpeta "data" deben estar los archivos: `10_million_location.txt` y `10_million_user.txt`
+- En la carpeta "data" deben estar los archivos: `10_million_location.txt` y `10_million_user.txt` (asegurate de que esten allí antes de empezar, descargalos si no los tienes)
 - En la carpeta "graficos" no importa si hay algo o no.
 - Si te falta alguna libreria instalala con `requirements.txt`
 
