@@ -17,9 +17,11 @@ Te indico que hace cada uno:
 - **`mapa_comunidad.py`**: Te permite crear un mapa simple (sin aristas) de `n` nodos, guarda el archivo en `/graficos` como `html` y luego lo visualiza en tu navegador principal.
 - **`mapa_por_comunidad.py`**: Permite crear el mapa de una comunidad a tu elección y acentuando los nodos más populares de esa comunidad, puedes limitar la cantidad de nodos que se muestra y seleccionar si quieres visualizar aristas o no
 - **`mapaBFS.py`**: Esto te permite crear un mapa desde el nodo de tu elección usando BFS, puedes limitar la cantidad de nodos que se muestran
+
+
 **IMPORTANTE**: Todas las configuraciones que te menciono estan al inicio del codigo para que las puedas modificar a tu gusto, te muestro un ejemplo:
 ```python
-#mapa_por_comunidad.py
+# mapa_por_comunidad.py
 # ========================
 # Parámetros configurables
 # ========================
