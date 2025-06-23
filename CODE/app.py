@@ -12,6 +12,9 @@ from logger_config import setup_logger
 # Inicialización del logger personalizado
 log = setup_logger()
 
+LOCATION = "data/10_million_location.txt"
+USER = "data/10_million_user.txt"
+
 # --------------------------
 # Función principal
 # --------------------------
@@ -22,7 +25,7 @@ def main():
 
         # Cargar archivo de ubicaciones usando polars en modo scan_csv (streaming/lazy)
         locations_lazy = pl.scan_csv(
-            "social_network_data/10_million_location.txt",  # Ruta al archivo
+            LOCATION,  # Ruta al archivo
             separator=",",  # Separador de columnas
             has_header=False,  # El archivo no tiene encabezados
             new_columns=["latitude", "longitude"]  # Nombres de columnas asignados
@@ -33,7 +36,7 @@ def main():
 
         # Cargar archivo de conexiones de usuarios
         users_lazy = pl.scan_csv(
-            "social_network_data/10_million_user.txt",  # Ruta al archivo
+            USER,  # Ruta al archivo
             separator="\n",  # Cada línea es una fila con una sola columna
             has_header=False,  # Sin encabezado
             new_columns=["connections"],  # Nombre asignado a la columna
@@ -87,10 +90,10 @@ def main():
         log.info(" Guardando archivos .parquet...")
 
         # Guardar ubicaciones validadas en formato Parquet
-        locations_final.write_parquet("ubicaciones_limpias.parquet")
+        locations_final.write_parquet("data/ubicaciones_limpias.parquet")
 
         # Guardar conexiones procesadas en formato Parquet
-        users_final.write_parquet("usuarios_conexiones.parquet")
+        users_final.write_parquet("data/usuarios_conexiones.parquet")
 
         # Mensaje final de éxito
         log.info(" Preprocesamiento terminado (eficiente y escalable).")
