@@ -54,7 +54,9 @@ El flujo de trabajo general del proyecto se puede describir en los siguientes pa
         *   `mapa_comunidad.py`: Muestra una muestra de nodos en un mapa, coloreados según la comunidad a la que pertenecen. Se enfoca en las N comunidades más grandes. Guarda el mapa en `graficos/grafo_top_N_comunidades.html`.
         *   `mapa_por_comunidad.py`: Visualiza todos los nodos pertenecientes a una comunidad específica en un mapa. Puede mostrar aristas internas y resaltar los nodos más populares (mayor in-degree) dentro de esa comunidad. Guarda el mapa en `graficos/comunidades/comunidad_X_con_aristas_Y.html`.
 
-El script `kruskal.py` está presente pero actualmente se encuentra vacío. `logger_config.py` proporciona una configuración centralizada para el logging usado por varios scripts.
+El script `kruskal.py` ahora contiene una implementación del algoritmo de Kruskal para encontrar el Árbol de Expansión Mínima (MST) de un grafo, sin depender de librerías externas para su lógica central. Incluye una clase `DSU` (Disjoint Set Union) y ejemplos de uso. `logger_config.py` proporciona una configuración centralizada para el logging usado por varios scripts.
+
+Adicionalmente, se ha añadido `main.py` como un script principal para orquestar la ejecución de la secuencia de preprocesamiento y construcción del grafo.
 
 ## Instrucciones de Uso
 
@@ -74,11 +76,34 @@ El script `kruskal.py` está presente pero actualmente se encuentra vacío. `log
 
 ### Ejecución de los Scripts
 
-Los scripts están diseñados para ser ejecutados en una secuencia específica debido a las dependencias de datos entre ellos.
+Existen dos formas principales de ejecutar el flujo de trabajo:
+
+**A. Ejecución del Pipeline Principal con `main.py` (Recomendado para flujo completo)**
+
+El script `V1/main.py` ha sido añadido para orquestar la ejecución de los pasos clave del preprocesamiento de datos, construcción del grafo y detección de comunidades.
 
 1.  **Preparar los datos de entrada**:
-    *   Coloca los archivos `10_million_location.txt` y `10_million_user.txt` en el subdirectorio `V1/data/`. (Nota: Estos archivos no están incluidos en el repositorio y deben obtenerse por separado).
-    *   El directorio `V1/data/` también tiene un `README.md` (actualmente vacío) que podría usarse para describir los datos de entrada.
+    *   Asegúrate de que los archivos `10_million_location.txt` y `10_million_user.txt` estén en el subdirectorio `V1/data/`. (Estos archivos no están incluidos en el repositorio).
+
+2.  **Ejecutar `main.py`**:
+    ```bash
+    python V1/main.py
+    ```
+    *   Este script ejecutará secuencialmente:
+        1.  `data_to_parquet.py`
+        2.  `calc_weight.py`
+        3.  `join_weights.py`
+        4.  `graph_construction.py`
+        5.  `comunidad_igraph.py` (utilizado por defecto en `main.py` para la detección de comunidades)
+    *   **Entradas Principales**: `V1/data/10_million_location.txt`, `V1/data/10_million_user.txt`
+    *   **Salidas Principales**: `V1/data/grafo_con_comunidades.pkl`, archivos intermedios en `V1/data/`, y logs en `V1/app.log`.
+
+**B. Ejecución Manual de Scripts Individuales**
+
+Si necesitas ejecutar pasos específicos o utilizar alternativas (como `asignar_comunidad.py`), puedes ejecutar los scripts individualmente como se describe a continuación.
+
+1.  **Preparar los datos de entrada**:
+    *   Como se mencionó anteriormente, los archivos de datos crudos deben estar en `V1/data/`.
 
 2.  **Preprocesamiento (`data_to_parquet.py`)**:
     ```bash
@@ -110,53 +135,61 @@ Los scripts están diseñados para ser ejecutados en una secuencia específica d
 
 6.  **Detección de Comunidades**:
     *   Elige una de las implementaciones:
-        *   Usando `asignar_comunidad.py`:
+        *   Usando `asignar_comunidad.py` (implementación manual de Louvain):
             ```bash
             python V1/asignar_comunidad.py
             ```
-        *   O usando `comunidad_igraph.py`:
+        *   O usando `comunidad_igraph.py` (usa la librería igraph, por defecto en `main.py`):
             ```bash
             python V1/comunidad_igraph.py
             ```
     *   **Entrada**: `V1/data/grafo_guardado.pkl`
     *   **Salida**: `V1/data/grafo_con_comunidades.pkl`
 
-7.  **Análisis y Visualización**:
-    *   **Análisis Exploratorio de Datos**:
+7.  **Análisis y Visualización (Scripts independientes)**:
+    Estos scripts generalmente se ejecutan después de que `grafo_con_comunidades.pkl` (o al menos `grafo_guardado.pkl` para Kruskal) esté disponible.
+    *   **Análisis Exploratorio de Datos (`eda.py`)**:
         ```bash
         python V1/eda.py
         ```
         *   **Entrada**: `V1/data/ubicaciones_limpias.parquet`, `V1/data/usuarios_conexiones.parquet`
         *   **Salida**: Gráficos en `V1/graficos/`, `V1/app.log` (actualizado)
-    *   **Análisis de Comunidades Específicas**:
+    *   **Análisis de Comunidades Específicas (`analisis_comunidades.py`)**:
         ```bash
         python V1/analisis_comunidades.py
         ```
-        *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. El script pedirá interactivamente el ID de la comunidad o la opción de análisis general.
-    *   **Algoritmo de Dijkstra**:
+        *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. Interactivo.
+    *   **Algoritmo de Dijkstra (`dijkstra.py`)**:
         ```bash
         python V1/dijkstra.py
         ```
-        *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. Los nodos origen y destino están hardcodeados en el script (actualmente `2572385` y `942391`).
+        *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. Origen/destino hardcodeados.
         *   **Salida**: `V1/graficos/dijkstra/camino_mas_corto.html`
-    *   **Visualizaciones de Mapas**:
-        *   BFS:
+    *   **Algoritmo de Kruskal (`kruskal.py`)**:
+        El script `kruskal.py` contiene su propio ejemplo de ejecución en el bloque `if __name__ == "__main__":`.
+        ```bash
+        python V1/kruskal.py
+        ```
+        *   **Entrada (para el ejemplo interno)**: `V1/data/grafo_guardado.pkl`.
+        *   **Salida**: Imprime en consola el peso total del MST y el número de aristas. No genera archivos por defecto, pero el código puede ser adaptado.
+    *   **Visualizaciones de Mapas (Plotly)**:
+        *   BFS (`mapa_BFS.py`):
             ```bash
             python V1/mapa_BFS.py
             ```
-            *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. El nodo de inicio está hardcodeado (`2572385`).
+            *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. Nodo de inicio hardcodeado.
             *   **Salida**: `V1/graficos/BFS/grafo_bfs.html`
-        *   Comunidades Top N:
+        *   Comunidades Top N (`mapa_comunidad.py`):
             ```bash
             python V1/mapa_comunidad.py
             ```
             *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`.
-            *   **Salida**: `V1/graficos/grafo_top_N_comunidades.html` (N es configurable en el script, actualmente 50).
-        *   Mapa por Comunidad Específica:
+            *   **Salida**: `V1/graficos/grafo_top_N_comunidades.html`.
+        *   Mapa por Comunidad Específica (`mapa_por_comunidad.py`):
             ```bash
             python V1/mapa_por_comunidad.py
             ```
-            *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. La comunidad objetivo es configurable en el script (actualmente `27`).
+            *   **Entrada**: `V1/data/grafo_con_comunidades.pkl`. Comunidad objetivo hardcodeada.
             *   **Salida**: `V1/graficos/comunidades/comunidad_X_con_aristas_Y.html`.
 
 ### Uso con Docker
@@ -214,14 +247,15 @@ V1/
 │   │   └── comunidad_*.html
 │   ├── dijkstra/
 │   │   └── camino_mas_corto.html
-│   ├── distribucion_geografica.png
-│   └── distribucion_outliers.png
+│   ├── distribucion_geografica.png # Salida de eda.py
+│   └── distribucion_outliers.png   # Salida de eda.py
 ├── graphObj.py
 ├── graphObj_alt.py
 ├── graph_construction.py
 ├── join_weights.py
-├── kruskal.py                # Actualmente vacío
+├── kruskal.py                # Implementación de Kruskal con ejemplo
 ├── logger_config.py
+├── main.py                   # Script principal para ejecutar el pipeline
 ├── mapa_BFS.py
 ├── mapa_comunidad.py
 ├── mapa_por_comunidad.py
