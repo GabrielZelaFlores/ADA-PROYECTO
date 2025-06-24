@@ -1,0 +1,2008 @@
+14:25:08 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+14:25:08 - ERROR -  Ocurri� un error cr�tico durante el preprocesamiento.
+Traceback (most recent call last):
+  File "c:\Users\jhuam\OneDrive\Desktop\ADA\app.py", line 29, in main
+    locations_lazy = pl.scan_csv(
+                     ^^^^^^^^^^^^
+  File "C:\Users\jhuam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhuam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhuam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhuam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\polars\io\csv\functions.py", line 1349, in scan_csv
+    return _scan_csv_impl(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\jhuam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\polars\io\csv\functions.py", line 1452, in _scan_csv_impl
+    pylf = PyLazyFrame.new_from_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: El sistema no puede encontrar la ruta especificada. (os error 3): social_network_data/10_million_location.txt
+19:25:43 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+19:25:43 - ERROR -  Ocurrió un error crítico durante el preprocesamiento.
+Traceback (most recent call last):
+  File "/app/app.py", line 29, in main
+    locations_lazy = pl.scan_csv(
+                     ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/polars/io/csv/functions.py", line 1349, in scan_csv
+    return _scan_csv_impl(
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/polars/io/csv/functions.py", line 1452, in _scan_csv_impl
+    pylf = PyLazyFrame.new_from_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: No such file or directory (os error 2): social_network_data/10_million_location.txt
+19:25:52 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+19:25:52 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+19:25:52 - INFO -  Validando datos de ubicación...
+19:25:52 - INFO -  Procesando listas de conexiones...
+19:25:52 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+19:25:54 - INFO -  Ubicaciones válidas: (10000000, 2)
+19:25:54 - INFO -  Ejecutando procesamiento de usuarios...
+19:25:56 - INFO -  Usuarios procesados: (10000000, 1)
+19:25:56 - INFO -  Guardando archivos .parquet...
+19:26:03 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+14:28:10 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+14:28:10 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+14:28:10 - INFO -  Validando datos de ubicaci�n...
+14:28:10 - INFO -  Procesando listas de conexiones...
+14:28:10 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+14:28:10 - INFO -  Ubicaciones v�lidas: (10000000, 2)
+14:28:10 - INFO -  Ejecutando procesamiento de usuarios...
+14:28:10 - INFO -  Usuarios procesados: (10000000, 1)
+14:28:10 - INFO -  Guardando archivos .parquet...
+14:28:13 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+03:02:00 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+03:02:00 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+03:02:00 - INFO -  Validando datos de ubicación...
+03:02:00 - INFO -  Procesando listas de conexiones...
+03:02:00 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+03:02:03 - INFO -  Ubicaciones válidas: (10000000, 2)
+03:02:03 - INFO -  Ejecutando procesamiento de usuarios...
+03:02:04 - INFO -  Usuarios procesados: (10000000, 1)
+03:02:04 - INFO -  Guardando archivos .parquet...
+03:02:09 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+03:07:09 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+03:07:09 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+03:07:09 - INFO -  Validando datos de ubicación...
+03:07:09 - INFO -  Procesando listas de conexiones...
+03:07:09 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+03:07:11 - INFO -  Ubicaciones válidas: (10000000, 2)
+03:07:11 - INFO -  Ejecutando procesamiento de usuarios...
+03:07:19 - INFO -  Usuarios procesados: (10000000, 1)
+03:07:19 - INFO -  Guardando archivos .parquet...
+03:07:35 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+21:12:51 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+21:12:51 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+21:12:51 - INFO -  Validando datos de ubicación...
+21:12:51 - INFO -  Procesando listas de conexiones...
+21:12:51 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+21:12:54 - INFO -  Ubicaciones válidas: (10000000, 2)
+21:12:54 - INFO -  Ejecutando procesamiento de usuarios...
+21:13:00 - INFO -  Usuarios procesados: (10000000, 1)
+21:13:00 - INFO -  Guardando archivos .parquet...
+21:13:16 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+23:43:49 - INFO - 📦 Cargando ubicaciones desde Parquet...
+23:43:54 - INFO - 📦 Cargando conexiones desde Parquet...
+23:44:00 - INFO - 🔁 Generando aristas con pesos por lotes...
+23:44:00 - INFO -   → Procesados 0 nodos
+23:44:01 - INFO - ✅ Lote 0 guardado con 104,988 aristas
+23:44:01 - INFO - ✅ Lote 1 guardado con 101,510 aristas
+23:44:01 - INFO - ✅ Lote 2 guardado con 101,151 aristas
+23:44:01 - INFO - ✅ Lote 3 guardado con 102,231 aristas
+23:44:01 - INFO - ✅ Lote 4 guardado con 102,956 aristas
+23:44:01 - INFO - ✅ Lote 5 guardado con 100,912 aristas
+23:44:02 - INFO - ✅ Lote 6 guardado con 104,952 aristas
+23:44:02 - INFO - ✅ Lote 7 guardado con 101,182 aristas
+23:44:02 - INFO - ✅ Lote 8 guardado con 101,061 aristas
+23:44:02 - INFO - ✅ Lote 9 guardado con 100,793 aristas
+23:44:02 - INFO - ✅ Lote 10 guardado con 101,228 aristas
+23:44:02 - INFO - ✅ Lote 11 guardado con 102,099 aristas
+23:44:03 - INFO - ✅ Lote 12 guardado con 102,366 aristas
+23:44:03 - INFO - ✅ Lote 13 guardado con 102,190 aristas
+23:44:03 - INFO - ✅ Lote 14 guardado con 100,422 aristas
+23:44:03 - INFO - ✅ Lote 15 guardado con 103,310 aristas
+23:44:03 - INFO - ✅ Lote 16 guardado con 102,653 aristas
+23:44:03 - INFO - ✅ Lote 17 guardado con 101,868 aristas
+23:44:04 - INFO - ✅ Lote 18 guardado con 103,027 aristas
+23:44:04 - INFO - ✅ Lote 19 guardado con 102,944 aristas
+23:44:04 - INFO - ✅ Lote 20 guardado con 100,598 aristas
+23:44:04 - INFO - ✅ Lote 21 guardado con 102,226 aristas
+23:44:04 - INFO - ✅ Lote 22 guardado con 102,510 aristas
+23:44:05 - INFO - ✅ Lote 23 guardado con 102,443 aristas
+23:44:05 - INFO - ✅ Lote 24 guardado con 100,533 aristas
+23:44:05 - INFO - ✅ Lote 25 guardado con 102,205 aristas
+23:44:05 - INFO - ✅ Lote 26 guardado con 100,604 aristas
+23:44:05 - INFO - ✅ Lote 27 guardado con 104,906 aristas
+23:44:05 - INFO - ✅ Lote 28 guardado con 106,425 aristas
+23:44:06 - INFO - ✅ Lote 29 guardado con 107,650 aristas
+23:44:06 - INFO - ✅ Lote 30 guardado con 101,224 aristas
+23:44:06 - INFO - ✅ Lote 31 guardado con 102,107 aristas
+23:44:06 - INFO - ✅ Lote 32 guardado con 101,761 aristas
+23:44:06 - INFO - ✅ Lote 33 guardado con 102,022 aristas
+23:44:06 - INFO - ✅ Lote 34 guardado con 100,329 aristas
+23:44:07 - INFO - ✅ Lote 35 guardado con 102,140 aristas
+23:44:07 - INFO - ✅ Lote 36 guardado con 103,809 aristas
+23:44:07 - INFO - ✅ Lote 37 guardado con 102,591 aristas
+23:44:07 - INFO - ✅ Lote 38 guardado con 102,684 aristas
+23:44:07 - INFO - ✅ Lote 39 guardado con 100,907 aristas
+23:44:07 - INFO - ✅ Lote 40 guardado con 100,831 aristas
+23:44:08 - INFO - ✅ Lote 41 guardado con 103,261 aristas
+23:44:08 - INFO - ✅ Lote 42 guardado con 101,023 aristas
+23:44:08 - INFO - ✅ Lote 43 guardado con 101,627 aristas
+23:44:08 - INFO - ✅ Lote 44 guardado con 100,785 aristas
+23:44:08 - INFO - ✅ Lote 45 guardado con 101,844 aristas
+23:44:08 - INFO - ✅ Lote 46 guardado con 105,914 aristas
+23:44:08 - INFO - ✅ Lote 47 guardado con 105,181 aristas
+23:44:09 - INFO - ✅ Lote 48 guardado con 100,377 aristas
+23:44:09 - INFO - ✅ Lote 49 guardado con 104,198 aristas
+23:44:09 - INFO - ✅ Lote 50 guardado con 105,850 aristas
+23:44:09 - INFO - ✅ Lote 51 guardado con 102,483 aristas
+23:44:09 - INFO - ✅ Lote 52 guardado con 103,305 aristas
+23:44:09 - INFO - ✅ Lote 53 guardado con 101,421 aristas
+23:44:10 - INFO - ✅ Lote 54 guardado con 101,235 aristas
+23:44:10 - INFO - ✅ Lote 55 guardado con 101,496 aristas
+23:44:10 - INFO - ✅ Lote 56 guardado con 100,000 aristas
+23:44:10 - INFO - ✅ Lote 57 guardado con 100,582 aristas
+23:44:10 - INFO - ✅ Lote 58 guardado con 100,092 aristas
+23:44:10 - INFO - ✅ Lote 59 guardado con 100,971 aristas
+23:44:11 - INFO - ✅ Lote 60 guardado con 100,162 aristas
+23:44:11 - INFO - ✅ Lote 61 guardado con 100,388 aristas
+23:44:11 - INFO - ✅ Lote 62 guardado con 103,502 aristas
+23:44:11 - INFO - ✅ Lote 63 guardado con 100,966 aristas
+23:44:11 - INFO - ✅ Lote 64 guardado con 100,046 aristas
+23:44:11 - INFO - ✅ Lote 65 guardado con 103,377 aristas
+23:44:11 - INFO - ✅ Lote 66 guardado con 107,718 aristas
+23:44:12 - INFO - ✅ Lote 67 guardado con 100,102 aristas
+23:44:12 - INFO - ✅ Lote 68 guardado con 102,614 aristas
+23:44:12 - INFO - ✅ Lote 69 guardado con 100,262 aristas
+23:44:12 - INFO - ✅ Lote 70 guardado con 101,479 aristas
+23:44:12 - INFO - ✅ Lote 71 guardado con 100,772 aristas
+23:44:12 - INFO - ✅ Lote 72 guardado con 103,210 aristas
+23:44:13 - INFO - ✅ Lote 73 guardado con 104,828 aristas
+23:44:13 - INFO - ✅ Lote 74 guardado con 101,936 aristas
+23:44:13 - INFO - ✅ Lote 75 guardado con 100,091 aristas
+23:44:13 - INFO - ✅ Lote 76 guardado con 102,584 aristas
+23:44:13 - INFO - ✅ Lote 77 guardado con 100,319 aristas
+23:44:13 - INFO - ✅ Lote 78 guardado con 100,443 aristas
+23:44:14 - INFO - ✅ Lote 79 guardado con 100,016 aristas
+23:44:14 - INFO - ✅ Lote 80 guardado con 100,516 aristas
+23:44:14 - INFO - ✅ Lote 81 guardado con 100,118 aristas
+23:44:14 - INFO - ✅ Lote 82 guardado con 100,917 aristas
+23:44:14 - INFO - ✅ Lote 83 guardado con 105,372 aristas
+23:44:14 - INFO - ✅ Lote 84 guardado con 100,013 aristas
+23:44:15 - INFO - ✅ Lote 85 guardado con 101,754 aristas
+23:44:15 - INFO - ✅ Lote 86 guardado con 101,453 aristas
+23:44:15 - INFO - ✅ Lote 87 guardado con 100,808 aristas
+23:44:15 - INFO - ✅ Lote 88 guardado con 107,621 aristas
+23:44:15 - INFO - ✅ Lote 89 guardado con 100,874 aristas
+23:44:15 - INFO - ✅ Lote 90 guardado con 105,599 aristas
+23:44:15 - INFO - ✅ Lote 91 guardado con 100,060 aristas
+23:44:16 - INFO - ✅ Lote 92 guardado con 101,530 aristas
+23:44:16 - INFO - ✅ Lote 93 guardado con 100,167 aristas
+23:44:16 - INFO - ✅ Lote 94 guardado con 107,509 aristas
+23:44:16 - INFO - ✅ Lote 95 guardado con 102,823 aristas
+23:44:16 - INFO - ✅ Lote 96 guardado con 100,536 aristas
+23:44:16 - INFO - ✅ Lote 97 guardado con 101,504 aristas
+23:44:17 - INFO - ✅ Lote 98 guardado con 101,191 aristas
+23:44:17 - INFO - ✅ Lote 99 guardado con 101,688 aristas
+23:44:17 - INFO - ✅ Lote 100 guardado con 105,393 aristas
+23:44:17 - INFO - ✅ Lote 101 guardado con 103,745 aristas
+23:44:17 - INFO - ✅ Lote 102 guardado con 100,146 aristas
+23:44:17 - INFO - ✅ Lote 103 guardado con 100,142 aristas
+23:44:18 - INFO - ✅ Lote 104 guardado con 103,049 aristas
+23:44:18 - INFO - ✅ Lote 105 guardado con 101,893 aristas
+23:44:18 - INFO - ✅ Lote 106 guardado con 101,901 aristas
+23:44:18 - INFO - ✅ Lote 107 guardado con 100,733 aristas
+23:44:18 - INFO - ✅ Lote 108 guardado con 103,608 aristas
+23:44:18 - INFO - ✅ Lote 109 guardado con 102,591 aristas
+23:44:19 - INFO - ✅ Lote 110 guardado con 102,599 aristas
+23:44:19 - INFO - ✅ Lote 111 guardado con 100,972 aristas
+23:44:19 - INFO - ✅ Lote 112 guardado con 100,004 aristas
+23:44:19 - INFO - ✅ Lote 113 guardado con 102,668 aristas
+23:44:19 - INFO - ✅ Lote 114 guardado con 101,907 aristas
+23:44:19 - INFO - ✅ Lote 115 guardado con 102,354 aristas
+23:44:20 - INFO - ✅ Lote 116 guardado con 102,240 aristas
+23:44:20 - INFO - ✅ Lote 117 guardado con 100,906 aristas
+23:44:20 - INFO - ✅ Lote 118 guardado con 100,350 aristas
+23:44:20 - INFO - ✅ Lote 119 guardado con 102,001 aristas
+23:44:20 - INFO - ✅ Lote 120 guardado con 102,754 aristas
+23:44:20 - INFO - ✅ Lote 121 guardado con 100,956 aristas
+23:44:20 - INFO - ✅ Lote 122 guardado con 100,001 aristas
+23:44:21 - INFO - ✅ Lote 123 guardado con 100,271 aristas
+23:44:21 - INFO - ✅ Lote 124 guardado con 102,844 aristas
+23:44:21 - INFO - ✅ Lote 125 guardado con 100,252 aristas
+23:44:21 - INFO - ✅ Lote 126 guardado con 108,739 aristas
+23:44:21 - INFO - ✅ Lote 127 guardado con 100,003 aristas
+23:44:21 - INFO - ✅ Lote 128 guardado con 103,481 aristas
+23:44:21 - INFO - ✅ Lote 129 guardado con 102,338 aristas
+23:44:21 - INFO - ✅ Lote 130 guardado con 102,615 aristas
+23:44:22 - INFO - ✅ Lote 131 guardado con 103,736 aristas
+23:44:22 - INFO - ✅ Lote 132 guardado con 100,104 aristas
+23:44:22 - INFO - ✅ Lote 133 guardado con 103,489 aristas
+23:44:22 - INFO - ✅ Lote 134 guardado con 105,393 aristas
+23:44:22 - INFO - ✅ Lote 135 guardado con 101,610 aristas
+23:44:22 - INFO - ✅ Lote 136 guardado con 105,543 aristas
+23:44:22 - INFO - ✅ Lote 137 guardado con 100,377 aristas
+23:44:23 - INFO - ✅ Lote 138 guardado con 100,670 aristas
+23:44:23 - INFO - ✅ Lote 139 guardado con 102,125 aristas
+23:44:23 - INFO - ✅ Lote 140 guardado con 102,024 aristas
+23:44:23 - INFO - ✅ Lote 141 guardado con 100,116 aristas
+23:44:23 - INFO - ✅ Lote 142 guardado con 100,826 aristas
+23:44:23 - INFO - ✅ Lote 143 guardado con 103,309 aristas
+23:44:23 - INFO - ✅ Lote 144 guardado con 103,608 aristas
+23:44:24 - INFO - ✅ Lote 145 guardado con 103,263 aristas
+23:44:24 - INFO - ✅ Lote 146 guardado con 101,826 aristas
+23:44:24 - INFO - ✅ Lote 147 guardado con 100,100 aristas
+23:44:24 - INFO - ✅ Lote 148 guardado con 100,364 aristas
+23:44:24 - INFO - ✅ Lote 149 guardado con 101,538 aristas
+23:44:24 - INFO - ✅ Lote 150 guardado con 103,049 aristas
+23:44:24 - INFO - ✅ Lote 151 guardado con 100,286 aristas
+23:44:25 - INFO - ✅ Lote 152 guardado con 102,007 aristas
+23:44:25 - INFO - ✅ Lote 153 guardado con 100,201 aristas
+23:44:25 - INFO - ✅ Lote 154 guardado con 100,011 aristas
+23:44:25 - INFO - ✅ Lote 155 guardado con 100,091 aristas
+23:44:25 - INFO - ✅ Lote 156 guardado con 103,176 aristas
+23:44:25 - INFO - ✅ Lote 157 guardado con 100,146 aristas
+23:44:25 - INFO - ✅ Lote 158 guardado con 102,977 aristas
+23:44:26 - INFO - ✅ Lote 159 guardado con 106,113 aristas
+23:44:26 - INFO - ✅ Lote 160 guardado con 100,736 aristas
+23:44:26 - INFO - ✅ Lote 161 guardado con 100,109 aristas
+23:44:26 - INFO - ✅ Lote 162 guardado con 102,382 aristas
+23:44:26 - INFO - ✅ Lote 163 guardado con 100,085 aristas
+23:44:26 - INFO - ✅ Lote 164 guardado con 100,386 aristas
+23:44:26 - INFO - ✅ Lote 165 guardado con 101,467 aristas
+23:44:27 - INFO - ✅ Lote 166 guardado con 102,529 aristas
+23:44:27 - INFO - ✅ Lote 167 guardado con 103,225 aristas
+23:44:27 - INFO - ✅ Lote 168 guardado con 102,569 aristas
+23:44:27 - INFO - ✅ Lote 169 guardado con 102,527 aristas
+23:44:27 - INFO - ✅ Lote 170 guardado con 100,842 aristas
+23:44:27 - INFO - ✅ Lote 171 guardado con 100,150 aristas
+23:44:28 - INFO - ✅ Lote 172 guardado con 101,027 aristas
+23:44:28 - INFO - ✅ Lote 173 guardado con 100,669 aristas
+23:44:28 - INFO - ✅ Lote 174 guardado con 100,008 aristas
+23:44:28 - INFO - ✅ Lote 175 guardado con 102,206 aristas
+23:44:28 - INFO - ✅ Lote 176 guardado con 108,142 aristas
+23:44:28 - INFO - ✅ Lote 177 guardado con 100,286 aristas
+23:44:29 - INFO - ✅ Lote 178 guardado con 101,030 aristas
+23:44:29 - INFO - ✅ Lote 179 guardado con 104,303 aristas
+23:44:29 - INFO - ✅ Lote 180 guardado con 102,270 aristas
+23:44:29 - INFO - ✅ Lote 181 guardado con 101,776 aristas
+23:44:29 - INFO - ✅ Lote 182 guardado con 100,995 aristas
+23:44:29 - INFO - ✅ Lote 183 guardado con 102,532 aristas
+23:44:29 - INFO - ✅ Lote 184 guardado con 100,164 aristas
+23:44:30 - INFO - ✅ Lote 185 guardado con 100,512 aristas
+23:44:30 - INFO - ✅ Lote 186 guardado con 100,533 aristas
+23:44:30 - INFO - ✅ Lote 187 guardado con 100,026 aristas
+23:44:30 - INFO - ✅ Lote 188 guardado con 104,136 aristas
+23:44:30 - INFO - ✅ Lote 189 guardado con 101,266 aristas
+23:44:30 - INFO - ✅ Lote 190 guardado con 100,680 aristas
+23:44:31 - INFO - ✅ Lote 191 guardado con 100,367 aristas
+23:44:31 - INFO - ✅ Lote 192 guardado con 102,045 aristas
+23:44:31 - INFO - ✅ Lote 193 guardado con 102,014 aristas
+23:44:31 - INFO - ✅ Lote 194 guardado con 103,681 aristas
+23:44:31 - INFO - ✅ Lote 195 guardado con 101,972 aristas
+23:44:31 - INFO - ✅ Lote 196 guardado con 100,428 aristas
+23:44:32 - INFO - ✅ Lote 197 guardado con 106,089 aristas
+23:44:32 - INFO - ✅ Lote 198 guardado con 100,290 aristas
+23:44:32 - INFO - ✅ Lote 199 guardado con 102,555 aristas
+23:44:32 - INFO - ✅ Lote 200 guardado con 100,270 aristas
+23:44:32 - INFO - ✅ Lote 201 guardado con 102,277 aristas
+23:44:32 - INFO - ✅ Lote 202 guardado con 102,506 aristas
+23:44:33 - INFO - ✅ Lote 203 guardado con 104,201 aristas
+23:44:33 - INFO - ✅ Lote 204 guardado con 103,721 aristas
+23:44:33 - INFO - ✅ Lote 205 guardado con 102,659 aristas
+23:44:33 - INFO - ✅ Lote 206 guardado con 101,756 aristas
+23:44:33 - INFO - ✅ Lote 207 guardado con 100,587 aristas
+23:44:33 - INFO - ✅ Lote 208 guardado con 101,157 aristas
+23:44:33 - INFO - ✅ Lote 209 guardado con 100,830 aristas
+23:44:34 - INFO - ✅ Lote 210 guardado con 103,959 aristas
+23:44:34 - INFO - ✅ Lote 211 guardado con 100,869 aristas
+23:44:34 - INFO - ✅ Lote 212 guardado con 100,108 aristas
+23:44:34 - INFO - ✅ Lote 213 guardado con 103,500 aristas
+23:44:34 - INFO - ✅ Lote 214 guardado con 101,336 aristas
+23:44:34 - INFO - ✅ Lote 215 guardado con 100,203 aristas
+23:44:35 - INFO - ✅ Lote 216 guardado con 102,556 aristas
+23:44:35 - INFO - ✅ Lote 217 guardado con 100,972 aristas
+23:44:35 - INFO - ✅ Lote 218 guardado con 100,068 aristas
+23:44:35 - INFO - ✅ Lote 219 guardado con 101,092 aristas
+23:44:35 - INFO - ✅ Lote 220 guardado con 100,310 aristas
+23:44:35 - INFO - ✅ Lote 221 guardado con 100,097 aristas
+23:44:36 - INFO - ✅ Lote 222 guardado con 104,537 aristas
+23:44:36 - INFO - ✅ Lote 223 guardado con 100,999 aristas
+23:44:36 - INFO - ✅ Lote 224 guardado con 106,040 aristas
+23:44:36 - INFO - ✅ Lote 225 guardado con 100,609 aristas
+23:44:36 - INFO - ✅ Lote 226 guardado con 100,432 aristas
+23:44:36 - INFO - ✅ Lote 227 guardado con 101,285 aristas
+23:44:36 - INFO - ✅ Lote 228 guardado con 104,218 aristas
+23:44:37 - INFO - ✅ Lote 229 guardado con 102,283 aristas
+23:44:37 - INFO - ✅ Lote 230 guardado con 101,287 aristas
+23:44:37 - INFO - ✅ Lote 231 guardado con 101,615 aristas
+23:44:37 - INFO - ✅ Lote 232 guardado con 100,472 aristas
+23:44:37 - INFO - ✅ Lote 233 guardado con 102,888 aristas
+23:44:38 - INFO - ✅ Lote 234 guardado con 102,765 aristas
+23:44:38 - INFO - ✅ Lote 235 guardado con 102,850 aristas
+23:44:38 - INFO - ✅ Lote 236 guardado con 102,692 aristas
+23:44:38 - INFO - ✅ Lote 237 guardado con 100,282 aristas
+23:44:38 - INFO - ✅ Lote 238 guardado con 101,212 aristas
+23:44:38 - INFO - ✅ Lote 239 guardado con 105,581 aristas
+23:44:39 - INFO - ✅ Lote 240 guardado con 100,467 aristas
+23:44:39 - INFO - ✅ Lote 241 guardado con 100,852 aristas
+23:44:39 - INFO - ✅ Lote 242 guardado con 105,032 aristas
+23:44:39 - INFO - ✅ Lote 243 guardado con 100,936 aristas
+23:44:39 - INFO - ✅ Lote 244 guardado con 101,534 aristas
+23:44:39 - INFO - ✅ Lote 245 guardado con 101,421 aristas
+23:44:40 - INFO - ✅ Lote 246 guardado con 101,645 aristas
+23:44:40 - INFO - ✅ Lote 247 guardado con 100,145 aristas
+23:44:40 - INFO - ✅ Lote 248 guardado con 101,415 aristas
+23:44:40 - INFO - ✅ Lote 249 guardado con 100,377 aristas
+23:44:40 - INFO - ✅ Lote 250 guardado con 102,035 aristas
+23:44:40 - INFO - ✅ Lote 251 guardado con 100,041 aristas
+23:44:41 - INFO - ✅ Lote 252 guardado con 100,607 aristas
+23:44:41 - INFO - ✅ Lote 253 guardado con 102,763 aristas
+23:44:41 - INFO - ✅ Lote 254 guardado con 100,615 aristas
+23:44:41 - INFO - ✅ Lote 255 guardado con 101,919 aristas
+23:44:41 - INFO - ✅ Lote 256 guardado con 102,439 aristas
+23:44:41 - INFO - ✅ Lote 257 guardado con 100,696 aristas
+23:44:41 - INFO - ✅ Lote 258 guardado con 100,069 aristas
+23:44:42 - INFO - ✅ Lote 259 guardado con 100,407 aristas
+23:44:42 - INFO - ✅ Lote 260 guardado con 100,685 aristas
+23:44:42 - INFO - ✅ Lote 261 guardado con 100,220 aristas
+23:44:42 - INFO - ✅ Lote 262 guardado con 102,566 aristas
+23:44:42 - INFO - ✅ Lote 263 guardado con 100,757 aristas
+23:44:42 - INFO - ✅ Lote 264 guardado con 101,764 aristas
+23:44:43 - INFO - ✅ Lote 265 guardado con 100,483 aristas
+23:44:43 - INFO - ✅ Lote 266 guardado con 100,852 aristas
+23:44:43 - INFO - ✅ Lote 267 guardado con 100,001 aristas
+23:44:43 - INFO - ✅ Lote 268 guardado con 100,731 aristas
+23:44:43 - INFO - ✅ Lote 269 guardado con 102,991 aristas
+23:44:43 - INFO - ✅ Lote 270 guardado con 100,829 aristas
+23:44:43 - INFO - ✅ Lote 271 guardado con 103,171 aristas
+23:44:44 - INFO - ✅ Lote 272 guardado con 100,122 aristas
+23:44:44 - INFO - ✅ Lote 273 guardado con 106,374 aristas
+23:44:44 - INFO - ✅ Lote 274 guardado con 100,500 aristas
+23:44:44 - INFO - ✅ Lote 275 guardado con 100,523 aristas
+23:44:44 - INFO - ✅ Lote 276 guardado con 100,002 aristas
+23:44:44 - INFO - ✅ Lote 277 guardado con 100,005 aristas
+23:44:44 - INFO - ✅ Lote 278 guardado con 100,100 aristas
+23:44:45 - INFO - ✅ Lote 279 guardado con 103,048 aristas
+23:44:45 - INFO - ✅ Lote 280 guardado con 100,144 aristas
+23:44:45 - INFO - ✅ Lote 281 guardado con 104,373 aristas
+23:44:45 - INFO - ✅ Lote 282 guardado con 100,447 aristas
+23:44:45 - INFO - ✅ Lote 283 guardado con 104,052 aristas
+23:44:45 - INFO - ✅ Lote 284 guardado con 100,114 aristas
+23:44:46 - INFO - ✅ Lote 285 guardado con 100,328 aristas
+23:44:46 - INFO - ✅ Lote 286 guardado con 100,498 aristas
+23:44:46 - INFO - ✅ Lote 287 guardado con 100,788 aristas
+23:44:46 - INFO - ✅ Lote 288 guardado con 100,529 aristas
+23:44:46 - INFO - ✅ Lote 289 guardado con 104,438 aristas
+23:44:46 - INFO - ✅ Lote 290 guardado con 100,066 aristas
+23:44:46 - INFO - ✅ Lote 291 guardado con 100,557 aristas
+23:44:47 - INFO - ✅ Lote 292 guardado con 100,063 aristas
+23:44:47 - INFO - ✅ Lote 293 guardado con 106,878 aristas
+23:44:47 - INFO - ✅ Lote 294 guardado con 101,527 aristas
+23:44:47 - INFO - ✅ Lote 295 guardado con 101,013 aristas
+23:44:47 - INFO - ✅ Lote 296 guardado con 103,062 aristas
+23:44:48 - INFO - ✅ Lote 297 guardado con 107,825 aristas
+23:44:48 - INFO - ✅ Lote 298 guardado con 100,632 aristas
+23:44:48 - INFO - ✅ Lote 299 guardado con 104,901 aristas
+23:44:48 - INFO - ✅ Lote 300 guardado con 100,943 aristas
+23:44:48 - INFO - ✅ Lote 301 guardado con 100,468 aristas
+23:44:48 - INFO - ✅ Lote 302 guardado con 100,416 aristas
+23:44:48 - INFO - ✅ Lote 303 guardado con 101,993 aristas
+23:44:49 - INFO - ✅ Lote 304 guardado con 100,025 aristas
+23:44:49 - INFO - ✅ Lote 305 guardado con 100,024 aristas
+23:44:49 - INFO - ✅ Lote 306 guardado con 101,655 aristas
+23:44:49 - INFO - ✅ Lote 307 guardado con 100,062 aristas
+23:44:49 - INFO - ✅ Lote 308 guardado con 100,338 aristas
+23:44:49 - INFO - ✅ Lote 309 guardado con 102,392 aristas
+23:44:50 - INFO - ✅ Lote 310 guardado con 100,078 aristas
+23:44:50 - INFO - ✅ Lote 311 guardado con 100,562 aristas
+23:44:50 - INFO - ✅ Lote 312 guardado con 100,051 aristas
+23:44:50 - INFO - ✅ Lote 313 guardado con 102,948 aristas
+23:44:50 - INFO - ✅ Lote 314 guardado con 101,634 aristas
+23:44:50 - INFO - ✅ Lote 315 guardado con 100,442 aristas
+23:44:51 - INFO - ✅ Lote 316 guardado con 100,019 aristas
+23:44:51 - INFO - ✅ Lote 317 guardado con 100,353 aristas
+23:44:51 - INFO - ✅ Lote 318 guardado con 100,651 aristas
+23:44:51 - INFO - ✅ Lote 319 guardado con 101,343 aristas
+23:44:51 - INFO - ✅ Lote 320 guardado con 104,789 aristas
+23:44:51 - INFO - ✅ Lote 321 guardado con 100,169 aristas
+23:44:52 - INFO - ✅ Lote 322 guardado con 104,466 aristas
+23:44:52 - INFO - ✅ Lote 323 guardado con 101,996 aristas
+23:44:52 - INFO - ✅ Lote 324 guardado con 106,995 aristas
+23:44:52 - INFO - ✅ Lote 325 guardado con 103,583 aristas
+23:44:52 - INFO - ✅ Lote 326 guardado con 100,826 aristas
+23:44:52 - INFO - ✅ Lote 327 guardado con 104,469 aristas
+23:44:53 - INFO - ✅ Lote 328 guardado con 107,032 aristas
+23:44:53 - INFO - ✅ Lote 329 guardado con 103,695 aristas
+23:44:53 - INFO - ✅ Lote 330 guardado con 102,137 aristas
+23:44:53 - INFO - ✅ Lote 331 guardado con 102,830 aristas
+23:44:53 - INFO - ✅ Lote 332 guardado con 101,214 aristas
+23:44:53 - INFO - ✅ Lote 333 guardado con 101,840 aristas
+23:44:54 - INFO - ✅ Lote 334 guardado con 104,090 aristas
+23:44:54 - INFO - ✅ Lote 335 guardado con 101,301 aristas
+23:44:54 - INFO - ✅ Lote 336 guardado con 101,873 aristas
+23:44:54 - INFO - ✅ Lote 337 guardado con 100,139 aristas
+23:44:54 - INFO - ✅ Lote 338 guardado con 100,262 aristas
+23:44:55 - INFO - ✅ Lote 339 guardado con 100,507 aristas
+23:44:55 - INFO - ✅ Lote 340 guardado con 100,680 aristas
+23:44:55 - INFO - ✅ Lote 341 guardado con 105,054 aristas
+23:44:55 - INFO - ✅ Lote 342 guardado con 101,941 aristas
+23:44:55 - INFO - ✅ Lote 343 guardado con 101,745 aristas
+23:44:56 - INFO - ✅ Lote 344 guardado con 101,808 aristas
+23:44:56 - INFO - ✅ Lote 345 guardado con 101,923 aristas
+23:44:56 - INFO - ✅ Lote 346 guardado con 100,524 aristas
+23:44:56 - INFO - ✅ Lote 347 guardado con 104,514 aristas
+23:44:56 - INFO - ✅ Lote 348 guardado con 101,411 aristas
+23:44:56 - INFO - ✅ Lote 349 guardado con 101,447 aristas
+23:44:57 - INFO - ✅ Lote 350 guardado con 100,146 aristas
+23:44:57 - INFO - ✅ Lote 351 guardado con 105,087 aristas
+23:44:57 - INFO - ✅ Lote 352 guardado con 102,859 aristas
+23:44:57 - INFO - ✅ Lote 353 guardado con 105,715 aristas
+23:44:57 - INFO - ✅ Lote 354 guardado con 104,470 aristas
+23:44:58 - INFO - ✅ Lote 355 guardado con 100,230 aristas
+23:44:58 - INFO - ✅ Lote 356 guardado con 105,297 aristas
+23:44:58 - INFO - ✅ Lote 357 guardado con 101,591 aristas
+23:44:58 - INFO - ✅ Lote 358 guardado con 101,401 aristas
+23:44:58 - INFO - ✅ Lote 359 guardado con 101,155 aristas
+23:44:58 - INFO - ✅ Lote 360 guardado con 104,992 aristas
+23:44:59 - INFO - ✅ Lote 361 guardado con 102,458 aristas
+23:44:59 - INFO - ✅ Lote 362 guardado con 101,707 aristas
+23:44:59 - INFO - ✅ Lote 363 guardado con 104,618 aristas
+23:44:59 - INFO - ✅ Lote 364 guardado con 101,713 aristas
+23:44:59 - INFO - ✅ Lote 365 guardado con 101,796 aristas
+23:45:00 - INFO - ✅ Lote 366 guardado con 101,108 aristas
+23:45:00 - INFO - ✅ Lote 367 guardado con 100,848 aristas
+23:45:00 - INFO - ✅ Lote 368 guardado con 101,688 aristas
+23:45:00 - INFO - ✅ Lote 369 guardado con 101,845 aristas
+23:45:00 - INFO - ✅ Lote 370 guardado con 100,721 aristas
+23:45:00 - INFO - ✅ Lote 371 guardado con 100,669 aristas
+23:45:01 - INFO - ✅ Lote 372 guardado con 102,924 aristas
+23:45:01 - INFO - ✅ Lote 373 guardado con 102,499 aristas
+23:45:01 - INFO - ✅ Lote 374 guardado con 105,982 aristas
+23:45:01 - INFO - ✅ Lote 375 guardado con 100,267 aristas
+23:45:01 - INFO - ✅ Lote 376 guardado con 102,754 aristas
+23:45:01 - INFO - ✅ Lote 377 guardado con 100,218 aristas
+23:45:02 - INFO - ✅ Lote 378 guardado con 100,893 aristas
+23:45:02 - INFO - ✅ Lote 379 guardado con 103,582 aristas
+23:45:02 - INFO - ✅ Lote 380 guardado con 100,797 aristas
+23:45:02 - INFO - ✅ Lote 381 guardado con 101,423 aristas
+23:45:02 - INFO - ✅ Lote 382 guardado con 100,804 aristas
+23:45:02 - INFO - ✅ Lote 383 guardado con 100,941 aristas
+23:45:03 - INFO - ✅ Lote 384 guardado con 100,349 aristas
+23:45:03 - INFO -   → Procesados 50,000 nodos
+23:45:03 - INFO - ✅ Lote 385 guardado con 100,335 aristas
+23:45:03 - INFO - ✅ Lote 386 guardado con 100,964 aristas
+23:45:03 - INFO - ✅ Lote 387 guardado con 100,774 aristas
+23:45:03 - INFO - ✅ Lote 388 guardado con 100,630 aristas
+23:45:04 - INFO - ✅ Lote 389 guardado con 100,415 aristas
+23:45:04 - INFO - ✅ Lote 390 guardado con 104,953 aristas
+23:45:04 - INFO - ✅ Lote 391 guardado con 101,677 aristas
+23:45:04 - INFO - ✅ Lote 392 guardado con 105,660 aristas
+23:45:04 - INFO - ✅ Lote 393 guardado con 100,342 aristas
+23:45:05 - INFO - ✅ Lote 394 guardado con 103,887 aristas
+23:45:05 - INFO - ✅ Lote 395 guardado con 104,612 aristas
+23:45:05 - INFO - ✅ Lote 396 guardado con 101,163 aristas
+23:45:05 - INFO - ✅ Lote 397 guardado con 104,476 aristas
+23:45:05 - INFO - ✅ Lote 398 guardado con 102,040 aristas
+23:45:05 - INFO - ✅ Lote 399 guardado con 105,181 aristas
+23:45:06 - INFO - ✅ Lote 400 guardado con 103,883 aristas
+23:45:06 - INFO - ✅ Lote 401 guardado con 103,928 aristas
+23:45:06 - INFO - ✅ Lote 402 guardado con 101,628 aristas
+23:45:06 - INFO - ✅ Lote 403 guardado con 100,711 aristas
+23:45:07 - INFO - ✅ Lote 404 guardado con 101,374 aristas
+23:45:07 - INFO - ✅ Lote 405 guardado con 100,401 aristas
+23:45:07 - INFO - ✅ Lote 406 guardado con 104,094 aristas
+23:45:07 - INFO - ✅ Lote 407 guardado con 100,190 aristas
+23:45:07 - INFO - ✅ Lote 408 guardado con 101,249 aristas
+23:45:07 - INFO - ✅ Lote 409 guardado con 100,557 aristas
+23:45:08 - INFO - ✅ Lote 410 guardado con 100,111 aristas
+23:45:08 - INFO - ✅ Lote 411 guardado con 100,126 aristas
+23:45:08 - INFO - ✅ Lote 412 guardado con 100,240 aristas
+23:45:08 - INFO - ✅ Lote 413 guardado con 104,397 aristas
+23:45:08 - INFO - ✅ Lote 414 guardado con 100,134 aristas
+23:45:09 - INFO - ✅ Lote 415 guardado con 100,022 aristas
+23:45:09 - INFO - ✅ Lote 416 guardado con 100,044 aristas
+23:45:09 - INFO - ✅ Lote 417 guardado con 102,199 aristas
+23:45:09 - INFO - ✅ Lote 418 guardado con 100,952 aristas
+23:45:09 - INFO - ✅ Lote 419 guardado con 101,866 aristas
+23:45:09 - INFO - ✅ Lote 420 guardado con 104,427 aristas
+23:45:10 - INFO - ✅ Lote 421 guardado con 100,047 aristas
+23:45:10 - INFO - ✅ Lote 422 guardado con 100,734 aristas
+23:45:10 - INFO - ✅ Lote 423 guardado con 102,428 aristas
+23:45:10 - INFO - ✅ Lote 424 guardado con 102,205 aristas
+23:45:10 - INFO - ✅ Lote 425 guardado con 100,373 aristas
+23:45:11 - INFO - ✅ Lote 426 guardado con 100,267 aristas
+23:45:11 - INFO - ✅ Lote 427 guardado con 102,283 aristas
+23:45:11 - INFO - ✅ Lote 428 guardado con 101,456 aristas
+23:45:11 - INFO - ✅ Lote 429 guardado con 101,549 aristas
+23:45:11 - INFO - ✅ Lote 430 guardado con 100,636 aristas
+23:45:12 - INFO - ✅ Lote 431 guardado con 100,428 aristas
+23:45:12 - INFO - ✅ Lote 432 guardado con 101,056 aristas
+23:45:12 - INFO - ✅ Lote 433 guardado con 101,302 aristas
+23:45:12 - INFO - ✅ Lote 434 guardado con 101,161 aristas
+23:45:12 - INFO - ✅ Lote 435 guardado con 100,268 aristas
+23:45:12 - INFO - ✅ Lote 436 guardado con 101,151 aristas
+23:45:13 - INFO - ✅ Lote 437 guardado con 100,109 aristas
+23:45:13 - INFO - ✅ Lote 438 guardado con 102,885 aristas
+23:45:13 - INFO - ✅ Lote 439 guardado con 105,528 aristas
+23:45:13 - INFO - ✅ Lote 440 guardado con 100,326 aristas
+23:45:14 - INFO - ✅ Lote 441 guardado con 105,556 aristas
+23:45:14 - INFO - ✅ Lote 442 guardado con 100,797 aristas
+23:45:14 - INFO - ✅ Lote 443 guardado con 101,413 aristas
+23:45:14 - INFO - ✅ Lote 444 guardado con 100,727 aristas
+23:45:14 - INFO - ✅ Lote 445 guardado con 100,640 aristas
+23:45:14 - INFO - ✅ Lote 446 guardado con 100,699 aristas
+23:45:15 - INFO - ✅ Lote 447 guardado con 103,225 aristas
+23:45:15 - INFO - ✅ Lote 448 guardado con 100,002 aristas
+23:45:15 - INFO - ✅ Lote 449 guardado con 106,127 aristas
+23:45:15 - INFO - ✅ Lote 450 guardado con 100,497 aristas
+23:45:15 - INFO - ✅ Lote 451 guardado con 100,633 aristas
+23:45:16 - INFO - ✅ Lote 452 guardado con 100,828 aristas
+23:45:16 - INFO - ✅ Lote 453 guardado con 100,510 aristas
+23:45:16 - INFO - ✅ Lote 454 guardado con 100,269 aristas
+23:45:16 - INFO - ✅ Lote 455 guardado con 102,715 aristas
+23:45:16 - INFO - ✅ Lote 456 guardado con 100,132 aristas
+23:45:17 - INFO - ✅ Lote 457 guardado con 100,019 aristas
+23:45:17 - INFO - ✅ Lote 458 guardado con 100,280 aristas
+23:45:17 - INFO - ✅ Lote 459 guardado con 101,595 aristas
+23:45:17 - INFO - ✅ Lote 460 guardado con 100,644 aristas
+23:45:17 - INFO - ✅ Lote 461 guardado con 100,800 aristas
+23:45:18 - INFO - ✅ Lote 462 guardado con 101,750 aristas
+23:45:18 - INFO - ✅ Lote 463 guardado con 100,014 aristas
+23:45:18 - INFO - ✅ Lote 464 guardado con 101,655 aristas
+23:45:18 - INFO - ✅ Lote 465 guardado con 102,581 aristas
+23:45:18 - INFO - ✅ Lote 466 guardado con 100,103 aristas
+23:45:18 - INFO - ✅ Lote 467 guardado con 100,648 aristas
+23:45:19 - INFO - ✅ Lote 468 guardado con 100,833 aristas
+23:45:19 - INFO - ✅ Lote 469 guardado con 105,979 aristas
+23:45:19 - INFO - ✅ Lote 470 guardado con 100,195 aristas
+23:45:19 - INFO - ✅ Lote 471 guardado con 100,118 aristas
+23:45:19 - INFO - ✅ Lote 472 guardado con 101,837 aristas
+23:45:20 - INFO - ✅ Lote 473 guardado con 100,620 aristas
+23:45:20 - INFO - ✅ Lote 474 guardado con 107,011 aristas
+23:45:20 - INFO - ✅ Lote 475 guardado con 101,024 aristas
+23:45:20 - INFO - ✅ Lote 476 guardado con 101,126 aristas
+23:45:20 - INFO - ✅ Lote 477 guardado con 102,540 aristas
+23:45:21 - INFO - ✅ Lote 478 guardado con 100,512 aristas
+23:45:21 - INFO - ✅ Lote 479 guardado con 104,921 aristas
+23:45:21 - INFO - ✅ Lote 480 guardado con 103,481 aristas
+23:45:21 - INFO - ✅ Lote 481 guardado con 104,869 aristas
+23:45:21 - INFO - ✅ Lote 482 guardado con 100,885 aristas
+23:45:21 - INFO - ✅ Lote 483 guardado con 103,674 aristas
+23:45:22 - INFO - ✅ Lote 484 guardado con 100,113 aristas
+23:45:22 - INFO - ✅ Lote 485 guardado con 104,456 aristas
+23:45:22 - INFO - ✅ Lote 486 guardado con 100,015 aristas
+23:45:22 - INFO - ✅ Lote 487 guardado con 101,013 aristas
+23:45:22 - INFO - ✅ Lote 488 guardado con 102,389 aristas
+23:45:23 - INFO - ✅ Lote 489 guardado con 100,086 aristas
+23:45:23 - INFO - ✅ Lote 490 guardado con 100,715 aristas
+23:45:23 - INFO - ✅ Lote 491 guardado con 100,039 aristas
+23:45:23 - INFO - ✅ Lote 492 guardado con 100,285 aristas
+23:45:23 - INFO - ✅ Lote 493 guardado con 100,289 aristas
+23:45:23 - INFO - ✅ Lote 494 guardado con 100,037 aristas
+23:45:23 - INFO - ✅ Lote 495 guardado con 100,000 aristas
+23:45:24 - INFO - ✅ Lote 496 guardado con 100,219 aristas
+23:45:24 - INFO - ✅ Lote 497 guardado con 100,124 aristas
+23:45:24 - INFO - ✅ Lote 498 guardado con 100,043 aristas
+23:45:24 - INFO - ✅ Lote 499 guardado con 103,193 aristas
+23:45:24 - INFO - ✅ Lote 500 guardado con 100,125 aristas
+23:45:24 - INFO - ✅ Lote 501 guardado con 100,125 aristas
+23:45:25 - INFO - ✅ Lote 502 guardado con 102,648 aristas
+23:45:25 - INFO - ✅ Lote 503 guardado con 100,287 aristas
+23:45:25 - INFO - ✅ Lote 504 guardado con 102,022 aristas
+23:45:25 - INFO - ✅ Lote 505 guardado con 100,195 aristas
+23:45:25 - INFO - ✅ Lote 506 guardado con 100,544 aristas
+23:45:25 - INFO - ✅ Lote 507 guardado con 100,788 aristas
+23:45:26 - INFO - ✅ Lote 508 guardado con 102,738 aristas
+23:45:26 - INFO - ✅ Lote 509 guardado con 100,367 aristas
+23:45:26 - INFO - ✅ Lote 510 guardado con 100,379 aristas
+23:45:26 - INFO - ✅ Lote 511 guardado con 100,210 aristas
+23:45:26 - INFO - ✅ Lote 512 guardado con 100,390 aristas
+23:45:27 - INFO - ✅ Lote 513 guardado con 103,388 aristas
+23:45:27 - INFO - ✅ Lote 514 guardado con 101,387 aristas
+23:45:27 - INFO - ✅ Lote 515 guardado con 100,108 aristas
+23:45:27 - INFO - ✅ Lote 516 guardado con 104,161 aristas
+23:45:27 - INFO - ✅ Lote 517 guardado con 104,420 aristas
+23:45:28 - INFO - ✅ Lote 518 guardado con 100,111 aristas
+23:45:28 - INFO - ✅ Lote 519 guardado con 100,077 aristas
+23:45:28 - INFO - ✅ Lote 520 guardado con 100,285 aristas
+23:45:28 - INFO - ✅ Lote 521 guardado con 101,470 aristas
+23:45:28 - INFO - ✅ Lote 522 guardado con 101,413 aristas
+23:45:28 - INFO - ✅ Lote 523 guardado con 103,422 aristas
+23:45:29 - INFO - ✅ Lote 524 guardado con 102,774 aristas
+23:45:29 - INFO - ✅ Lote 525 guardado con 100,765 aristas
+23:45:29 - INFO - ✅ Lote 526 guardado con 101,880 aristas
+23:45:29 - INFO - ✅ Lote 527 guardado con 100,118 aristas
+23:45:29 - INFO - ✅ Lote 528 guardado con 101,230 aristas
+23:45:29 - INFO - ✅ Lote 529 guardado con 100,673 aristas
+23:45:30 - INFO - ✅ Lote 530 guardado con 101,696 aristas
+23:45:30 - INFO - ✅ Lote 531 guardado con 100,896 aristas
+23:45:30 - INFO - ✅ Lote 532 guardado con 101,476 aristas
+23:45:30 - INFO - ✅ Lote 533 guardado con 100,187 aristas
+23:45:30 - INFO - ✅ Lote 534 guardado con 105,318 aristas
+23:45:31 - INFO - ✅ Lote 535 guardado con 100,216 aristas
+23:45:31 - INFO - ✅ Lote 536 guardado con 100,393 aristas
+23:45:31 - INFO - ✅ Lote 537 guardado con 102,936 aristas
+23:45:31 - INFO - ✅ Lote 538 guardado con 100,048 aristas
+23:45:32 - INFO - ✅ Lote 539 guardado con 100,520 aristas
+23:45:32 - INFO - ✅ Lote 540 guardado con 100,554 aristas
+23:45:32 - INFO - ✅ Lote 541 guardado con 101,661 aristas
+23:45:32 - INFO - ✅ Lote 542 guardado con 100,110 aristas
+23:45:33 - INFO - ✅ Lote 543 guardado con 100,068 aristas
+23:45:33 - INFO - ✅ Lote 544 guardado con 100,399 aristas
+23:45:33 - INFO - ✅ Lote 545 guardado con 101,616 aristas
+23:45:33 - INFO - ✅ Lote 546 guardado con 100,123 aristas
+23:45:33 - INFO - ✅ Lote 547 guardado con 102,095 aristas
+23:45:34 - INFO - ✅ Lote 548 guardado con 101,937 aristas
+23:45:34 - INFO - ✅ Lote 549 guardado con 100,330 aristas
+23:45:34 - INFO - ✅ Lote 550 guardado con 103,362 aristas
+23:45:35 - INFO - ✅ Lote 551 guardado con 100,002 aristas
+23:45:35 - INFO - ✅ Lote 552 guardado con 101,626 aristas
+23:45:35 - INFO - ✅ Lote 553 guardado con 102,416 aristas
+23:45:35 - INFO - ✅ Lote 554 guardado con 100,706 aristas
+23:45:35 - INFO - ✅ Lote 555 guardado con 102,096 aristas
+23:45:35 - INFO - ✅ Lote 556 guardado con 101,033 aristas
+23:45:35 - INFO - ✅ Lote 557 guardado con 100,742 aristas
+23:45:35 - INFO - ✅ Lote 558 guardado con 100,336 aristas
+23:45:36 - INFO - ✅ Lote 559 guardado con 100,731 aristas
+23:45:36 - INFO - ✅ Lote 560 guardado con 100,389 aristas
+23:45:36 - INFO - ✅ Lote 561 guardado con 102,818 aristas
+23:45:36 - INFO - ✅ Lote 562 guardado con 100,770 aristas
+23:45:36 - INFO - ✅ Lote 563 guardado con 101,065 aristas
+23:45:36 - INFO - ✅ Lote 564 guardado con 101,879 aristas
+23:45:37 - INFO - ✅ Lote 565 guardado con 100,380 aristas
+23:45:37 - INFO - ✅ Lote 566 guardado con 100,251 aristas
+23:45:37 - INFO - ✅ Lote 567 guardado con 100,194 aristas
+23:45:37 - INFO - ✅ Lote 568 guardado con 100,351 aristas
+23:45:37 - INFO - ✅ Lote 569 guardado con 100,013 aristas
+23:45:37 - INFO - ✅ Lote 570 guardado con 105,684 aristas
+23:45:38 - INFO - ✅ Lote 571 guardado con 102,194 aristas
+23:45:38 - INFO - ✅ Lote 572 guardado con 101,488 aristas
+23:45:38 - INFO - ✅ Lote 573 guardado con 100,077 aristas
+23:45:38 - INFO - ✅ Lote 574 guardado con 105,947 aristas
+23:45:38 - INFO - ✅ Lote 575 guardado con 104,641 aristas
+23:45:38 - INFO - ✅ Lote 576 guardado con 100,805 aristas
+23:45:39 - INFO - ✅ Lote 577 guardado con 101,522 aristas
+23:45:39 - INFO - ✅ Lote 578 guardado con 103,206 aristas
+23:45:39 - INFO - ✅ Lote 579 guardado con 100,723 aristas
+23:45:39 - INFO - ✅ Lote 580 guardado con 101,956 aristas
+23:45:39 - INFO - ✅ Lote 581 guardado con 100,409 aristas
+23:45:39 - INFO - ✅ Lote 582 guardado con 100,020 aristas
+23:45:39 - INFO - ✅ Lote 583 guardado con 101,139 aristas
+23:45:40 - INFO - ✅ Lote 584 guardado con 100,047 aristas
+23:45:40 - INFO -   → Procesados 100,000 nodos
+23:45:40 - INFO - ✅ Lote 585 guardado con 103,532 aristas
+23:45:40 - INFO - ✅ Lote 586 guardado con 100,680 aristas
+23:45:40 - INFO - ✅ Lote 587 guardado con 100,962 aristas
+23:45:40 - INFO - ✅ Lote 588 guardado con 100,672 aristas
+23:45:41 - INFO - ✅ Lote 589 guardado con 101,433 aristas
+23:45:41 - INFO - ✅ Lote 590 guardado con 100,378 aristas
+23:45:41 - INFO - ✅ Lote 591 guardado con 100,740 aristas
+23:45:41 - INFO - ✅ Lote 592 guardado con 103,128 aristas
+23:45:41 - INFO - ✅ Lote 593 guardado con 100,030 aristas
+23:45:41 - INFO - ✅ Lote 594 guardado con 101,078 aristas
+23:45:42 - INFO - ✅ Lote 595 guardado con 101,498 aristas
+23:45:42 - INFO - ✅ Lote 596 guardado con 104,531 aristas
+23:45:42 - INFO - ✅ Lote 597 guardado con 101,260 aristas
+23:45:42 - INFO - ✅ Lote 598 guardado con 100,321 aristas
+23:45:42 - INFO - ✅ Lote 599 guardado con 100,014 aristas
+23:45:42 - INFO - ✅ Lote 600 guardado con 102,186 aristas
+23:45:43 - INFO - ✅ Lote 601 guardado con 100,022 aristas
+23:45:43 - INFO - ✅ Lote 602 guardado con 103,253 aristas
+23:45:43 - INFO - ✅ Lote 603 guardado con 100,223 aristas
+23:45:43 - INFO - ✅ Lote 604 guardado con 102,366 aristas
+23:45:43 - INFO - ✅ Lote 605 guardado con 100,846 aristas
+23:45:43 - INFO - ✅ Lote 606 guardado con 100,210 aristas
+23:45:44 - INFO - ✅ Lote 607 guardado con 102,915 aristas
+23:45:44 - INFO - ✅ Lote 608 guardado con 100,112 aristas
+23:45:44 - INFO - ✅ Lote 609 guardado con 100,049 aristas
+23:45:44 - INFO - ✅ Lote 610 guardado con 100,029 aristas
+23:45:44 - INFO - ✅ Lote 611 guardado con 100,071 aristas
+23:45:44 - INFO - ✅ Lote 612 guardado con 103,761 aristas
+23:45:44 - INFO - ✅ Lote 613 guardado con 100,784 aristas
+23:45:45 - INFO - ✅ Lote 614 guardado con 101,628 aristas
+23:45:45 - INFO - ✅ Lote 615 guardado con 102,253 aristas
+23:45:45 - INFO - ✅ Lote 616 guardado con 100,000 aristas
+23:45:45 - INFO - ✅ Lote 617 guardado con 101,660 aristas
+23:45:45 - INFO - ✅ Lote 618 guardado con 100,201 aristas
+23:45:45 - INFO - ✅ Lote 619 guardado con 100,158 aristas
+23:45:46 - INFO - ✅ Lote 620 guardado con 101,084 aristas
+23:45:46 - INFO - ✅ Lote 621 guardado con 100,366 aristas
+23:45:46 - INFO - ✅ Lote 622 guardado con 100,021 aristas
+23:45:46 - INFO - ✅ Lote 623 guardado con 100,227 aristas
+23:45:46 - INFO - ✅ Lote 624 guardado con 100,418 aristas
+23:45:46 - INFO - ✅ Lote 625 guardado con 100,000 aristas
+23:45:46 - INFO - ✅ Lote 626 guardado con 100,064 aristas
+23:45:47 - INFO - ✅ Lote 627 guardado con 100,723 aristas
+23:45:47 - INFO - ✅ Lote 628 guardado con 100,181 aristas
+23:45:47 - INFO - ✅ Lote 629 guardado con 100,000 aristas
+23:45:47 - INFO - ✅ Lote 630 guardado con 102,065 aristas
+23:45:47 - INFO - ✅ Lote 631 guardado con 100,017 aristas
+23:45:47 - INFO - ✅ Lote 632 guardado con 100,000 aristas
+23:45:48 - INFO - ✅ Lote 633 guardado con 106,545 aristas
+23:45:48 - INFO - ✅ Lote 634 guardado con 100,175 aristas
+23:45:48 - INFO - ✅ Lote 635 guardado con 100,747 aristas
+23:45:48 - INFO - ✅ Lote 636 guardado con 101,622 aristas
+23:45:48 - INFO - ✅ Lote 637 guardado con 100,701 aristas
+23:45:48 - INFO - ✅ Lote 638 guardado con 104,299 aristas
+23:45:49 - INFO - ✅ Lote 639 guardado con 105,270 aristas
+23:45:49 - INFO - ✅ Lote 640 guardado con 102,535 aristas
+23:45:49 - INFO - ✅ Lote 641 guardado con 107,028 aristas
+23:45:49 - INFO - ✅ Lote 642 guardado con 100,935 aristas
+23:45:49 - INFO - ✅ Lote 643 guardado con 100,631 aristas
+23:45:49 - INFO - ✅ Lote 644 guardado con 103,532 aristas
+23:45:49 - INFO - ✅ Lote 645 guardado con 105,524 aristas
+23:45:50 - INFO - ✅ Lote 646 guardado con 100,434 aristas
+23:45:50 - INFO - ✅ Lote 647 guardado con 103,518 aristas
+23:45:50 - INFO - ✅ Lote 648 guardado con 101,749 aristas
+23:45:50 - INFO - ✅ Lote 649 guardado con 103,881 aristas
+23:45:50 - INFO - ✅ Lote 650 guardado con 101,159 aristas
+23:45:50 - INFO - ✅ Lote 651 guardado con 100,119 aristas
+23:45:51 - INFO - ✅ Lote 652 guardado con 101,664 aristas
+23:45:51 - INFO - ✅ Lote 653 guardado con 104,593 aristas
+23:45:51 - INFO - ✅ Lote 654 guardado con 100,189 aristas
+23:45:51 - INFO - ✅ Lote 655 guardado con 100,229 aristas
+23:45:51 - INFO - ✅ Lote 656 guardado con 100,061 aristas
+23:45:51 - INFO - ✅ Lote 657 guardado con 104,119 aristas
+23:45:51 - INFO - ✅ Lote 658 guardado con 101,537 aristas
+23:45:52 - INFO - ✅ Lote 659 guardado con 100,052 aristas
+23:45:52 - INFO - ✅ Lote 660 guardado con 100,879 aristas
+23:45:52 - INFO - ✅ Lote 661 guardado con 100,014 aristas
+23:45:52 - INFO - ✅ Lote 662 guardado con 100,627 aristas
+23:45:52 - INFO - ✅ Lote 663 guardado con 100,279 aristas
+23:45:52 - INFO - ✅ Lote 664 guardado con 100,061 aristas
+23:45:53 - INFO - ✅ Lote 665 guardado con 100,124 aristas
+23:45:53 - INFO - ✅ Lote 666 guardado con 100,810 aristas
+23:45:53 - INFO - ✅ Lote 667 guardado con 100,077 aristas
+23:45:53 - INFO - ✅ Lote 668 guardado con 102,179 aristas
+23:45:53 - INFO - ✅ Lote 669 guardado con 100,986 aristas
+23:45:53 - INFO - ✅ Lote 670 guardado con 101,715 aristas
+23:45:54 - INFO - ✅ Lote 671 guardado con 100,373 aristas
+23:45:54 - INFO - ✅ Lote 672 guardado con 102,676 aristas
+23:45:54 - INFO - ✅ Lote 673 guardado con 100,155 aristas
+23:45:54 - INFO - ✅ Lote 674 guardado con 100,566 aristas
+23:45:54 - INFO - ✅ Lote 675 guardado con 100,201 aristas
+23:45:54 - INFO - ✅ Lote 676 guardado con 100,025 aristas
+23:45:55 - INFO - ✅ Lote 677 guardado con 100,656 aristas
+23:45:55 - INFO - ✅ Lote 678 guardado con 100,168 aristas
+23:45:55 - INFO - ✅ Lote 679 guardado con 100,759 aristas
+23:45:55 - INFO - ✅ Lote 680 guardado con 101,164 aristas
+23:45:55 - INFO - ✅ Lote 681 guardado con 100,068 aristas
+23:45:55 - INFO - ✅ Lote 682 guardado con 100,177 aristas
+23:45:56 - INFO - ✅ Lote 683 guardado con 100,015 aristas
+23:45:56 - INFO - ✅ Lote 684 guardado con 103,192 aristas
+23:45:56 - INFO - ✅ Lote 685 guardado con 100,022 aristas
+23:45:56 - INFO - ✅ Lote 686 guardado con 102,753 aristas
+23:45:56 - INFO - ✅ Lote 687 guardado con 103,517 aristas
+23:45:56 - INFO - ✅ Lote 688 guardado con 100,215 aristas
+23:45:56 - INFO - ✅ Lote 689 guardado con 101,980 aristas
+23:45:57 - INFO - ✅ Lote 690 guardado con 100,302 aristas
+23:45:57 - INFO - ✅ Lote 691 guardado con 101,920 aristas
+23:45:57 - INFO - ✅ Lote 692 guardado con 100,027 aristas
+23:45:57 - INFO - ✅ Lote 693 guardado con 102,034 aristas
+23:45:57 - INFO - ✅ Lote 694 guardado con 100,518 aristas
+23:45:58 - INFO - ✅ Lote 695 guardado con 102,585 aristas
+23:45:58 - INFO - ✅ Lote 696 guardado con 102,620 aristas
+23:45:58 - INFO - ✅ Lote 697 guardado con 100,497 aristas
+23:45:58 - INFO - ✅ Lote 698 guardado con 100,184 aristas
+23:45:58 - INFO - ✅ Lote 699 guardado con 101,457 aristas
+23:45:58 - INFO - ✅ Lote 700 guardado con 101,026 aristas
+23:45:58 - INFO - ✅ Lote 701 guardado con 104,735 aristas
+23:45:59 - INFO - ✅ Lote 702 guardado con 104,511 aristas
+23:45:59 - INFO - ✅ Lote 703 guardado con 100,258 aristas
+23:45:59 - INFO -   → Procesados 150,000 nodos
+23:45:59 - INFO - ✅ Lote 704 guardado con 101,891 aristas
+23:45:59 - INFO - ✅ Lote 705 guardado con 102,303 aristas
+23:45:59 - INFO - ✅ Lote 706 guardado con 104,339 aristas
+23:45:59 - INFO - ✅ Lote 707 guardado con 101,792 aristas
+23:46:00 - INFO - ✅ Lote 708 guardado con 102,646 aristas
+23:46:00 - INFO - ✅ Lote 709 guardado con 102,946 aristas
+23:46:00 - INFO - ✅ Lote 710 guardado con 100,482 aristas
+23:46:00 - INFO - ✅ Lote 711 guardado con 102,079 aristas
+23:46:00 - INFO - ✅ Lote 712 guardado con 104,857 aristas
+23:46:00 - INFO - ✅ Lote 713 guardado con 105,455 aristas
+23:46:01 - INFO - ✅ Lote 714 guardado con 102,923 aristas
+23:46:01 - INFO - ✅ Lote 715 guardado con 100,228 aristas
+23:46:01 - INFO - ✅ Lote 716 guardado con 102,034 aristas
+23:46:01 - INFO - ✅ Lote 717 guardado con 101,426 aristas
+23:46:01 - INFO - ✅ Lote 718 guardado con 100,219 aristas
+23:46:01 - INFO - ✅ Lote 719 guardado con 100,139 aristas
+23:46:02 - INFO - ✅ Lote 720 guardado con 100,722 aristas
+23:46:02 - INFO - ✅ Lote 721 guardado con 102,008 aristas
+23:46:02 - INFO - ✅ Lote 722 guardado con 102,629 aristas
+23:46:02 - INFO - ✅ Lote 723 guardado con 100,303 aristas
+23:46:02 - INFO - ✅ Lote 724 guardado con 100,888 aristas
+23:46:02 - INFO - ✅ Lote 725 guardado con 100,713 aristas
+23:46:03 - INFO - ✅ Lote 726 guardado con 101,924 aristas
+23:46:03 - INFO - ✅ Lote 727 guardado con 100,031 aristas
+23:46:03 - INFO - ✅ Lote 728 guardado con 101,111 aristas
+23:46:03 - INFO - ✅ Lote 729 guardado con 100,033 aristas
+23:46:03 - INFO - ✅ Lote 730 guardado con 106,413 aristas
+23:46:03 - INFO - ✅ Lote 731 guardado con 100,585 aristas
+23:46:03 - INFO - ✅ Lote 732 guardado con 101,262 aristas
+23:46:04 - INFO - ✅ Lote 733 guardado con 102,550 aristas
+23:46:04 - INFO - ✅ Lote 734 guardado con 100,096 aristas
+23:46:04 - INFO - ✅ Lote 735 guardado con 100,701 aristas
+23:46:04 - INFO - ✅ Lote 736 guardado con 103,057 aristas
+23:46:04 - INFO - ✅ Lote 737 guardado con 102,347 aristas
+23:46:04 - INFO - ✅ Lote 738 guardado con 100,023 aristas
+23:46:04 - INFO - ✅ Lote 739 guardado con 100,494 aristas
+23:46:05 - INFO - ✅ Lote 740 guardado con 100,051 aristas
+23:46:05 - INFO - ✅ Lote 741 guardado con 100,036 aristas
+23:46:05 - INFO - ✅ Lote 742 guardado con 100,121 aristas
+23:46:05 - INFO - ✅ Lote 743 guardado con 100,471 aristas
+23:46:05 - INFO - ✅ Lote 744 guardado con 100,057 aristas
+23:46:05 - INFO - ✅ Lote 745 guardado con 100,468 aristas
+23:46:06 - INFO - ✅ Lote 746 guardado con 101,570 aristas
+23:46:06 - INFO - ✅ Lote 747 guardado con 100,440 aristas
+23:46:06 - INFO - ✅ Lote 748 guardado con 101,027 aristas
+23:46:06 - INFO - ✅ Lote 749 guardado con 101,046 aristas
+23:46:06 - INFO - ✅ Lote 750 guardado con 100,131 aristas
+23:46:06 - INFO - ✅ Lote 751 guardado con 100,917 aristas
+23:46:07 - INFO - ✅ Lote 752 guardado con 103,732 aristas
+23:46:07 - INFO - ✅ Lote 753 guardado con 106,182 aristas
+23:46:07 - INFO - ✅ Lote 754 guardado con 100,004 aristas
+23:46:07 - INFO - ✅ Lote 755 guardado con 100,706 aristas
+23:46:07 - INFO - ✅ Lote 756 guardado con 100,015 aristas
+23:46:07 - INFO - ✅ Lote 757 guardado con 100,407 aristas
+23:46:07 - INFO - ✅ Lote 758 guardado con 100,414 aristas
+23:46:08 - INFO - ✅ Lote 759 guardado con 100,004 aristas
+23:46:08 - INFO - ✅ Lote 760 guardado con 103,793 aristas
+23:46:08 - INFO - ✅ Lote 761 guardado con 100,221 aristas
+23:46:08 - INFO - ✅ Lote 762 guardado con 100,841 aristas
+23:46:08 - INFO - ✅ Lote 763 guardado con 100,027 aristas
+23:46:08 - INFO - ✅ Lote 764 guardado con 101,686 aristas
+23:46:09 - INFO - ✅ Lote 765 guardado con 100,125 aristas
+23:46:09 - INFO - ✅ Lote 766 guardado con 100,018 aristas
+23:46:09 - INFO - ✅ Lote 767 guardado con 101,505 aristas
+23:46:09 - INFO - ✅ Lote 768 guardado con 100,183 aristas
+23:46:09 - INFO - ✅ Lote 769 guardado con 100,190 aristas
+23:46:09 - INFO - ✅ Lote 770 guardado con 100,011 aristas
+23:46:10 - INFO - ✅ Lote 771 guardado con 102,582 aristas
+23:46:10 - INFO - ✅ Lote 772 guardado con 100,003 aristas
+23:46:10 - INFO - ✅ Lote 773 guardado con 100,250 aristas
+23:46:10 - INFO - ✅ Lote 774 guardado con 100,001 aristas
+23:46:10 - INFO - ✅ Lote 775 guardado con 100,783 aristas
+23:46:11 - INFO - ✅ Lote 776 guardado con 100,180 aristas
+23:46:11 - INFO - ✅ Lote 777 guardado con 101,131 aristas
+23:46:11 - INFO - ✅ Lote 778 guardado con 100,821 aristas
+23:46:11 - INFO - ✅ Lote 779 guardado con 100,893 aristas
+23:46:11 - INFO - ✅ Lote 780 guardado con 100,202 aristas
+23:46:11 - INFO - ✅ Lote 781 guardado con 105,888 aristas
+23:46:11 - INFO - ✅ Lote 782 guardado con 100,054 aristas
+23:46:12 - INFO - ✅ Lote 783 guardado con 100,345 aristas
+23:46:12 - INFO - ✅ Lote 784 guardado con 100,004 aristas
+23:46:12 - INFO - ✅ Lote 785 guardado con 101,922 aristas
+23:46:12 - INFO - ✅ Lote 786 guardado con 103,902 aristas
+23:46:12 - INFO - ✅ Lote 787 guardado con 100,792 aristas
+23:46:12 - INFO - ✅ Lote 788 guardado con 101,951 aristas
+23:46:13 - INFO - ✅ Lote 789 guardado con 103,463 aristas
+23:46:13 - INFO - ✅ Lote 790 guardado con 101,232 aristas
+23:46:13 - INFO - ✅ Lote 791 guardado con 105,623 aristas
+23:46:13 - INFO - ✅ Lote 792 guardado con 100,299 aristas
+23:46:13 - INFO - ✅ Lote 793 guardado con 101,077 aristas
+23:46:13 - INFO - ✅ Lote 794 guardado con 100,049 aristas
+23:46:14 - INFO - ✅ Lote 795 guardado con 101,400 aristas
+23:46:14 - INFO - ✅ Lote 796 guardado con 101,381 aristas
+23:46:14 - INFO - ✅ Lote 797 guardado con 100,010 aristas
+23:46:14 - INFO - ✅ Lote 798 guardado con 101,275 aristas
+23:46:14 - INFO - ✅ Lote 799 guardado con 100,041 aristas
+23:46:14 - INFO - ✅ Lote 800 guardado con 100,085 aristas
+23:46:15 - INFO - ✅ Lote 801 guardado con 100,048 aristas
+23:46:15 - INFO - ✅ Lote 802 guardado con 100,648 aristas
+23:46:15 - INFO - ✅ Lote 803 guardado con 100,247 aristas
+23:46:15 - INFO - ✅ Lote 804 guardado con 100,883 aristas
+23:46:15 - INFO - ✅ Lote 805 guardado con 100,237 aristas
+23:46:15 - INFO - ✅ Lote 806 guardado con 100,105 aristas
+23:46:16 - INFO - ✅ Lote 807 guardado con 100,882 aristas
+23:46:16 - INFO -   → Procesados 200,000 nodos
+23:46:16 - INFO - ✅ Lote 808 guardado con 100,999 aristas
+23:46:16 - INFO - ✅ Lote 809 guardado con 100,009 aristas
+23:46:16 - INFO - ✅ Lote 810 guardado con 100,021 aristas
+23:46:16 - INFO - ✅ Lote 811 guardado con 100,365 aristas
+23:46:16 - INFO - ✅ Lote 812 guardado con 100,988 aristas
+23:46:16 - INFO - ✅ Lote 813 guardado con 100,019 aristas
+23:46:17 - INFO - ✅ Lote 814 guardado con 100,669 aristas
+23:46:17 - INFO - ✅ Lote 815 guardado con 101,626 aristas
+23:46:17 - INFO - ✅ Lote 816 guardado con 100,172 aristas
+23:46:17 - INFO - ✅ Lote 817 guardado con 100,308 aristas
+23:46:17 - INFO - ✅ Lote 818 guardado con 102,192 aristas
+23:46:18 - INFO - ✅ Lote 819 guardado con 101,291 aristas
+23:46:18 - INFO - ✅ Lote 820 guardado con 100,728 aristas
+23:46:18 - INFO - ✅ Lote 821 guardado con 100,527 aristas
+23:46:18 - INFO - ✅ Lote 822 guardado con 100,002 aristas
+23:46:18 - INFO - ✅ Lote 823 guardado con 100,698 aristas
+23:46:18 - INFO - ✅ Lote 824 guardado con 100,176 aristas
+23:46:19 - INFO - ✅ Lote 825 guardado con 102,962 aristas
+23:46:19 - INFO - ✅ Lote 826 guardado con 101,024 aristas
+23:46:19 - INFO - ✅ Lote 827 guardado con 100,488 aristas
+23:46:19 - INFO - ✅ Lote 828 guardado con 100,134 aristas
+23:46:19 - INFO - ✅ Lote 829 guardado con 101,262 aristas
+23:46:19 - INFO - ✅ Lote 830 guardado con 100,346 aristas
+23:46:20 - INFO - ✅ Lote 831 guardado con 100,352 aristas
+23:46:20 - INFO - ✅ Lote 832 guardado con 101,676 aristas
+23:46:20 - INFO - ✅ Lote 833 guardado con 100,424 aristas
+23:46:20 - INFO - ✅ Lote 834 guardado con 102,695 aristas
+23:46:20 - INFO - ✅ Lote 835 guardado con 103,323 aristas
+23:46:21 - INFO - ✅ Lote 836 guardado con 100,078 aristas
+23:46:21 - INFO - ✅ Lote 837 guardado con 101,269 aristas
+23:46:21 - INFO - ✅ Lote 838 guardado con 100,390 aristas
+23:46:21 - INFO - ✅ Lote 839 guardado con 100,127 aristas
+23:46:21 - INFO - ✅ Lote 840 guardado con 101,037 aristas
+23:46:21 - INFO - ✅ Lote 841 guardado con 100,095 aristas
+23:46:22 - INFO - ✅ Lote 842 guardado con 100,138 aristas
+23:46:22 - INFO - ✅ Lote 843 guardado con 101,625 aristas
+23:46:22 - INFO - ✅ Lote 844 guardado con 100,052 aristas
+23:46:22 - INFO - ✅ Lote 845 guardado con 102,311 aristas
+23:46:23 - INFO - ✅ Lote 846 guardado con 100,844 aristas
+23:46:23 - INFO - ✅ Lote 847 guardado con 103,124 aristas
+23:46:23 - INFO - ✅ Lote 848 guardado con 100,444 aristas
+23:46:23 - INFO - ✅ Lote 849 guardado con 100,250 aristas
+23:46:23 - INFO - ✅ Lote 850 guardado con 100,206 aristas
+23:46:24 - INFO - ✅ Lote 851 guardado con 100,046 aristas
+23:46:24 - INFO - ✅ Lote 852 guardado con 100,133 aristas
+23:46:24 - INFO - ✅ Lote 853 guardado con 102,033 aristas
+23:46:24 - INFO - ✅ Lote 854 guardado con 100,451 aristas
+23:46:24 - INFO - ✅ Lote 855 guardado con 100,472 aristas
+23:46:25 - INFO - ✅ Lote 856 guardado con 102,073 aristas
+23:46:25 - INFO - ✅ Lote 857 guardado con 100,057 aristas
+23:46:25 - INFO - ✅ Lote 858 guardado con 100,053 aristas
+23:46:25 - INFO - ✅ Lote 859 guardado con 100,095 aristas
+23:46:25 - INFO - ✅ Lote 860 guardado con 100,101 aristas
+23:46:25 - INFO - ✅ Lote 861 guardado con 100,447 aristas
+23:46:26 - INFO - ✅ Lote 862 guardado con 100,157 aristas
+23:46:26 - INFO - ✅ Lote 863 guardado con 100,001 aristas
+23:46:26 - INFO - ✅ Lote 864 guardado con 100,002 aristas
+23:46:26 - INFO - ✅ Lote 865 guardado con 101,160 aristas
+23:46:26 - INFO - ✅ Lote 866 guardado con 101,618 aristas
+23:46:26 - INFO - ✅ Lote 867 guardado con 100,023 aristas
+23:46:27 - INFO - ✅ Lote 868 guardado con 100,439 aristas
+23:46:27 - INFO - ✅ Lote 869 guardado con 101,248 aristas
+23:46:27 - INFO - ✅ Lote 870 guardado con 100,198 aristas
+23:46:27 - INFO - ✅ Lote 871 guardado con 100,532 aristas
+23:46:27 - INFO - ✅ Lote 872 guardado con 100,749 aristas
+23:46:27 - INFO - ✅ Lote 873 guardado con 100,361 aristas
+23:46:28 - INFO - ✅ Lote 874 guardado con 100,034 aristas
+23:46:28 - INFO - ✅ Lote 875 guardado con 100,440 aristas
+23:46:28 - INFO - ✅ Lote 876 guardado con 101,617 aristas
+23:46:28 - INFO - ✅ Lote 877 guardado con 100,089 aristas
+23:46:28 - INFO - ✅ Lote 878 guardado con 103,306 aristas
+23:46:29 - INFO - ✅ Lote 879 guardado con 100,366 aristas
+23:46:29 - INFO - ✅ Lote 880 guardado con 100,041 aristas
+23:46:29 - INFO - ✅ Lote 881 guardado con 100,491 aristas
+23:46:29 - INFO - ✅ Lote 882 guardado con 100,569 aristas
+23:46:29 - INFO - ✅ Lote 883 guardado con 101,329 aristas
+23:46:30 - INFO - ✅ Lote 884 guardado con 100,024 aristas
+23:46:30 - INFO -   → Procesados 250,000 nodos
+23:46:30 - INFO - ✅ Lote 885 guardado con 101,425 aristas
+23:46:30 - INFO - ✅ Lote 886 guardado con 100,642 aristas
+23:46:30 - INFO - ✅ Lote 887 guardado con 101,407 aristas
+23:46:30 - INFO - ✅ Lote 888 guardado con 100,582 aristas
+23:46:30 - INFO - ✅ Lote 889 guardado con 100,169 aristas
+23:46:31 - INFO - ✅ Lote 890 guardado con 100,010 aristas
+23:46:31 - INFO - ✅ Lote 891 guardado con 100,100 aristas
+23:46:31 - INFO - ✅ Lote 892 guardado con 100,038 aristas
+23:46:31 - INFO - ✅ Lote 893 guardado con 100,247 aristas
+23:46:31 - INFO - ✅ Lote 894 guardado con 100,204 aristas
+23:46:32 - INFO - ✅ Lote 895 guardado con 100,662 aristas
+23:46:32 - INFO - ✅ Lote 896 guardado con 100,348 aristas
+23:46:32 - INFO - ✅ Lote 897 guardado con 100,248 aristas
+23:46:32 - INFO - ✅ Lote 898 guardado con 100,422 aristas
+23:46:32 - INFO - ✅ Lote 899 guardado con 100,831 aristas
+23:46:33 - INFO - ✅ Lote 900 guardado con 101,357 aristas
+23:46:33 - INFO - ✅ Lote 901 guardado con 100,671 aristas
+23:46:33 - INFO - ✅ Lote 902 guardado con 100,440 aristas
+23:46:33 - INFO - ✅ Lote 903 guardado con 100,919 aristas
+23:46:33 - INFO - ✅ Lote 904 guardado con 102,927 aristas
+23:46:34 - INFO - ✅ Lote 905 guardado con 100,024 aristas
+23:46:34 - INFO - ✅ Lote 906 guardado con 100,064 aristas
+23:46:34 - INFO - ✅ Lote 907 guardado con 101,956 aristas
+23:46:34 - INFO - ✅ Lote 908 guardado con 100,257 aristas
+23:46:34 - INFO - ✅ Lote 909 guardado con 100,087 aristas
+23:46:35 - INFO - ✅ Lote 910 guardado con 102,541 aristas
+23:46:35 - INFO - ✅ Lote 911 guardado con 100,096 aristas
+23:46:35 - INFO - ✅ Lote 912 guardado con 100,356 aristas
+23:46:35 - INFO - ✅ Lote 913 guardado con 100,490 aristas
+23:46:35 - INFO - ✅ Lote 914 guardado con 101,447 aristas
+23:46:35 - INFO - ✅ Lote 915 guardado con 100,615 aristas
+23:46:36 - INFO - ✅ Lote 916 guardado con 100,155 aristas
+23:46:36 - INFO - ✅ Lote 917 guardado con 100,919 aristas
+23:46:36 - INFO - ✅ Lote 918 guardado con 100,149 aristas
+23:46:36 - INFO - ✅ Lote 919 guardado con 100,353 aristas
+23:46:36 - INFO - ✅ Lote 920 guardado con 100,060 aristas
+23:46:37 - INFO - ✅ Lote 921 guardado con 100,657 aristas
+23:46:37 - INFO - ✅ Lote 922 guardado con 100,064 aristas
+23:46:37 - INFO - ✅ Lote 923 guardado con 100,512 aristas
+23:46:37 - INFO - ✅ Lote 924 guardado con 100,046 aristas
+23:46:37 - INFO - ✅ Lote 925 guardado con 100,180 aristas
+23:46:38 - INFO - ✅ Lote 926 guardado con 103,899 aristas
+23:46:38 - INFO - ✅ Lote 927 guardado con 100,091 aristas
+23:46:38 - INFO - ✅ Lote 928 guardado con 100,011 aristas
+23:46:38 - INFO - ✅ Lote 929 guardado con 100,917 aristas
+23:46:38 - INFO - ✅ Lote 930 guardado con 100,652 aristas
+23:46:38 - INFO - ✅ Lote 931 guardado con 100,056 aristas
+23:46:39 - INFO - ✅ Lote 932 guardado con 100,198 aristas
+23:46:39 - INFO - ✅ Lote 933 guardado con 100,398 aristas
+23:46:39 - INFO - ✅ Lote 934 guardado con 100,304 aristas
+23:46:39 - INFO - ✅ Lote 935 guardado con 102,285 aristas
+23:46:39 - INFO - ✅ Lote 936 guardado con 100,016 aristas
+23:46:40 - INFO - ✅ Lote 937 guardado con 100,000 aristas
+23:46:40 - INFO - ✅ Lote 938 guardado con 100,294 aristas
+23:46:40 - INFO -   → Procesados 300,000 nodos
+23:46:40 - INFO - ✅ Lote 939 guardado con 100,647 aristas
+23:46:40 - INFO - ✅ Lote 940 guardado con 100,128 aristas
+23:46:40 - INFO - ✅ Lote 941 guardado con 100,082 aristas
+23:46:41 - INFO - ✅ Lote 942 guardado con 100,027 aristas
+23:46:41 - INFO - ✅ Lote 943 guardado con 100,135 aristas
+23:46:41 - INFO - ✅ Lote 944 guardado con 100,808 aristas
+23:46:41 - INFO - ✅ Lote 945 guardado con 101,622 aristas
+23:46:41 - INFO - ✅ Lote 946 guardado con 100,971 aristas
+23:46:41 - INFO - ✅ Lote 947 guardado con 100,063 aristas
+23:46:42 - INFO - ✅ Lote 948 guardado con 100,019 aristas
+23:46:42 - INFO - ✅ Lote 949 guardado con 101,247 aristas
+23:46:42 - INFO - ✅ Lote 950 guardado con 100,135 aristas
+23:46:42 - INFO - ✅ Lote 951 guardado con 100,291 aristas
+23:46:42 - INFO - ✅ Lote 952 guardado con 100,073 aristas
+23:46:42 - INFO - ✅ Lote 953 guardado con 101,198 aristas
+23:46:43 - INFO - ✅ Lote 954 guardado con 100,014 aristas
+23:46:43 - INFO - ✅ Lote 955 guardado con 100,269 aristas
+23:46:43 - INFO - ✅ Lote 956 guardado con 100,012 aristas
+23:46:43 - INFO - ✅ Lote 957 guardado con 100,013 aristas
+23:46:43 - INFO - ✅ Lote 958 guardado con 100,404 aristas
+23:46:44 - INFO - ✅ Lote 959 guardado con 100,011 aristas
+23:46:44 - INFO - ✅ Lote 960 guardado con 100,302 aristas
+23:46:44 - INFO - ✅ Lote 961 guardado con 100,274 aristas
+23:46:44 - INFO - ✅ Lote 962 guardado con 100,083 aristas
+23:46:44 - INFO - ✅ Lote 963 guardado con 102,554 aristas
+23:46:45 - INFO - ✅ Lote 964 guardado con 100,097 aristas
+23:46:45 - INFO - ✅ Lote 965 guardado con 100,047 aristas
+23:46:45 - INFO - ✅ Lote 966 guardado con 100,226 aristas
+23:46:45 - INFO - ✅ Lote 967 guardado con 100,601 aristas
+23:46:45 - INFO - ✅ Lote 968 guardado con 100,011 aristas
+23:46:46 - INFO - ✅ Lote 969 guardado con 100,194 aristas
+23:46:46 - INFO - ✅ Lote 970 guardado con 100,355 aristas
+23:46:46 - INFO - ✅ Lote 971 guardado con 100,032 aristas
+23:46:46 - INFO - ✅ Lote 972 guardado con 100,002 aristas
+23:46:46 - INFO - ✅ Lote 973 guardado con 100,021 aristas
+23:46:47 - INFO - ✅ Lote 974 guardado con 100,046 aristas
+23:46:47 - INFO - ✅ Lote 975 guardado con 100,009 aristas
+23:46:47 - INFO - ✅ Lote 976 guardado con 100,778 aristas
+23:46:47 - INFO - ✅ Lote 977 guardado con 100,673 aristas
+23:46:47 - INFO - ✅ Lote 978 guardado con 100,055 aristas
+23:46:47 - INFO -   → Procesados 350,000 nodos
+23:46:48 - INFO - ✅ Lote 979 guardado con 100,003 aristas
+23:46:48 - INFO - ✅ Lote 980 guardado con 100,001 aristas
+23:46:48 - INFO - ✅ Lote 981 guardado con 100,566 aristas
+23:46:48 - INFO - ✅ Lote 982 guardado con 100,021 aristas
+23:46:48 - INFO - ✅ Lote 983 guardado con 101,463 aristas
+23:46:49 - INFO - ✅ Lote 984 guardado con 100,446 aristas
+23:46:49 - INFO - ✅ Lote 985 guardado con 100,912 aristas
+23:46:49 - INFO - ✅ Lote 986 guardado con 100,141 aristas
+23:46:49 - INFO - ✅ Lote 987 guardado con 100,000 aristas
+23:46:49 - INFO - ✅ Lote 988 guardado con 100,192 aristas
+23:46:50 - INFO - ✅ Lote 989 guardado con 100,092 aristas
+23:46:50 - INFO - ✅ Lote 990 guardado con 100,018 aristas
+23:46:50 - INFO - ✅ Lote 991 guardado con 100,019 aristas
+23:46:50 - INFO - ✅ Lote 992 guardado con 100,103 aristas
+23:46:50 - INFO - ✅ Lote 993 guardado con 100,137 aristas
+23:46:51 - INFO - ✅ Lote 994 guardado con 100,768 aristas
+23:46:51 - INFO - ✅ Lote 995 guardado con 100,580 aristas
+23:46:51 - INFO - ✅ Lote 996 guardado con 100,088 aristas
+23:46:51 - INFO - ✅ Lote 997 guardado con 100,706 aristas
+23:46:51 - INFO - ✅ Lote 998 guardado con 100,014 aristas
+23:46:51 - INFO - ✅ Lote 999 guardado con 100,019 aristas
+23:46:52 - INFO - ✅ Lote 1000 guardado con 100,119 aristas
+23:46:52 - INFO - ✅ Lote 1001 guardado con 100,843 aristas
+23:46:52 - INFO - ✅ Lote 1002 guardado con 100,699 aristas
+23:46:52 - INFO - ✅ Lote 1003 guardado con 100,010 aristas
+23:46:52 - INFO - ✅ Lote 1004 guardado con 100,248 aristas
+23:46:53 - INFO - ✅ Lote 1005 guardado con 100,331 aristas
+23:46:53 - INFO - ✅ Lote 1006 guardado con 100,109 aristas
+23:46:53 - INFO - ✅ Lote 1007 guardado con 100,269 aristas
+23:46:53 - INFO - ✅ Lote 1008 guardado con 100,098 aristas
+23:46:53 - INFO - ✅ Lote 1009 guardado con 100,266 aristas
+23:46:53 - INFO - ✅ Lote 1010 guardado con 100,002 aristas
+23:46:53 - INFO -   → Procesados 400,000 nodos
+23:46:54 - INFO - ✅ Lote 1011 guardado con 100,765 aristas
+23:46:54 - INFO - ✅ Lote 1012 guardado con 100,785 aristas
+23:46:54 - INFO - ✅ Lote 1013 guardado con 100,033 aristas
+23:46:54 - INFO - ✅ Lote 1014 guardado con 100,028 aristas
+23:46:54 - INFO - ✅ Lote 1015 guardado con 100,322 aristas
+23:46:55 - INFO - ✅ Lote 1016 guardado con 100,174 aristas
+23:46:55 - INFO - ✅ Lote 1017 guardado con 100,006 aristas
+23:46:55 - INFO - ✅ Lote 1018 guardado con 100,044 aristas
+23:46:55 - INFO - ✅ Lote 1019 guardado con 101,276 aristas
+23:46:55 - INFO - ✅ Lote 1020 guardado con 100,472 aristas
+23:46:55 - INFO - ✅ Lote 1021 guardado con 100,396 aristas
+23:46:56 - INFO - ✅ Lote 1022 guardado con 100,551 aristas
+23:46:56 - INFO - ✅ Lote 1023 guardado con 100,006 aristas
+23:46:56 - INFO - ✅ Lote 1024 guardado con 100,002 aristas
+23:46:56 - INFO - ✅ Lote 1025 guardado con 100,167 aristas
+23:46:56 - INFO - ✅ Lote 1026 guardado con 100,130 aristas
+23:46:56 - INFO - ✅ Lote 1027 guardado con 100,051 aristas
+23:46:57 - INFO - ✅ Lote 1028 guardado con 100,119 aristas
+23:46:57 - INFO - ✅ Lote 1029 guardado con 100,035 aristas
+23:46:57 - INFO - ✅ Lote 1030 guardado con 100,155 aristas
+23:46:57 - INFO - ✅ Lote 1031 guardado con 100,118 aristas
+23:46:57 - INFO - ✅ Lote 1032 guardado con 100,047 aristas
+23:46:58 - INFO - ✅ Lote 1033 guardado con 101,635 aristas
+23:46:58 - INFO - ✅ Lote 1034 guardado con 101,124 aristas
+23:46:58 - INFO - ✅ Lote 1035 guardado con 100,025 aristas
+23:46:58 - INFO - ✅ Lote 1036 guardado con 100,006 aristas
+23:46:58 - INFO - ✅ Lote 1037 guardado con 100,243 aristas
+23:46:59 - INFO -   → Procesados 450,000 nodos
+23:46:59 - INFO - ✅ Lote 1038 guardado con 100,036 aristas
+23:46:59 - INFO - ✅ Lote 1039 guardado con 100,446 aristas
+23:46:59 - INFO - ✅ Lote 1040 guardado con 100,083 aristas
+23:46:59 - INFO - ✅ Lote 1041 guardado con 100,035 aristas
+23:47:00 - INFO - ✅ Lote 1042 guardado con 100,095 aristas
+23:47:00 - INFO - ✅ Lote 1043 guardado con 100,477 aristas
+23:47:00 - INFO - ✅ Lote 1044 guardado con 100,346 aristas
+23:47:00 - INFO - ✅ Lote 1045 guardado con 100,178 aristas
+23:47:00 - INFO - ✅ Lote 1046 guardado con 101,538 aristas
+23:47:00 - INFO - ✅ Lote 1047 guardado con 101,248 aristas
+23:47:01 - INFO - ✅ Lote 1048 guardado con 102,099 aristas
+23:47:01 - INFO - ✅ Lote 1049 guardado con 100,045 aristas
+23:47:01 - INFO - ✅ Lote 1050 guardado con 100,132 aristas
+23:47:01 - INFO - ✅ Lote 1051 guardado con 100,078 aristas
+23:47:01 - INFO - ✅ Lote 1052 guardado con 100,036 aristas
+23:47:02 - INFO - ✅ Lote 1053 guardado con 100,815 aristas
+23:47:02 - INFO - ✅ Lote 1054 guardado con 100,891 aristas
+23:47:02 - INFO - ✅ Lote 1055 guardado con 100,324 aristas
+23:47:02 - INFO - ✅ Lote 1056 guardado con 101,282 aristas
+23:47:03 - INFO - ✅ Lote 1057 guardado con 100,605 aristas
+23:47:03 - INFO - ✅ Lote 1058 guardado con 101,296 aristas
+23:47:03 - INFO - ✅ Lote 1059 guardado con 100,013 aristas
+23:47:03 - INFO - ✅ Lote 1060 guardado con 100,259 aristas
+23:47:03 - INFO - ✅ Lote 1061 guardado con 100,391 aristas
+23:47:03 - INFO - ✅ Lote 1062 guardado con 100,004 aristas
+23:47:04 - INFO - ✅ Lote 1063 guardado con 100,049 aristas
+23:47:04 - INFO - ✅ Lote 1064 guardado con 100,010 aristas
+23:47:04 - INFO - ✅ Lote 1065 guardado con 100,379 aristas
+23:47:04 - INFO - ✅ Lote 1066 guardado con 100,005 aristas
+23:47:04 - INFO -   → Procesados 500,000 nodos
+23:47:04 - INFO - ✅ Lote 1067 guardado con 100,062 aristas
+23:47:04 - INFO - ✅ Lote 1068 guardado con 102,425 aristas
+23:47:05 - INFO - ✅ Lote 1069 guardado con 101,721 aristas
+23:47:05 - INFO - ✅ Lote 1070 guardado con 100,032 aristas
+23:47:05 - INFO - ✅ Lote 1071 guardado con 100,065 aristas
+23:47:05 - INFO - ✅ Lote 1072 guardado con 100,049 aristas
+23:47:05 - INFO - ✅ Lote 1073 guardado con 100,117 aristas
+23:47:06 - INFO - ✅ Lote 1074 guardado con 100,098 aristas
+23:47:06 - INFO - ✅ Lote 1075 guardado con 100,029 aristas
+23:47:06 - INFO - ✅ Lote 1076 guardado con 100,752 aristas
+23:47:06 - INFO - ✅ Lote 1077 guardado con 100,039 aristas
+23:47:06 - INFO - ✅ Lote 1078 guardado con 100,026 aristas
+23:47:07 - INFO - ✅ Lote 1079 guardado con 100,034 aristas
+23:47:07 - INFO - ✅ Lote 1080 guardado con 100,882 aristas
+23:47:07 - INFO - ✅ Lote 1081 guardado con 100,023 aristas
+23:47:07 - INFO - ✅ Lote 1082 guardado con 100,036 aristas
+23:47:07 - INFO - ✅ Lote 1083 guardado con 100,135 aristas
+23:47:08 - INFO - ✅ Lote 1084 guardado con 100,002 aristas
+23:47:08 - INFO - ✅ Lote 1085 guardado con 100,069 aristas
+23:47:08 - INFO -   → Procesados 550,000 nodos
+23:47:08 - INFO - ✅ Lote 1086 guardado con 100,011 aristas
+23:47:08 - INFO - ✅ Lote 1087 guardado con 100,098 aristas
+23:47:08 - INFO - ✅ Lote 1088 guardado con 100,182 aristas
+23:47:09 - INFO - ✅ Lote 1089 guardado con 100,014 aristas
+23:47:09 - INFO - ✅ Lote 1090 guardado con 100,220 aristas
+23:47:09 - INFO - ✅ Lote 1091 guardado con 101,000 aristas
+23:47:09 - INFO - ✅ Lote 1092 guardado con 100,089 aristas
+23:47:09 - INFO - ✅ Lote 1093 guardado con 100,437 aristas
+23:47:10 - INFO - ✅ Lote 1094 guardado con 100,003 aristas
+23:47:10 - INFO - ✅ Lote 1095 guardado con 100,289 aristas
+23:47:10 - INFO - ✅ Lote 1096 guardado con 100,046 aristas
+23:47:10 - INFO - ✅ Lote 1097 guardado con 101,189 aristas
+23:47:10 - INFO - ✅ Lote 1098 guardado con 100,025 aristas
+23:47:10 - INFO - ✅ Lote 1099 guardado con 100,050 aristas
+23:47:11 - INFO - ✅ Lote 1100 guardado con 100,247 aristas
+23:47:11 - INFO - ✅ Lote 1101 guardado con 100,978 aristas
+23:47:11 - INFO - ✅ Lote 1102 guardado con 100,876 aristas
+23:47:11 - INFO - ✅ Lote 1103 guardado con 101,415 aristas
+23:47:11 - INFO - ✅ Lote 1104 guardado con 100,097 aristas
+23:47:12 - INFO - ✅ Lote 1105 guardado con 100,194 aristas
+23:47:12 - INFO - ✅ Lote 1106 guardado con 100,079 aristas
+23:47:12 - INFO - ✅ Lote 1107 guardado con 100,741 aristas
+23:47:12 - INFO - ✅ Lote 1108 guardado con 100,059 aristas
+23:47:12 - INFO -   → Procesados 600,000 nodos
+23:47:12 - INFO - ✅ Lote 1109 guardado con 100,003 aristas
+23:47:13 - INFO - ✅ Lote 1110 guardado con 100,000 aristas
+23:47:13 - INFO - ✅ Lote 1111 guardado con 100,089 aristas
+23:47:13 - INFO - ✅ Lote 1112 guardado con 100,222 aristas
+23:47:13 - INFO - ✅ Lote 1113 guardado con 100,082 aristas
+23:47:13 - INFO - ✅ Lote 1114 guardado con 100,221 aristas
+23:47:13 - INFO - ✅ Lote 1115 guardado con 100,028 aristas
+23:47:14 - INFO - ✅ Lote 1116 guardado con 100,356 aristas
+23:47:14 - INFO - ✅ Lote 1117 guardado con 100,742 aristas
+23:47:14 - INFO - ✅ Lote 1118 guardado con 100,002 aristas
+23:47:14 - INFO - ✅ Lote 1119 guardado con 100,602 aristas
+23:47:14 - INFO - ✅ Lote 1120 guardado con 100,042 aristas
+23:47:15 - INFO - ✅ Lote 1121 guardado con 100,003 aristas
+23:47:15 - INFO - ✅ Lote 1122 guardado con 100,401 aristas
+23:47:15 - INFO - ✅ Lote 1123 guardado con 100,008 aristas
+23:47:15 - INFO - ✅ Lote 1124 guardado con 100,775 aristas
+23:47:15 - INFO - ✅ Lote 1125 guardado con 100,042 aristas
+23:47:16 - INFO - ✅ Lote 1126 guardado con 100,181 aristas
+23:47:16 - INFO - ✅ Lote 1127 guardado con 100,423 aristas
+23:47:16 - INFO - ✅ Lote 1128 guardado con 100,657 aristas
+23:47:16 - INFO -   → Procesados 650,000 nodos
+23:47:16 - INFO - ✅ Lote 1129 guardado con 100,034 aristas
+23:47:16 - INFO - ✅ Lote 1130 guardado con 100,322 aristas
+23:47:16 - INFO - ✅ Lote 1131 guardado con 102,040 aristas
+23:47:17 - INFO - ✅ Lote 1132 guardado con 100,016 aristas
+23:47:17 - INFO - ✅ Lote 1133 guardado con 100,078 aristas
+23:47:17 - INFO - ✅ Lote 1134 guardado con 100,031 aristas
+23:47:17 - INFO - ✅ Lote 1135 guardado con 100,024 aristas
+23:47:17 - INFO - ✅ Lote 1136 guardado con 100,147 aristas
+23:47:18 - INFO - ✅ Lote 1137 guardado con 100,177 aristas
+23:47:18 - INFO - ✅ Lote 1138 guardado con 100,113 aristas
+23:47:18 - INFO - ✅ Lote 1139 guardado con 100,098 aristas
+23:47:18 - INFO - ✅ Lote 1140 guardado con 100,657 aristas
+23:47:18 - INFO - ✅ Lote 1141 guardado con 100,029 aristas
+23:47:19 - INFO - ✅ Lote 1142 guardado con 101,286 aristas
+23:47:19 - INFO - ✅ Lote 1143 guardado con 100,010 aristas
+23:47:19 - INFO - ✅ Lote 1144 guardado con 102,004 aristas
+23:47:19 - INFO - ✅ Lote 1145 guardado con 100,007 aristas
+23:47:19 - INFO - ✅ Lote 1146 guardado con 100,128 aristas
+23:47:19 - INFO - ✅ Lote 1147 guardado con 100,653 aristas
+23:47:20 - INFO - ✅ Lote 1148 guardado con 100,058 aristas
+23:47:20 - INFO - ✅ Lote 1149 guardado con 100,046 aristas
+23:47:20 - INFO - ✅ Lote 1150 guardado con 100,264 aristas
+23:47:20 - INFO - ✅ Lote 1151 guardado con 100,085 aristas
+23:47:20 - INFO -   → Procesados 700,000 nodos
+23:47:20 - INFO - ✅ Lote 1152 guardado con 100,380 aristas
+23:47:21 - INFO - ✅ Lote 1153 guardado con 100,573 aristas
+23:47:21 - INFO - ✅ Lote 1154 guardado con 100,037 aristas
+23:47:21 - INFO - ✅ Lote 1155 guardado con 100,545 aristas
+23:47:21 - INFO - ✅ Lote 1156 guardado con 100,021 aristas
+23:47:21 - INFO - ✅ Lote 1157 guardado con 100,060 aristas
+23:47:22 - INFO - ✅ Lote 1158 guardado con 100,000 aristas
+23:47:22 - INFO - ✅ Lote 1159 guardado con 100,010 aristas
+23:47:22 - INFO - ✅ Lote 1160 guardado con 100,394 aristas
+23:47:22 - INFO - ✅ Lote 1161 guardado con 100,017 aristas
+23:47:22 - INFO - ✅ Lote 1162 guardado con 100,110 aristas
+23:47:23 - INFO - ✅ Lote 1163 guardado con 100,001 aristas
+23:47:23 - INFO - ✅ Lote 1164 guardado con 100,007 aristas
+23:47:23 - INFO -   → Procesados 750,000 nodos
+23:47:23 - INFO - ✅ Lote 1165 guardado con 100,059 aristas
+23:47:23 - INFO - ✅ Lote 1166 guardado con 100,082 aristas
+23:47:23 - INFO - ✅ Lote 1167 guardado con 100,054 aristas
+23:47:24 - INFO - ✅ Lote 1168 guardado con 100,032 aristas
+23:47:24 - INFO - ✅ Lote 1169 guardado con 100,004 aristas
+23:47:24 - INFO - ✅ Lote 1170 guardado con 100,002 aristas
+23:47:24 - INFO - ✅ Lote 1171 guardado con 100,029 aristas
+23:47:24 - INFO - ✅ Lote 1172 guardado con 100,021 aristas
+23:47:24 - INFO - ✅ Lote 1173 guardado con 100,014 aristas
+23:47:25 - INFO - ✅ Lote 1174 guardado con 100,163 aristas
+23:47:25 - INFO - ✅ Lote 1175 guardado con 100,006 aristas
+23:47:25 - INFO - ✅ Lote 1176 guardado con 100,000 aristas
+23:47:25 - INFO - ✅ Lote 1177 guardado con 100,031 aristas
+23:47:25 - INFO - ✅ Lote 1178 guardado con 100,012 aristas
+23:47:26 - INFO - ✅ Lote 1179 guardado con 100,194 aristas
+23:47:26 - INFO - ✅ Lote 1180 guardado con 100,132 aristas
+23:47:26 - INFO - ✅ Lote 1181 guardado con 100,000 aristas
+23:47:26 - INFO - ✅ Lote 1182 guardado con 100,428 aristas
+23:47:26 - INFO -   → Procesados 800,000 nodos
+23:47:26 - INFO - ✅ Lote 1183 guardado con 100,007 aristas
+23:47:27 - INFO - ✅ Lote 1184 guardado con 100,010 aristas
+23:47:27 - INFO - ✅ Lote 1185 guardado con 100,020 aristas
+23:47:27 - INFO - ✅ Lote 1186 guardado con 100,106 aristas
+23:47:27 - INFO - ✅ Lote 1187 guardado con 100,116 aristas
+23:47:27 - INFO - ✅ Lote 1188 guardado con 100,007 aristas
+23:47:27 - INFO - ✅ Lote 1189 guardado con 100,098 aristas
+23:47:28 - INFO - ✅ Lote 1190 guardado con 100,458 aristas
+23:47:28 - INFO - ✅ Lote 1191 guardado con 100,007 aristas
+23:47:28 - INFO - ✅ Lote 1192 guardado con 100,004 aristas
+23:47:28 - INFO - ✅ Lote 1193 guardado con 100,277 aristas
+23:47:29 - INFO - ✅ Lote 1194 guardado con 100,000 aristas
+23:47:29 - INFO - ✅ Lote 1195 guardado con 100,076 aristas
+23:47:29 - INFO - ✅ Lote 1196 guardado con 100,008 aristas
+23:47:29 - INFO - ✅ Lote 1197 guardado con 100,076 aristas
+23:47:29 - INFO - ✅ Lote 1198 guardado con 100,713 aristas
+23:47:29 - INFO -   → Procesados 850,000 nodos
+23:47:30 - INFO - ✅ Lote 1199 guardado con 100,077 aristas
+23:47:30 - INFO - ✅ Lote 1200 guardado con 100,676 aristas
+23:47:30 - INFO - ✅ Lote 1201 guardado con 101,001 aristas
+23:47:30 - INFO - ✅ Lote 1202 guardado con 100,000 aristas
+23:47:30 - INFO - ✅ Lote 1203 guardado con 100,017 aristas
+23:47:31 - INFO - ✅ Lote 1204 guardado con 100,630 aristas
+23:47:31 - INFO - ✅ Lote 1205 guardado con 100,865 aristas
+23:47:31 - INFO - ✅ Lote 1206 guardado con 100,639 aristas
+23:47:31 - INFO - ✅ Lote 1207 guardado con 100,036 aristas
+23:47:32 - INFO - ✅ Lote 1208 guardado con 100,129 aristas
+23:47:32 - INFO - ✅ Lote 1209 guardado con 100,037 aristas
+23:47:32 - INFO - ✅ Lote 1210 guardado con 100,023 aristas
+23:47:32 - INFO -   → Procesados 900,000 nodos
+23:47:32 - INFO - ✅ Lote 1211 guardado con 100,084 aristas
+23:47:32 - INFO - ✅ Lote 1212 guardado con 100,002 aristas
+23:47:33 - INFO - ✅ Lote 1213 guardado con 100,150 aristas
+23:47:33 - INFO - ✅ Lote 1214 guardado con 100,153 aristas
+23:47:33 - INFO - ✅ Lote 1215 guardado con 100,000 aristas
+23:47:33 - INFO - ✅ Lote 1216 guardado con 100,010 aristas
+23:47:33 - INFO - ✅ Lote 1217 guardado con 100,217 aristas
+23:47:34 - INFO - ✅ Lote 1218 guardado con 100,062 aristas
+23:47:34 - INFO - ✅ Lote 1219 guardado con 100,100 aristas
+23:47:34 - INFO - ✅ Lote 1220 guardado con 101,366 aristas
+23:47:34 - INFO - ✅ Lote 1221 guardado con 100,007 aristas
+23:47:35 - INFO - ✅ Lote 1222 guardado con 100,993 aristas
+23:47:35 - INFO -   → Procesados 950,000 nodos
+23:47:35 - INFO - ✅ Lote 1223 guardado con 100,343 aristas
+23:47:35 - INFO - ✅ Lote 1224 guardado con 100,017 aristas
+23:47:35 - INFO - ✅ Lote 1225 guardado con 100,106 aristas
+23:47:35 - INFO - ✅ Lote 1226 guardado con 100,075 aristas
+23:47:36 - INFO - ✅ Lote 1227 guardado con 100,127 aristas
+23:47:36 - INFO - ✅ Lote 1228 guardado con 100,013 aristas
+23:47:36 - INFO - ✅ Lote 1229 guardado con 100,000 aristas
+23:47:36 - INFO - ✅ Lote 1230 guardado con 100,124 aristas
+23:47:36 - INFO - ✅ Lote 1231 guardado con 100,005 aristas
+23:47:37 - INFO - ✅ Lote 1232 guardado con 100,140 aristas
+23:47:37 - INFO -   → Procesados 1,000,000 nodos
+23:47:37 - INFO - ✅ Lote 1233 guardado con 100,006 aristas
+23:47:37 - INFO - ✅ Lote 1234 guardado con 100,005 aristas
+23:47:37 - INFO - ✅ Lote 1235 guardado con 100,005 aristas
+23:47:38 - INFO - ✅ Lote 1236 guardado con 100,017 aristas
+23:47:38 - INFO - ✅ Lote 1237 guardado con 100,714 aristas
+23:47:38 - INFO - ✅ Lote 1238 guardado con 100,000 aristas
+23:47:38 - INFO - ✅ Lote 1239 guardado con 100,004 aristas
+23:47:38 - INFO - ✅ Lote 1240 guardado con 100,009 aristas
+23:47:39 - INFO - ✅ Lote 1241 guardado con 100,002 aristas
+23:47:39 - INFO - ✅ Lote 1242 guardado con 100,000 aristas
+23:47:39 - INFO - ✅ Lote 1243 guardado con 100,033 aristas
+23:47:39 - INFO - ✅ Lote 1244 guardado con 100,003 aristas
+23:47:39 - INFO -   → Procesados 1,050,000 nodos
+23:47:40 - INFO - ✅ Lote 1245 guardado con 100,173 aristas
+23:47:40 - INFO - ✅ Lote 1246 guardado con 100,219 aristas
+23:47:40 - INFO - ✅ Lote 1247 guardado con 100,055 aristas
+23:47:40 - INFO - ✅ Lote 1248 guardado con 100,467 aristas
+23:47:40 - INFO - ✅ Lote 1249 guardado con 100,183 aristas
+23:47:41 - INFO - ✅ Lote 1250 guardado con 100,029 aristas
+23:47:41 - INFO - ✅ Lote 1251 guardado con 100,013 aristas
+23:47:41 - INFO - ✅ Lote 1252 guardado con 100,009 aristas
+23:47:41 - INFO - ✅ Lote 1253 guardado con 100,003 aristas
+23:47:42 - INFO - ✅ Lote 1254 guardado con 100,001 aristas
+23:47:42 - INFO - ✅ Lote 1255 guardado con 100,074 aristas
+23:47:42 - INFO -   → Procesados 1,100,000 nodos
+23:47:42 - INFO - ✅ Lote 1256 guardado con 100,979 aristas
+23:47:42 - INFO - ✅ Lote 1257 guardado con 100,013 aristas
+23:47:42 - INFO - ✅ Lote 1258 guardado con 100,027 aristas
+23:47:43 - INFO - ✅ Lote 1259 guardado con 100,094 aristas
+23:47:43 - INFO - ✅ Lote 1260 guardado con 100,268 aristas
+23:47:43 - INFO - ✅ Lote 1261 guardado con 100,013 aristas
+23:47:43 - INFO - ✅ Lote 1262 guardado con 100,056 aristas
+23:47:43 - INFO - ✅ Lote 1263 guardado con 100,000 aristas
+23:47:44 - INFO - ✅ Lote 1264 guardado con 100,000 aristas
+23:47:44 - INFO - ✅ Lote 1265 guardado con 100,034 aristas
+23:47:44 - INFO - ✅ Lote 1266 guardado con 100,012 aristas
+23:47:44 - INFO - ✅ Lote 1267 guardado con 100,027 aristas
+23:47:44 - INFO -   → Procesados 1,150,000 nodos
+23:47:44 - INFO - ✅ Lote 1268 guardado con 100,000 aristas
+23:47:45 - INFO - ✅ Lote 1269 guardado con 100,006 aristas
+23:47:45 - INFO - ✅ Lote 1270 guardado con 100,000 aristas
+23:47:45 - INFO - ✅ Lote 1271 guardado con 100,015 aristas
+23:47:45 - INFO - ✅ Lote 1272 guardado con 100,006 aristas
+23:47:46 - INFO - ✅ Lote 1273 guardado con 100,053 aristas
+23:47:46 - INFO - ✅ Lote 1274 guardado con 100,076 aristas
+23:47:46 - INFO - ✅ Lote 1275 guardado con 100,017 aristas
+23:47:46 - INFO - ✅ Lote 1276 guardado con 100,008 aristas
+23:47:46 - INFO - ✅ Lote 1277 guardado con 100,088 aristas
+23:47:47 - INFO -   → Procesados 1,200,000 nodos
+23:47:47 - INFO - ✅ Lote 1278 guardado con 100,031 aristas
+23:47:47 - INFO - ✅ Lote 1279 guardado con 100,008 aristas
+23:47:47 - INFO - ✅ Lote 1280 guardado con 100,000 aristas
+23:47:47 - INFO - ✅ Lote 1281 guardado con 100,030 aristas
+23:47:47 - INFO - ✅ Lote 1282 guardado con 100,023 aristas
+23:47:48 - INFO - ✅ Lote 1283 guardado con 100,003 aristas
+23:47:48 - INFO - ✅ Lote 1284 guardado con 100,021 aristas
+23:47:48 - INFO - ✅ Lote 1285 guardado con 100,016 aristas
+23:47:48 - INFO -   → Procesados 1,250,000 nodos
+23:47:48 - INFO - ✅ Lote 1286 guardado con 100,017 aristas
+23:47:49 - INFO - ✅ Lote 1287 guardado con 100,017 aristas
+23:47:49 - INFO - ✅ Lote 1288 guardado con 100,202 aristas
+23:47:49 - INFO - ✅ Lote 1289 guardado con 100,009 aristas
+23:47:49 - INFO - ✅ Lote 1290 guardado con 100,004 aristas
+23:47:50 - INFO - ✅ Lote 1291 guardado con 100,011 aristas
+23:47:50 - INFO - ✅ Lote 1292 guardado con 100,570 aristas
+23:47:50 - INFO - ✅ Lote 1293 guardado con 100,020 aristas
+23:47:50 - INFO - ✅ Lote 1294 guardado con 100,022 aristas
+23:47:50 - INFO -   → Procesados 1,300,000 nodos
+23:47:50 - INFO - ✅ Lote 1295 guardado con 100,003 aristas
+23:47:51 - INFO - ✅ Lote 1296 guardado con 100,003 aristas
+23:47:51 - INFO - ✅ Lote 1297 guardado con 100,139 aristas
+23:47:51 - INFO - ✅ Lote 1298 guardado con 100,290 aristas
+23:47:51 - INFO - ✅ Lote 1299 guardado con 100,038 aristas
+23:47:51 - INFO - ✅ Lote 1300 guardado con 100,010 aristas
+23:47:52 - INFO - ✅ Lote 1301 guardado con 100,166 aristas
+23:47:52 - INFO - ✅ Lote 1302 guardado con 100,285 aristas
+23:47:52 - INFO - ✅ Lote 1303 guardado con 100,008 aristas
+23:47:52 - INFO -   → Procesados 1,350,000 nodos
+23:47:52 - INFO - ✅ Lote 1304 guardado con 100,014 aristas
+23:47:53 - INFO - ✅ Lote 1305 guardado con 101,329 aristas
+23:47:53 - INFO - ✅ Lote 1306 guardado con 100,040 aristas
+23:47:53 - INFO - ✅ Lote 1307 guardado con 100,027 aristas
+23:47:53 - INFO - ✅ Lote 1308 guardado con 100,012 aristas
+23:47:54 - INFO - ✅ Lote 1309 guardado con 100,002 aristas
+23:47:54 - INFO - ✅ Lote 1310 guardado con 100,487 aristas
+23:47:54 - INFO - ✅ Lote 1311 guardado con 100,067 aristas
+23:47:54 - INFO - ✅ Lote 1312 guardado con 100,066 aristas
+23:47:54 - INFO -   → Procesados 1,400,000 nodos
+23:47:54 - INFO - ✅ Lote 1313 guardado con 100,635 aristas
+23:47:55 - INFO - ✅ Lote 1314 guardado con 100,006 aristas
+23:47:55 - INFO - ✅ Lote 1315 guardado con 105,461 aristas
+23:47:55 - INFO - ✅ Lote 1316 guardado con 100,051 aristas
+23:47:55 - INFO - ✅ Lote 1317 guardado con 100,013 aristas
+23:47:56 - INFO - ✅ Lote 1318 guardado con 100,001 aristas
+23:47:56 - INFO - ✅ Lote 1319 guardado con 100,011 aristas
+23:47:56 - INFO - ✅ Lote 1320 guardado con 100,213 aristas
+23:47:56 - INFO -   → Procesados 1,450,000 nodos
+23:47:56 - INFO - ✅ Lote 1321 guardado con 100,021 aristas
+23:47:57 - INFO - ✅ Lote 1322 guardado con 100,019 aristas
+23:47:57 - INFO - ✅ Lote 1323 guardado con 100,008 aristas
+23:47:57 - INFO - ✅ Lote 1324 guardado con 100,003 aristas
+23:47:57 - INFO - ✅ Lote 1325 guardado con 100,005 aristas
+23:47:58 - INFO - ✅ Lote 1326 guardado con 100,021 aristas
+23:47:58 - INFO - ✅ Lote 1327 guardado con 100,022 aristas
+23:47:58 - INFO -   → Procesados 1,500,000 nodos
+23:47:58 - INFO - ✅ Lote 1328 guardado con 100,005 aristas
+23:47:58 - INFO - ✅ Lote 1329 guardado con 100,002 aristas
+23:47:59 - INFO - ✅ Lote 1330 guardado con 100,027 aristas
+23:47:59 - INFO - ✅ Lote 1331 guardado con 100,549 aristas
+23:47:59 - INFO - ✅ Lote 1332 guardado con 100,031 aristas
+23:47:59 - INFO - ✅ Lote 1333 guardado con 100,069 aristas
+23:48:00 - INFO - ✅ Lote 1334 guardado con 100,464 aristas
+23:48:00 - INFO -   → Procesados 1,550,000 nodos
+23:48:00 - INFO - ✅ Lote 1335 guardado con 100,030 aristas
+23:48:00 - INFO - ✅ Lote 1336 guardado con 100,002 aristas
+23:48:00 - INFO - ✅ Lote 1337 guardado con 100,025 aristas
+23:48:00 - INFO - ✅ Lote 1338 guardado con 100,094 aristas
+23:48:01 - INFO - ✅ Lote 1339 guardado con 100,026 aristas
+23:48:01 - INFO - ✅ Lote 1340 guardado con 100,995 aristas
+23:48:01 - INFO - ✅ Lote 1341 guardado con 100,000 aristas
+23:48:01 - INFO -   → Procesados 1,600,000 nodos
+23:48:01 - INFO - ✅ Lote 1342 guardado con 100,012 aristas
+23:48:02 - INFO - ✅ Lote 1343 guardado con 100,105 aristas
+23:48:02 - INFO - ✅ Lote 1344 guardado con 100,007 aristas
+23:48:02 - INFO - ✅ Lote 1345 guardado con 100,012 aristas
+23:48:02 - INFO - ✅ Lote 1346 guardado con 100,009 aristas
+23:48:02 - INFO -   → Procesados 1,650,000 nodos
+23:48:03 - INFO - ✅ Lote 1347 guardado con 100,035 aristas
+23:48:03 - INFO - ✅ Lote 1348 guardado con 100,018 aristas
+23:48:03 - INFO - ✅ Lote 1349 guardado con 100,047 aristas
+23:48:03 - INFO - ✅ Lote 1350 guardado con 100,010 aristas
+23:48:03 - INFO - ✅ Lote 1351 guardado con 100,015 aristas
+23:48:04 - INFO - ✅ Lote 1352 guardado con 100,125 aristas
+23:48:04 - INFO -   → Procesados 1,700,000 nodos
+23:48:04 - INFO - ✅ Lote 1353 guardado con 100,002 aristas
+23:48:04 - INFO - ✅ Lote 1354 guardado con 100,004 aristas
+23:48:05 - INFO - ✅ Lote 1355 guardado con 100,067 aristas
+23:48:05 - INFO - ✅ Lote 1356 guardado con 100,058 aristas
+23:48:05 - INFO - ✅ Lote 1357 guardado con 100,012 aristas
+23:48:05 - INFO -   → Procesados 1,750,000 nodos
+23:48:05 - INFO - ✅ Lote 1358 guardado con 100,013 aristas
+23:48:05 - INFO - ✅ Lote 1359 guardado con 100,052 aristas
+23:48:06 - INFO - ✅ Lote 1360 guardado con 100,251 aristas
+23:48:06 - INFO - ✅ Lote 1361 guardado con 100,214 aristas
+23:48:06 - INFO - ✅ Lote 1362 guardado con 102,907 aristas
+23:48:07 - INFO - ✅ Lote 1363 guardado con 100,022 aristas
+23:48:07 - INFO - ✅ Lote 1364 guardado con 100,126 aristas
+23:48:07 - INFO -   → Procesados 1,800,000 nodos
+23:48:07 - INFO - ✅ Lote 1365 guardado con 100,084 aristas
+23:48:07 - INFO - ✅ Lote 1366 guardado con 100,069 aristas
+23:48:08 - INFO - ✅ Lote 1367 guardado con 100,018 aristas
+23:48:08 - INFO - ✅ Lote 1368 guardado con 100,170 aristas
+23:48:08 - INFO - ✅ Lote 1369 guardado con 100,018 aristas
+23:48:08 - INFO - ✅ Lote 1370 guardado con 100,512 aristas
+23:48:08 - INFO -   → Procesados 1,850,000 nodos
+23:48:09 - INFO - ✅ Lote 1371 guardado con 100,001 aristas
+23:48:09 - INFO - ✅ Lote 1372 guardado con 100,037 aristas
+23:48:09 - INFO - ✅ Lote 1373 guardado con 100,003 aristas
+23:48:09 - INFO - ✅ Lote 1374 guardado con 100,038 aristas
+23:48:10 - INFO - ✅ Lote 1375 guardado con 100,312 aristas
+23:48:10 - INFO -   → Procesados 1,900,000 nodos
+23:48:10 - INFO - ✅ Lote 1376 guardado con 100,000 aristas
+23:48:10 - INFO - ✅ Lote 1377 guardado con 100,006 aristas
+23:48:10 - INFO - ✅ Lote 1378 guardado con 100,004 aristas
+23:48:11 - INFO - ✅ Lote 1379 guardado con 100,075 aristas
+23:48:11 - INFO - ✅ Lote 1380 guardado con 100,009 aristas
+23:48:11 - INFO -   → Procesados 1,950,000 nodos
+23:48:11 - INFO - ✅ Lote 1381 guardado con 100,526 aristas
+23:48:11 - INFO - ✅ Lote 1382 guardado con 100,064 aristas
+23:48:12 - INFO - ✅ Lote 1383 guardado con 100,449 aristas
+23:48:12 - INFO - ✅ Lote 1384 guardado con 100,003 aristas
+23:48:12 - INFO - ✅ Lote 1385 guardado con 100,108 aristas
+23:48:12 - INFO - ✅ Lote 1386 guardado con 100,005 aristas
+23:48:12 - INFO -   → Procesados 2,000,000 nodos
+23:48:13 - INFO - ✅ Lote 1387 guardado con 100,010 aristas
+23:48:13 - INFO - ✅ Lote 1388 guardado con 100,004 aristas
+23:48:13 - INFO - ✅ Lote 1389 guardado con 100,049 aristas
+23:48:13 - INFO - ✅ Lote 1390 guardado con 100,009 aristas
+23:48:14 - INFO - ✅ Lote 1391 guardado con 100,050 aristas
+23:48:14 - INFO - ✅ Lote 1392 guardado con 100,214 aristas
+23:48:14 - INFO -   → Procesados 2,050,000 nodos
+23:48:14 - INFO - ✅ Lote 1393 guardado con 100,006 aristas
+23:48:14 - INFO - ✅ Lote 1394 guardado con 100,018 aristas
+23:48:15 - INFO - ✅ Lote 1395 guardado con 100,016 aristas
+23:48:15 - INFO - ✅ Lote 1396 guardado con 100,056 aristas
+23:48:15 - INFO - ✅ Lote 1397 guardado con 100,001 aristas
+23:48:15 - INFO -   → Procesados 2,100,000 nodos
+23:48:15 - INFO - ✅ Lote 1398 guardado con 100,001 aristas
+23:48:16 - INFO - ✅ Lote 1399 guardado con 100,025 aristas
+23:48:16 - INFO - ✅ Lote 1400 guardado con 100,004 aristas
+23:48:16 - INFO - ✅ Lote 1401 guardado con 100,003 aristas
+23:48:16 - INFO -   → Procesados 2,150,000 nodos
+23:48:16 - INFO - ✅ Lote 1402 guardado con 100,015 aristas
+23:48:17 - INFO - ✅ Lote 1403 guardado con 100,002 aristas
+23:48:17 - INFO - ✅ Lote 1404 guardado con 100,057 aristas
+23:48:17 - INFO - ✅ Lote 1405 guardado con 100,050 aristas
+23:48:17 - INFO - ✅ Lote 1406 guardado con 100,004 aristas
+23:48:17 - INFO -   → Procesados 2,200,000 nodos
+23:48:18 - INFO - ✅ Lote 1407 guardado con 100,122 aristas
+23:48:18 - INFO - ✅ Lote 1408 guardado con 100,001 aristas
+23:48:18 - INFO - ✅ Lote 1409 guardado con 100,033 aristas
+23:48:18 - INFO - ✅ Lote 1410 guardado con 100,006 aristas
+23:48:19 - INFO - ✅ Lote 1411 guardado con 100,002 aristas
+23:48:19 - INFO - ✅ Lote 1412 guardado con 100,036 aristas
+23:48:19 - INFO -   → Procesados 2,250,000 nodos
+23:48:19 - INFO - ✅ Lote 1413 guardado con 100,002 aristas
+23:48:19 - INFO - ✅ Lote 1414 guardado con 100,010 aristas
+23:48:20 - INFO - ✅ Lote 1415 guardado con 100,011 aristas
+23:48:20 - INFO - ✅ Lote 1416 guardado con 100,009 aristas
+23:48:20 - INFO -   → Procesados 2,300,000 nodos
+23:48:20 - INFO - ✅ Lote 1417 guardado con 100,003 aristas
+23:48:20 - INFO - ✅ Lote 1418 guardado con 100,002 aristas
+23:48:21 - INFO - ✅ Lote 1419 guardado con 100,000 aristas
+23:48:21 - INFO - ✅ Lote 1420 guardado con 100,086 aristas
+23:48:21 - INFO - ✅ Lote 1421 guardado con 100,000 aristas
+23:48:21 - INFO -   → Procesados 2,350,000 nodos
+23:48:22 - INFO - ✅ Lote 1422 guardado con 100,015 aristas
+23:48:22 - INFO - ✅ Lote 1423 guardado con 100,223 aristas
+23:48:22 - INFO - ✅ Lote 1424 guardado con 100,000 aristas
+23:48:22 - INFO - ✅ Lote 1425 guardado con 100,006 aristas
+23:48:23 - INFO -   → Procesados 2,400,000 nodos
+23:48:23 - INFO - ✅ Lote 1426 guardado con 100,001 aristas
+23:48:23 - INFO - ✅ Lote 1427 guardado con 100,002 aristas
+23:48:23 - INFO - ✅ Lote 1428 guardado con 100,007 aristas
+23:48:24 - INFO - ✅ Lote 1429 guardado con 100,001 aristas
+23:48:24 - INFO -   → Procesados 2,450,000 nodos
+23:48:24 - INFO - ✅ Lote 1430 guardado con 100,000 aristas
+23:48:24 - INFO - ✅ Lote 1431 guardado con 100,075 aristas
+23:48:24 - INFO - ✅ Lote 1432 guardado con 100,284 aristas
+23:48:25 - INFO - ✅ Lote 1433 guardado con 100,002 aristas
+23:48:25 - INFO - ✅ Lote 1434 guardado con 100,000 aristas
+23:48:25 - INFO -   → Procesados 2,500,000 nodos
+23:48:25 - INFO - ✅ Lote 1435 guardado con 100,762 aristas
+23:48:25 - INFO - ✅ Lote 1436 guardado con 100,043 aristas
+23:48:26 - INFO - ✅ Lote 1437 guardado con 100,005 aristas
+23:48:26 - INFO -   → Procesados 2,550,000 nodos
+23:48:26 - INFO - ✅ Lote 1438 guardado con 100,714 aristas
+23:48:26 - INFO - ✅ Lote 1439 guardado con 100,013 aristas
+23:48:26 - INFO - ✅ Lote 1440 guardado con 100,173 aristas
+23:48:27 - INFO - ✅ Lote 1441 guardado con 100,010 aristas
+23:48:27 - INFO - ✅ Lote 1442 guardado con 100,011 aristas
+23:48:27 - INFO -   → Procesados 2,600,000 nodos
+23:48:27 - INFO - ✅ Lote 1443 guardado con 100,059 aristas
+23:48:27 - INFO - ✅ Lote 1444 guardado con 100,006 aristas
+23:48:28 - INFO - ✅ Lote 1445 guardado con 100,081 aristas
+23:48:28 - INFO - ✅ Lote 1446 guardado con 100,008 aristas
+23:48:28 - INFO -   → Procesados 2,650,000 nodos
+23:48:28 - INFO - ✅ Lote 1447 guardado con 100,008 aristas
+23:48:28 - INFO - ✅ Lote 1448 guardado con 100,003 aristas
+23:48:29 - INFO - ✅ Lote 1449 guardado con 100,000 aristas
+23:48:29 - INFO - ✅ Lote 1450 guardado con 100,001 aristas
+23:48:29 - INFO -   → Procesados 2,700,000 nodos
+23:48:29 - INFO - ✅ Lote 1451 guardado con 100,014 aristas
+23:48:29 - INFO - ✅ Lote 1452 guardado con 100,019 aristas
+23:48:30 - INFO - ✅ Lote 1453 guardado con 100,010 aristas
+23:48:30 - INFO -   → Procesados 2,750,000 nodos
+23:48:30 - INFO - ✅ Lote 1454 guardado con 100,000 aristas
+23:48:30 - INFO - ✅ Lote 1455 guardado con 100,786 aristas
+23:48:30 - INFO - ✅ Lote 1456 guardado con 100,012 aristas
+23:48:31 - INFO - ✅ Lote 1457 guardado con 100,005 aristas
+23:48:31 - INFO -   → Procesados 2,800,000 nodos
+23:48:31 - INFO - ✅ Lote 1458 guardado con 100,003 aristas
+23:48:31 - INFO - ✅ Lote 1459 guardado con 100,109 aristas
+23:48:32 - INFO - ✅ Lote 1460 guardado con 100,013 aristas
+23:48:32 - INFO - ✅ Lote 1461 guardado con 100,000 aristas
+23:48:32 - INFO -   → Procesados 2,850,000 nodos
+23:48:33 - INFO - ✅ Lote 1462 guardado con 100,006 aristas
+23:48:33 - INFO - ✅ Lote 1463 guardado con 100,049 aristas
+23:48:33 - INFO - ✅ Lote 1464 guardado con 100,023 aristas
+23:48:33 - INFO -   → Procesados 2,900,000 nodos
+23:48:34 - INFO - ✅ Lote 1465 guardado con 100,010 aristas
+23:48:34 - INFO - ✅ Lote 1466 guardado con 100,037 aristas
+23:48:34 - INFO - ✅ Lote 1467 guardado con 100,003 aristas
+23:48:34 - INFO -   → Procesados 2,950,000 nodos
+23:48:34 - INFO - ✅ Lote 1468 guardado con 100,006 aristas
+23:48:35 - INFO - ✅ Lote 1469 guardado con 100,005 aristas
+23:48:35 - INFO - ✅ Lote 1470 guardado con 100,000 aristas
+23:48:35 - INFO -   → Procesados 3,000,000 nodos
+23:48:35 - INFO - ✅ Lote 1471 guardado con 100,006 aristas
+23:48:36 - INFO - ✅ Lote 1472 guardado con 100,020 aristas
+23:48:36 - INFO - ✅ Lote 1473 guardado con 100,483 aristas
+23:48:36 - INFO - ✅ Lote 1474 guardado con 100,008 aristas
+23:48:36 - INFO -   → Procesados 3,050,000 nodos
+23:48:36 - INFO - ✅ Lote 1475 guardado con 100,010 aristas
+23:48:37 - INFO - ✅ Lote 1476 guardado con 100,004 aristas
+23:48:37 - INFO - ✅ Lote 1477 guardado con 100,000 aristas
+23:48:37 - INFO -   → Procesados 3,100,000 nodos
+23:48:37 - INFO - ✅ Lote 1478 guardado con 100,009 aristas
+23:48:37 - INFO - ✅ Lote 1479 guardado con 100,003 aristas
+23:48:38 - INFO - ✅ Lote 1480 guardado con 100,003 aristas
+23:48:38 - INFO -   → Procesados 3,150,000 nodos
+23:48:38 - INFO - ✅ Lote 1481 guardado con 100,168 aristas
+23:48:38 - INFO - ✅ Lote 1482 guardado con 100,006 aristas
+23:48:38 - INFO - ✅ Lote 1483 guardado con 100,025 aristas
+23:48:38 - INFO -   → Procesados 3,200,000 nodos
+23:48:39 - INFO - ✅ Lote 1484 guardado con 100,072 aristas
+23:48:39 - INFO - ✅ Lote 1485 guardado con 100,037 aristas
+23:48:39 - INFO - ✅ Lote 1486 guardado con 100,003 aristas
+23:48:39 - INFO -   → Procesados 3,250,000 nodos
+23:48:39 - INFO - ✅ Lote 1487 guardado con 100,006 aristas
+23:48:40 - INFO - ✅ Lote 1488 guardado con 100,012 aristas
+23:48:40 - INFO - ✅ Lote 1489 guardado con 100,353 aristas
+23:48:40 - INFO -   → Procesados 3,300,000 nodos
+23:48:40 - INFO - ✅ Lote 1490 guardado con 100,070 aristas
+23:48:40 - INFO - ✅ Lote 1491 guardado con 100,003 aristas
+23:48:41 - INFO - ✅ Lote 1492 guardado con 100,000 aristas
+23:48:41 - INFO -   → Procesados 3,350,000 nodos
+23:48:41 - INFO - ✅ Lote 1493 guardado con 100,000 aristas
+23:48:41 - INFO - ✅ Lote 1494 guardado con 100,005 aristas
+23:48:41 - INFO -   → Procesados 3,400,000 nodos
+23:48:41 - INFO - ✅ Lote 1495 guardado con 100,114 aristas
+23:48:42 - INFO - ✅ Lote 1496 guardado con 100,042 aristas
+23:48:42 - INFO - ✅ Lote 1497 guardado con 100,011 aristas
+23:48:42 - INFO -   → Procesados 3,450,000 nodos
+23:48:42 - INFO - ✅ Lote 1498 guardado con 100,000 aristas
+23:48:42 - INFO - ✅ Lote 1499 guardado con 100,000 aristas
+23:48:43 - INFO - ✅ Lote 1500 guardado con 100,017 aristas
+23:48:43 - INFO -   → Procesados 3,500,000 nodos
+23:48:43 - INFO - ✅ Lote 1501 guardado con 100,009 aristas
+23:48:43 - INFO - ✅ Lote 1502 guardado con 100,004 aristas
+23:48:43 - INFO - ✅ Lote 1503 guardado con 100,007 aristas
+23:48:44 - INFO -   → Procesados 3,550,000 nodos
+23:48:44 - INFO - ✅ Lote 1504 guardado con 100,000 aristas
+23:48:44 - INFO - ✅ Lote 1505 guardado con 100,000 aristas
+23:48:44 - INFO - ✅ Lote 1506 guardado con 100,001 aristas
+23:48:44 - INFO -   → Procesados 3,600,000 nodos
+23:48:44 - INFO - ✅ Lote 1507 guardado con 100,047 aristas
+23:48:45 - INFO - ✅ Lote 1508 guardado con 100,004 aristas
+23:48:45 - INFO - ✅ Lote 1509 guardado con 100,005 aristas
+23:48:45 - INFO -   → Procesados 3,650,000 nodos
+23:48:45 - INFO - ✅ Lote 1510 guardado con 100,000 aristas
+23:48:45 - INFO - ✅ Lote 1511 guardado con 100,002 aristas
+23:48:45 - INFO -   → Procesados 3,700,000 nodos
+23:48:46 - INFO - ✅ Lote 1512 guardado con 100,007 aristas
+23:48:46 - INFO - ✅ Lote 1513 guardado con 100,007 aristas
+23:48:46 - INFO - ✅ Lote 1514 guardado con 100,005 aristas
+23:48:46 - INFO -   → Procesados 3,750,000 nodos
+23:48:46 - INFO - ✅ Lote 1515 guardado con 100,013 aristas
+23:48:47 - INFO - ✅ Lote 1516 guardado con 100,001 aristas
+23:48:47 - INFO - ✅ Lote 1517 guardado con 100,204 aristas
+23:48:47 - INFO -   → Procesados 3,800,000 nodos
+23:48:47 - INFO - ✅ Lote 1518 guardado con 100,001 aristas
+23:48:47 - INFO - ✅ Lote 1519 guardado con 100,000 aristas
+23:48:47 - INFO -   → Procesados 3,850,000 nodos
+23:48:47 - INFO - ✅ Lote 1520 guardado con 100,000 aristas
+23:48:48 - INFO - ✅ Lote 1521 guardado con 100,001 aristas
+23:48:48 - INFO - ✅ Lote 1522 guardado con 100,004 aristas
+23:48:48 - INFO -   → Procesados 3,900,000 nodos
+23:48:48 - INFO - ✅ Lote 1523 guardado con 100,001 aristas
+23:48:48 - INFO - ✅ Lote 1524 guardado con 100,001 aristas
+23:48:49 - INFO -   → Procesados 3,950,000 nodos
+23:48:49 - INFO - ✅ Lote 1525 guardado con 100,619 aristas
+23:48:49 - INFO - ✅ Lote 1526 guardado con 100,001 aristas
+23:48:49 - INFO -   → Procesados 4,000,000 nodos
+23:48:49 - INFO - ✅ Lote 1527 guardado con 100,006 aristas
+23:48:49 - INFO - ✅ Lote 1528 guardado con 100,001 aristas
+23:48:50 - INFO -   → Procesados 4,050,000 nodos
+23:48:50 - INFO - ✅ Lote 1529 guardado con 100,001 aristas
+23:48:50 - INFO - ✅ Lote 1530 guardado con 100,037 aristas
+23:48:50 - INFO -   → Procesados 4,100,000 nodos
+23:48:50 - INFO - ✅ Lote 1531 guardado con 100,033 aristas
+23:48:51 - INFO - ✅ Lote 1532 guardado con 100,036 aristas
+23:48:51 - INFO - ✅ Lote 1533 guardado con 100,005 aristas
+23:48:51 - INFO -   → Procesados 4,150,000 nodos
+23:48:51 - INFO - ✅ Lote 1534 guardado con 100,002 aristas
+23:48:51 - INFO -   → Procesados 4,200,000 nodos
+23:48:51 - INFO - ✅ Lote 1535 guardado con 100,002 aristas
+23:48:51 - INFO - ✅ Lote 1536 guardado con 100,001 aristas
+23:48:52 - INFO -   → Procesados 4,250,000 nodos
+23:48:52 - INFO - ✅ Lote 1537 guardado con 100,001 aristas
+23:48:52 - INFO - ✅ Lote 1538 guardado con 100,006 aristas
+23:48:52 - INFO -   → Procesados 4,300,000 nodos
+23:48:52 - INFO - ✅ Lote 1539 guardado con 100,008 aristas
+23:48:52 - INFO - ✅ Lote 1540 guardado con 100,006 aristas
+23:48:53 - INFO - ✅ Lote 1541 guardado con 100,001 aristas
+23:48:53 - INFO -   → Procesados 4,350,000 nodos
+23:48:53 - INFO - ✅ Lote 1542 guardado con 100,002 aristas
+23:48:53 - INFO - ✅ Lote 1543 guardado con 100,000 aristas
+23:48:53 - INFO -   → Procesados 4,400,000 nodos
+23:48:53 - INFO - ✅ Lote 1544 guardado con 100,000 aristas
+23:48:54 - INFO - ✅ Lote 1545 guardado con 100,001 aristas
+23:48:54 - INFO -   → Procesados 4,450,000 nodos
+23:48:54 - INFO - ✅ Lote 1546 guardado con 100,004 aristas
+23:48:54 - INFO - ✅ Lote 1547 guardado con 100,002 aristas
+23:48:54 - INFO -   → Procesados 4,500,000 nodos
+23:48:54 - INFO - ✅ Lote 1548 guardado con 100,001 aristas
+23:48:55 - INFO - ✅ Lote 1549 guardado con 100,001 aristas
+23:48:55 - INFO -   → Procesados 4,550,000 nodos
+23:48:55 - INFO - ✅ Lote 1550 guardado con 100,002 aristas
+23:48:55 - INFO -   → Procesados 4,600,000 nodos
+23:48:55 - INFO - ✅ Lote 1551 guardado con 100,001 aristas
+23:48:55 - INFO - ✅ Lote 1552 guardado con 100,007 aristas
+23:48:56 - INFO -   → Procesados 4,650,000 nodos
+23:48:56 - INFO - ✅ Lote 1553 guardado con 100,000 aristas
+23:48:56 - INFO - ✅ Lote 1554 guardado con 100,006 aristas
+23:48:56 - INFO -   → Procesados 4,700,000 nodos
+23:48:56 - INFO - ✅ Lote 1555 guardado con 100,006 aristas
+23:48:56 - INFO - ✅ Lote 1556 guardado con 100,000 aristas
+23:48:57 - INFO -   → Procesados 4,750,000 nodos
+23:48:57 - INFO - ✅ Lote 1557 guardado con 100,001 aristas
+23:48:57 - INFO - ✅ Lote 1558 guardado con 100,001 aristas
+23:48:57 - INFO -   → Procesados 4,800,000 nodos
+23:48:57 - INFO - ✅ Lote 1559 guardado con 100,088 aristas
+23:48:57 - INFO - ✅ Lote 1560 guardado con 100,000 aristas
+23:48:57 - INFO -   → Procesados 4,850,000 nodos
+23:48:58 - INFO - ✅ Lote 1561 guardado con 100,000 aristas
+23:48:58 - INFO - ✅ Lote 1562 guardado con 100,002 aristas
+23:48:58 - INFO -   → Procesados 4,900,000 nodos
+23:48:58 - INFO - ✅ Lote 1563 guardado con 100,007 aristas
+23:48:58 - INFO - ✅ Lote 1564 guardado con 100,003 aristas
+23:48:58 - INFO -   → Procesados 4,950,000 nodos
+23:48:59 - INFO - ✅ Lote 1565 guardado con 100,016 aristas
+23:48:59 - INFO - ✅ Lote 1566 guardado con 100,027 aristas
+23:48:59 - INFO -   → Procesados 5,000,000 nodos
+23:48:59 - INFO - ✅ Lote 1567 guardado con 100,002 aristas
+23:48:59 - INFO - ✅ Lote 1568 guardado con 100,054 aristas
+23:48:59 - INFO -   → Procesados 5,050,000 nodos
+23:49:00 - INFO - ✅ Lote 1569 guardado con 100,001 aristas
+23:49:00 - INFO - ✅ Lote 1570 guardado con 100,004 aristas
+23:49:00 - INFO -   → Procesados 5,100,000 nodos
+23:49:00 - INFO - ✅ Lote 1571 guardado con 100,001 aristas
+23:49:00 - INFO -   → Procesados 5,150,000 nodos
+23:49:00 - INFO - ✅ Lote 1572 guardado con 100,000 aristas
+23:49:01 - INFO - ✅ Lote 1573 guardado con 100,010 aristas
+23:49:01 - INFO -   → Procesados 5,200,000 nodos
+23:49:01 - INFO - ✅ Lote 1574 guardado con 100,000 aristas
+23:49:01 - INFO - ✅ Lote 1575 guardado con 100,002 aristas
+23:49:01 - INFO -   → Procesados 5,250,000 nodos
+23:49:01 - INFO - ✅ Lote 1576 guardado con 100,008 aristas
+23:49:02 - INFO -   → Procesados 5,300,000 nodos
+23:49:02 - INFO - ✅ Lote 1577 guardado con 100,003 aristas
+23:49:02 - INFO - ✅ Lote 1578 guardado con 100,007 aristas
+23:49:02 - INFO -   → Procesados 5,350,000 nodos
+23:49:02 - INFO - ✅ Lote 1579 guardado con 100,003 aristas
+23:49:02 - INFO - ✅ Lote 1580 guardado con 100,000 aristas
+23:49:02 - INFO -   → Procesados 5,400,000 nodos
+23:49:03 - INFO - ✅ Lote 1581 guardado con 100,003 aristas
+23:49:03 - INFO -   → Procesados 5,450,000 nodos
+23:49:03 - INFO - ✅ Lote 1582 guardado con 100,001 aristas
+23:49:03 - INFO - ✅ Lote 1583 guardado con 100,003 aristas
+23:49:03 - INFO -   → Procesados 5,500,000 nodos
+23:49:03 - INFO - ✅ Lote 1584 guardado con 100,000 aristas
+23:49:04 - INFO -   → Procesados 5,550,000 nodos
+23:49:04 - INFO - ✅ Lote 1585 guardado con 100,000 aristas
+23:49:04 - INFO - ✅ Lote 1586 guardado con 100,007 aristas
+23:49:04 - INFO -   → Procesados 5,600,000 nodos
+23:49:04 - INFO - ✅ Lote 1587 guardado con 100,004 aristas
+23:49:04 - INFO -   → Procesados 5,650,000 nodos
+23:49:04 - INFO - ✅ Lote 1588 guardado con 100,024 aristas
+23:49:05 - INFO - ✅ Lote 1589 guardado con 100,001 aristas
+23:49:05 - INFO -   → Procesados 5,700,000 nodos
+23:49:05 - INFO - ✅ Lote 1590 guardado con 100,000 aristas
+23:49:05 - INFO -   → Procesados 5,750,000 nodos
+23:49:05 - INFO - ✅ Lote 1591 guardado con 100,021 aristas
+23:49:05 - INFO - ✅ Lote 1592 guardado con 100,000 aristas
+23:49:05 - INFO -   → Procesados 5,800,000 nodos
+23:49:06 - INFO - ✅ Lote 1593 guardado con 100,000 aristas
+23:49:06 - INFO -   → Procesados 5,850,000 nodos
+23:49:06 - INFO - ✅ Lote 1594 guardado con 100,000 aristas
+23:49:06 - INFO -   → Procesados 5,900,000 nodos
+23:49:06 - INFO - ✅ Lote 1595 guardado con 100,026 aristas
+23:49:06 - INFO - ✅ Lote 1596 guardado con 100,002 aristas
+23:49:06 - INFO -   → Procesados 5,950,000 nodos
+23:49:06 - INFO - ✅ Lote 1597 guardado con 100,000 aristas
+23:49:07 - INFO -   → Procesados 6,000,000 nodos
+23:49:07 - INFO - ✅ Lote 1598 guardado con 100,003 aristas
+23:49:07 - INFO - ✅ Lote 1599 guardado con 100,000 aristas
+23:49:07 - INFO -   → Procesados 6,050,000 nodos
+23:49:07 - INFO - ✅ Lote 1600 guardado con 100,000 aristas
+23:49:07 - INFO -   → Procesados 6,100,000 nodos
+23:49:07 - INFO - ✅ Lote 1601 guardado con 100,004 aristas
+23:49:08 - INFO - ✅ Lote 1602 guardado con 100,095 aristas
+23:49:08 - INFO -   → Procesados 6,150,000 nodos
+23:49:08 - INFO - ✅ Lote 1603 guardado con 100,004 aristas
+23:49:08 - INFO -   → Procesados 6,200,000 nodos
+23:49:08 - INFO - ✅ Lote 1604 guardado con 100,000 aristas
+23:49:08 - INFO -   → Procesados 6,250,000 nodos
+23:49:08 - INFO - ✅ Lote 1605 guardado con 100,000 aristas
+23:49:09 - INFO - ✅ Lote 1606 guardado con 100,023 aristas
+23:49:09 - INFO -   → Procesados 6,300,000 nodos
+23:49:09 - INFO - ✅ Lote 1607 guardado con 100,000 aristas
+23:49:09 - INFO -   → Procesados 6,350,000 nodos
+23:49:09 - INFO - ✅ Lote 1608 guardado con 100,004 aristas
+23:49:09 - INFO -   → Procesados 6,400,000 nodos
+23:49:09 - INFO - ✅ Lote 1609 guardado con 100,000 aristas
+23:49:10 - INFO - ✅ Lote 1610 guardado con 100,000 aristas
+23:49:10 - INFO -   → Procesados 6,450,000 nodos
+23:49:10 - INFO - ✅ Lote 1611 guardado con 100,000 aristas
+23:49:10 - INFO -   → Procesados 6,500,000 nodos
+23:49:10 - INFO - ✅ Lote 1612 guardado con 100,003 aristas
+23:49:10 - INFO -   → Procesados 6,550,000 nodos
+23:49:10 - INFO - ✅ Lote 1613 guardado con 100,003 aristas
+23:49:11 - INFO -   → Procesados 6,600,000 nodos
+23:49:11 - INFO - ✅ Lote 1614 guardado con 100,000 aristas
+23:49:11 - INFO - ✅ Lote 1615 guardado con 100,002 aristas
+23:49:11 - INFO -   → Procesados 6,650,000 nodos
+23:49:11 - INFO - ✅ Lote 1616 guardado con 100,006 aristas
+23:49:11 - INFO -   → Procesados 6,700,000 nodos
+23:49:11 - INFO - ✅ Lote 1617 guardado con 100,001 aristas
+23:49:12 - INFO -   → Procesados 6,750,000 nodos
+23:49:12 - INFO - ✅ Lote 1618 guardado con 100,004 aristas
+23:49:12 - INFO -   → Procesados 6,800,000 nodos
+23:49:12 - INFO - ✅ Lote 1619 guardado con 100,003 aristas
+23:49:12 - INFO - ✅ Lote 1620 guardado con 100,000 aristas
+23:49:12 - INFO -   → Procesados 6,850,000 nodos
+23:49:13 - INFO - ✅ Lote 1621 guardado con 100,015 aristas
+23:49:13 - INFO -   → Procesados 6,900,000 nodos
+23:49:13 - INFO - ✅ Lote 1622 guardado con 100,000 aristas
+23:49:13 - INFO -   → Procesados 6,950,000 nodos
+23:49:13 - INFO - ✅ Lote 1623 guardado con 100,006 aristas
+23:49:13 - INFO -   → Procesados 7,000,000 nodos
+23:49:13 - INFO - ✅ Lote 1624 guardado con 100,000 aristas
+23:49:14 - INFO - ✅ Lote 1625 guardado con 100,018 aristas
+23:49:14 - INFO -   → Procesados 7,050,000 nodos
+23:49:14 - INFO - ✅ Lote 1626 guardado con 100,000 aristas
+23:49:14 - INFO -   → Procesados 7,100,000 nodos
+23:49:14 - INFO - ✅ Lote 1627 guardado con 100,000 aristas
+23:49:14 - INFO -   → Procesados 7,150,000 nodos
+23:49:14 - INFO - ✅ Lote 1628 guardado con 100,019 aristas
+23:49:15 - INFO -   → Procesados 7,200,000 nodos
+23:49:15 - INFO - ✅ Lote 1629 guardado con 100,019 aristas
+23:49:15 - INFO - ✅ Lote 1630 guardado con 100,003 aristas
+23:49:15 - INFO -   → Procesados 7,250,000 nodos
+23:49:15 - INFO - ✅ Lote 1631 guardado con 100,005 aristas
+23:49:15 - INFO -   → Procesados 7,300,000 nodos
+23:49:15 - INFO - ✅ Lote 1632 guardado con 100,000 aristas
+23:49:16 - INFO -   → Procesados 7,350,000 nodos
+23:49:16 - INFO - ✅ Lote 1633 guardado con 100,001 aristas
+23:49:16 - INFO -   → Procesados 7,400,000 nodos
+23:49:16 - INFO - ✅ Lote 1634 guardado con 100,004 aristas
+23:49:16 - INFO -   → Procesados 7,450,000 nodos
+23:49:16 - INFO - ✅ Lote 1635 guardado con 100,003 aristas
+23:49:16 - INFO -   → Procesados 7,500,000 nodos
+23:49:16 - INFO - ✅ Lote 1636 guardado con 100,004 aristas
+23:49:17 - INFO - ✅ Lote 1637 guardado con 100,000 aristas
+23:49:17 - INFO -   → Procesados 7,550,000 nodos
+23:49:17 - INFO - ✅ Lote 1638 guardado con 100,019 aristas
+23:49:17 - INFO -   → Procesados 7,600,000 nodos
+23:49:17 - INFO - ✅ Lote 1639 guardado con 100,000 aristas
+23:49:17 - INFO -   → Procesados 7,650,000 nodos
+23:49:17 - INFO - ✅ Lote 1640 guardado con 100,000 aristas
+23:49:18 - INFO -   → Procesados 7,700,000 nodos
+23:49:18 - INFO - ✅ Lote 1641 guardado con 100,002 aristas
+23:49:18 - INFO -   → Procesados 7,750,000 nodos
+23:49:18 - INFO - ✅ Lote 1642 guardado con 100,000 aristas
+23:49:18 - INFO -   → Procesados 7,800,000 nodos
+23:49:18 - INFO - ✅ Lote 1643 guardado con 100,002 aristas
+23:49:18 - INFO -   → Procesados 7,850,000 nodos
+23:49:18 - INFO - ✅ Lote 1644 guardado con 100,001 aristas
+23:49:19 - INFO -   → Procesados 7,900,000 nodos
+23:49:19 - INFO - ✅ Lote 1645 guardado con 100,000 aristas
+23:49:19 - INFO -   → Procesados 7,950,000 nodos
+23:49:19 - INFO - ✅ Lote 1646 guardado con 100,000 aristas
+23:49:19 - INFO -   → Procesados 8,000,000 nodos
+23:49:19 - INFO - ✅ Lote 1647 guardado con 100,001 aristas
+23:49:19 - INFO -   → Procesados 8,050,000 nodos
+23:49:20 - INFO - ✅ Lote 1648 guardado con 100,000 aristas
+23:49:20 - INFO -   → Procesados 8,100,000 nodos
+23:49:20 - INFO - ✅ Lote 1649 guardado con 100,003 aristas
+23:49:20 - INFO -   → Procesados 8,150,000 nodos
+23:49:20 - INFO - ✅ Lote 1650 guardado con 100,000 aristas
+23:49:20 - INFO -   → Procesados 8,200,000 nodos
+23:49:20 - INFO - ✅ Lote 1651 guardado con 100,001 aristas
+23:49:20 - INFO -   → Procesados 8,250,000 nodos
+23:49:21 - INFO - ✅ Lote 1652 guardado con 100,002 aristas
+23:49:21 - INFO -   → Procesados 8,300,000 nodos
+23:49:21 - INFO - ✅ Lote 1653 guardado con 100,000 aristas
+23:49:21 - INFO -   → Procesados 8,350,000 nodos
+23:49:21 - INFO -   → Procesados 8,400,000 nodos
+23:49:21 - INFO - ✅ Lote 1654 guardado con 100,000 aristas
+23:49:21 - INFO -   → Procesados 8,450,000 nodos
+23:49:21 - INFO - ✅ Lote 1655 guardado con 100,000 aristas
+23:49:22 - INFO -   → Procesados 8,500,000 nodos
+23:49:22 - INFO - ✅ Lote 1656 guardado con 100,034 aristas
+23:49:22 - INFO -   → Procesados 8,550,000 nodos
+23:49:22 - INFO - ✅ Lote 1657 guardado con 100,000 aristas
+23:49:22 - INFO -   → Procesados 8,600,000 nodos
+23:49:22 - INFO - ✅ Lote 1658 guardado con 100,002 aristas
+23:49:22 - INFO -   → Procesados 8,650,000 nodos
+23:49:23 - INFO - ✅ Lote 1659 guardado con 100,005 aristas
+23:49:23 - INFO -   → Procesados 8,700,000 nodos
+23:49:23 - INFO - ✅ Lote 1660 guardado con 100,008 aristas
+23:49:23 - INFO -   → Procesados 8,750,000 nodos
+23:49:23 - INFO -   → Procesados 8,800,000 nodos
+23:49:23 - INFO - ✅ Lote 1661 guardado con 100,000 aristas
+23:49:23 - INFO -   → Procesados 8,850,000 nodos
+23:49:23 - INFO - ✅ Lote 1662 guardado con 100,000 aristas
+23:49:23 - INFO -   → Procesados 8,900,000 nodos
+23:49:24 - INFO - ✅ Lote 1663 guardado con 100,000 aristas
+23:49:24 - INFO -   → Procesados 8,950,000 nodos
+23:49:24 - INFO - ✅ Lote 1664 guardado con 100,000 aristas
+23:49:24 - INFO -   → Procesados 9,000,000 nodos
+23:49:24 - INFO -   → Procesados 9,050,000 nodos
+23:49:24 - INFO - ✅ Lote 1665 guardado con 100,000 aristas
+23:49:24 - INFO -   → Procesados 9,100,000 nodos
+23:49:24 - INFO - ✅ Lote 1666 guardado con 100,000 aristas
+23:49:25 - INFO -   → Procesados 9,150,000 nodos
+23:49:25 - INFO - ✅ Lote 1667 guardado con 100,014 aristas
+23:49:25 - INFO -   → Procesados 9,200,000 nodos
+23:49:25 - INFO -   → Procesados 9,250,000 nodos
+23:49:25 - INFO - ✅ Lote 1668 guardado con 100,000 aristas
+23:49:25 - INFO -   → Procesados 9,300,000 nodos
+23:49:25 - INFO - ✅ Lote 1669 guardado con 100,003 aristas
+23:49:25 - INFO -   → Procesados 9,350,000 nodos
+23:49:25 - INFO - ✅ Lote 1670 guardado con 100,015 aristas
+23:49:25 - INFO -   → Procesados 9,400,000 nodos
+23:49:26 - INFO -   → Procesados 9,450,000 nodos
+23:49:26 - INFO - ✅ Lote 1671 guardado con 100,001 aristas
+23:49:26 - INFO -   → Procesados 9,500,000 nodos
+23:49:26 - INFO - ✅ Lote 1672 guardado con 100,000 aristas
+23:49:26 - INFO -   → Procesados 9,550,000 nodos
+23:49:26 - INFO - ✅ Lote 1673 guardado con 100,001 aristas
+23:49:26 - INFO -   → Procesados 9,600,000 nodos
+23:49:26 - INFO -   → Procesados 9,650,000 nodos
+23:49:26 - INFO - ✅ Lote 1674 guardado con 100,000 aristas
+23:49:27 - INFO -   → Procesados 9,700,000 nodos
+23:49:27 - INFO - ✅ Lote 1675 guardado con 100,000 aristas
+23:49:27 - INFO -   → Procesados 9,750,000 nodos
+23:49:27 - INFO -   → Procesados 9,800,000 nodos
+23:49:27 - INFO - ✅ Lote 1676 guardado con 100,000 aristas
+23:49:27 - INFO -   → Procesados 9,850,000 nodos
+23:49:27 - INFO - ✅ Lote 1677 guardado con 100,001 aristas
+23:49:27 - INFO -   → Procesados 9,900,000 nodos
+23:49:27 - INFO -   → Procesados 9,950,000 nodos
+23:49:28 - INFO - ✅ Lote 1678 guardado con 100,001 aristas
+23:49:28 - INFO - ✅ Último lote 1679 guardado con 50,256 aristas
+23:49:28 - INFO - 🎉 Proceso finalizado. Total aristas: 169,488,181
+19:06:59 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+19:06:59 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+19:06:59 - INFO -  Validando datos de ubicaci�n...
+19:06:59 - INFO -  Procesando listas de conexiones...
+19:06:59 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+19:06:59 - INFO -  Ubicaciones v�lidas: (10000000, 2)
+19:06:59 - INFO -  Ejecutando procesamiento de usuarios...
+19:07:01 - INFO -  Usuarios procesados: (10000000, 1)
+19:07:01 - INFO -  Guardando archivos .parquet...
+19:07:23 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+22:48:16 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+22:48:16 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+22:48:16 - INFO -  Validando datos de ubicaci�n...
+22:48:16 - INFO -  Procesando listas de conexiones...
+22:48:16 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+22:48:16 - INFO -  Ubicaciones v�lidas: (10000000, 2)
+22:48:16 - INFO -  Ejecutando procesamiento de usuarios...
+22:48:17 - INFO -  Usuarios procesados: (10000000, 1)
+22:48:17 - INFO -  Guardando archivos .parquet...
+22:48:30 - INFO -  Preprocesamiento terminado (eficiente y escalable).
+22:49:13 - INFO -  Cargando ubicaciones en modo streaming (lazy)...
+22:49:13 - INFO -  Cargando usuarios (adyacencias) en modo streaming (lazy)...
+22:49:13 - INFO -  Validando datos de ubicaci�n...
+22:49:13 - INFO -  Procesando listas de conexiones...
+22:49:13 - INFO -  Ejecutando procesamiento de ubicaciones (esto puede tardar un poco)...
+22:49:13 - INFO -  Ubicaciones v�lidas: (10000000, 2)
+22:49:13 - INFO -  Ejecutando procesamiento de usuarios...
+22:49:14 - INFO -  Usuarios procesados: (10000000, 1)
+22:49:14 - INFO -  Guardando archivos .parquet...
+22:49:27 - INFO -  Preprocesamiento terminado (eficiente y escalable).
