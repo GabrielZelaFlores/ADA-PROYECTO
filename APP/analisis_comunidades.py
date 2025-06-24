@@ -1,5 +1,3 @@
-# analisisdecomunidades.py
-
 import pickle
 from collections import defaultdict, Counter
 import statistics
@@ -11,7 +9,7 @@ with open("data/grafo_con_comunidades.pkl", "rb") as f:
     grafo = pickle.load(f)
 
 if not hasattr(grafo, "comunidades"):
-    raise ValueError("\u274c El grafo no tiene atributo 'comunidades'. Debes calcularlas primero.")
+    raise ValueError("❌ El grafo no tiene atributo 'comunidades'. Debes calcularlas primero.")
 
 # ========================
 # Construir estructura por comunidad
@@ -25,18 +23,17 @@ for nodo, comunidad in grafo.comunidades.items():
 # ========================
 def analizar_comunidad(comunidad_id):
     if comunidad_id not in comunidades:
-        print(f"\u274c Comunidad {comunidad_id} no encontrada.")
+        print(f"❌ Comunidad {comunidad_id} no encontrada.")
         return
 
     nodos = comunidades[comunidad_id]
     total_nodos = len(nodos)
 
-    # Aristas dentro de la comunidad
     aristas = 0
     in_degrees = Counter()
 
     for u in nodos:
-        for v in grafo.adj.get(u, []):
+        for v, _ in grafo.adj.get(u, []):  # ahora v, peso
             if v in nodos:
                 aristas += 1
                 in_degrees[v] += 1
@@ -62,7 +59,7 @@ def analisis_general():
         total_nodos = len(nodos)
         aristas = 0
         for u in nodos:
-            for v in grafo.adj.get(u, []):
+            for v, _ in grafo.adj.get(u, []):  # considerar pesos, pero aquí solo se cuenta
                 if v in nodos:
                     aristas += 1
         grado_promedio = aristas / total_nodos if total_nodos else 0
@@ -79,22 +76,21 @@ def analisis_general():
     print(f"Grado promedio global: {prom_grado:.2f}")
 
     print("\nTop 5 comunidades más grandes:")
-    for cid, n, _, _ in sorted(resumen, key=lambda x: -x[1])[:5]:
+    for cid, n, _, _ in sorted(resumen, key=lambda x: -x[1])[:25]:
         print(f"  Comunidad {cid:<4} con {n} nodos")
 
-    min_nodos = 100  # mínimo de nodos para considerar
+    min_nodos = 100
 
-    print(f"\nTop 20 comunidades más pequeñas con más de {min_nodos} nodos:")
+    print(f"\nTop 10 comunidades más pequeñas con más de {min_nodos} nodos:")
     for cid, n, _, _ in sorted([r for r in resumen if r[1] > min_nodos], key=lambda x: x[1])[:10]:
         print(f"  Comunidad {cid:<4} con {n} nodos")
-
 
 # ========================
 # Ejecutar ejemplo
 # ========================
 if __name__ == "__main__":
     print("ANALISIS DE COMUNIDADES\nOpciones:\n1. Analisis de Comunidad por ID\n2. Analisis General")
-    a =  int(input("Opción: "))
+    a = int(input("Opción: "))
     if a == 1:
         comunidad_id = int(input("Ingrese el ID de la comunidad a analizar: "))
         analizar_comunidad(comunidad_id)
