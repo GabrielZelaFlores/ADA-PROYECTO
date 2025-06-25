@@ -1,0 +1,9 @@
+polars
+pandas
+matplotlib
+seaborn
+networkx
+scipy
+python-igraph
+pyvis>=0.3.2
+
