@@ -1,99 +1,109 @@
 # Proyecto de Análisis de Redes Espaciales V2
 
-## Descripción del Proyecto
+## 🧠 ¿De qué trata este proyecto?
 
-Este directorio (`V2`) contiene un conjunto de scripts de Python diseñados para realizar un análisis completo de datos de redes espaciales. El flujo de trabajo abarca desde la ingesta y limpieza de datos crudos, la construcción de una representación gráfica de la red, la detección y análisis de comunidades dentro de la red, hasta la aplicación de algoritmos de grafos clásicos como Dijkstra y Kruskal. Además, se incluyen herramientas para la visualización geográfica de los nodos, comunidades y resultados de los análisis.
+Este repositorio contiene un conjunto de scripts en Python diseñados para realizar un análisis completo sobre **redes espaciales**. El proceso abarca desde la **lectura y limpieza de datos crudos**, la **construcción del grafo**, la **detección de comunidades**, hasta la aplicación de algoritmos clásicos como **Dijkstra** y **Kruskal**, incluyendo también herramientas para visualizar los resultados en mapas interactivos.
 
-El proyecto está estructurado para manejar conjuntos de datos potencialmente grandes, utilizando formatos eficientes como Parquet para el almacenamiento intermedio de datos y Pickle para serializar el objeto grafo. Las visualizaciones se generan principalmente con la biblioteca Plotly.
+Se ha pensado en un flujo de trabajo modular y escalable, capaz de manejar grandes volúmenes de datos. Para ello se utilizan formatos eficientes como **Parquet** para almacenamiento intermedio y **Pickle** para guardar el grafo ya procesado. Las visualizaciones se generan principalmente con **Plotly**.
 
-## Estructura del Directorio
+---
 
-A continuación, se describen los componentes principales y archivos dentro del directorio `V2`:
+## 📁 Estructura del proyecto
 
-*   **`data/` (Directorio)**: Aunque no listado explícitamente en `ls V2`, se infiere que es donde residen los datos crudos (ej: `10_million_location.txt`, `10_million_user.txt`), los datos procesados en formato Parquet (ej: `ubicaciones_limpias.parquet`, `usuarios_conexiones.parquet`, `aristas_completo.parquet`), y los grafos serializados (ej: `grafo_guardado.pkl`, `grafo_con_comunidades.pkl`).
-*   **`graficos/` (Directorio)**: Se infiere que es donde se guardan las visualizaciones generadas, como mapas HTML (ej: `dijkstra/camino_mas_corto.html`, `grafo_top_N_comunidades.html`).
-*   **`__pycache__/` (Directorio)**: Archivos de caché generados por Python.
-*   **`graphObj.py`**: Define la clase `Graph`, la estructura de datos central para representar la red.
-*   **`logger_config.py`**: Script para la configuración del sistema de logging utilizado por otros scripts.
-*   **`requirements.txt`**: Lista las dependencias de Python necesarias para ejecutar el proyecto.
-*   **Scripts de Procesamiento de Datos:**
-    *   `data_raw_to_parquet.py`: Lee datos crudos de ubicación y usuarios, los limpia y los guarda en formato Parquet.
-    *   `data_weights_to_parquet.py`: (Presumiblemente) Calcula o asigna pesos a las conexiones/aristas y guarda el resultado en Parquet.
-    *   `data_graph_construction.py`: Construye el objeto grafo a partir de los archivos Parquet y lo guarda como un archivo Pickle.
-    *   `data_asignar_comunidad.py`: (Presumiblemente) Ejecuta algoritmos de detección de comunidades sobre el grafo y guarda el grafo actualizado con esta información.
-*   **Scripts de Análisis:**
-    *   `analisis_comunidades.py`: Realiza análisis estadísticos sobre las comunidades detectadas en el grafo.
-    *   `analisis_dijkstra.py`: Implementa el algoritmo de Dijkstra para encontrar el camino más corto entre nodos y visualiza el resultado.
-    *   `analisis_kruskal.py`: (Presumiblemente) Implementa el algoritmo de Kruskal, probablemente para encontrar Árboles de Expansión Mínima.
-    *   `analisis_eda.py`: (Presumiblemente) Realiza análisis exploratorio de datos sobre el grafo o sus propiedades.
-*   **Scripts de Visualización:**
-    *   `mapa_comunidad.py`: Genera un mapa interactivo visualizando nodos coloreados por su comunidad.
-    *   `mapa_BFS.py`: (Presumiblemente) Visualiza los resultados de un recorrido BFS (Breadth-First Search) en un mapa.
-    *   `mapa_por_comunidad.py`: (Presumiblemente) Genera visualizaciones de mapa específicas para comunidades individuales.
-*   **`carga.log`**: Archivo de log generado durante la ejecución de los scripts (probablemente por `logger_config.py`).
+Aquí te explicamos qué encontrarás dentro del directorio `V2`:
 
-## Flujo de Trabajo y Uso
+### Directorios principales
 
-El proyecto sigue un flujo de trabajo secuencial, donde la salida de un script es a menudo la entrada del siguiente:
+* `data/`: Aquí se guardan tanto los datos crudos (por ejemplo, `10_million_location.txt`) como los procesados (`.parquet`, `.pkl`).
+* `graficos/`: Contiene las visualizaciones generadas (mapas, recorridos, etc.) en formato HTML.
+* `__pycache__/`: Caché generada automáticamente por Python.
 
-1.  **Preparación de Datos:**
-    *   Ejecutar `data_raw_to_parquet.py` para convertir los datos crudos de ubicación y conexiones de usuario en archivos Parquet limpios y estructurados.
-        *   *Entrada*: Archivos de texto con datos crudos (ej: `data/10_million_location.txt`, `data/10_million_user.txt`).
-        *   *Salida*: Archivos Parquet (ej: `data/ubicaciones_limpias.parquet`, `data/usuarios_conexiones.parquet`).
-    *   Ejecutar `data_weights_to_parquet.py` (si es necesario para generar pesos de aristas).
-        *   *Entrada*: Datos de conexiones (posiblemente `data/usuarios_conexiones.parquet`).
-        *   *Salida*: Archivo Parquet con aristas ponderadas (ej: `data/aristas_completo.parquet`).
+### Archivos principales
 
-2.  **Construcción del Grafo:**
-    *   Ejecutar `data_graph_construction.py` para construir el objeto grafo a partir de los datos procesados y guardarlo.
-        *   *Entrada*: Archivos Parquet de ubicaciones y aristas ponderadas (ej: `data/ubicaciones_limpias.parquet`, `data/aristas_completo.parquet`).
-        *   *Salida*: Archivo Pickle del grafo (ej: `data/grafo_guardado.pkl`).
+* `graphObj.py`: Define la clase `Graph`, que representa la estructura principal del grafo.
+* `logger_config.py`: Configura el sistema de logs del proyecto.
+* `requirements.txt`: Lista de librerías necesarias.
 
-3.  **Detección y Asignación de Comunidades:**
-    *   Ejecutar `data_asignar_comunidad.py` para identificar comunidades dentro del grafo.
-        *   *Entrada*: Archivo Pickle del grafo (ej: `data/grafo_guardado.pkl`).
-        *   *Salida*: Archivo Pickle del grafo con información de comunidades (ej: `data/grafo_con_comunidades.pkl`).
+### Scripts para procesar los datos
 
-4.  **Análisis y Visualización:**
-    *   Una vez que el grafo (con o sin comunidades) está disponible, se pueden ejecutar los diversos scripts de análisis y visualización:
-        *   `analisis_comunidades.py`: Para obtener estadísticas y detalles sobre las comunidades.
-            *   *Entrada*: `data/grafo_con_comunidades.pkl`.
-        *   `analisis_dijkstra.py`: Para encontrar y visualizar caminos más cortos.
-            *   *Entrada*: `data/grafo_con_comunidades.pkl` (o `data/grafo_guardado.pkl` si las comunidades no son relevantes para el camino).
-            *   *Salida*: Visualización HTML en `graficos/dijkstra/`.
-        *   `analisis_kruskal.py`: Para análisis basados en MST.
-            *   *Entrada*: Grafo Pickled.
-        *   `analisis_eda.py`: Para exploración general de datos.
-            *   *Entrada*: Grafo Pickled.
-        *   `mapa_comunidad.py`: Para visualizar la distribución geográfica de las comunidades.
-            *   *Entrada*: `data/grafo_con_comunidades.pkl`.
-            *   *Salida*: Visualización HTML en `graficos/`.
-        *   `mapa_BFS.py`, `mapa_por_comunidad.py`: Para otras visualizaciones específicas.
-            *   *Entrada*: Grafo Pickled.
+* `data_raw_to_parquet.py`: Limpia los datos crudos y los convierte a formato Parquet.
+* `data_weights_to_parquet.py`: Asigna pesos a las conexiones y guarda el resultado.
+* `data_graph_construction.py`: Crea el grafo a partir de los datos limpios y lo guarda como Pickle.
+* `data_asignar_comunidad.py`: Aplica algoritmos de detección de comunidades sobre el grafo.
 
-## Instrucciones de Uso
+### Scripts de análisis
 
-1.  **Configurar el Entorno:**
-    *   Asegúrese de tener Python 3 instalado.
-    *   Instale las dependencias necesarias ejecutando:
-        ```bash
-        pip install -r requirements.txt
-        ```
-    *   Verifique que los directorios `data/` y `graficos/` existan en la raíz del proyecto `V2/` (créelos si no existen) para almacenar los datos de entrada/salida y las visualizaciones.
+* `analisis_comunidades.py`: Realiza estadísticas y análisis de las comunidades encontradas.
+* `analisis_dijkstra.py`: Calcula el camino más corto entre nodos y lo visualiza.
+* `analisis_kruskal.py`: Aplica el algoritmo de Kruskal (por ejemplo, para encontrar árboles de expansión mínima).
+* `analisis_eda.py`: Exploración general de los datos (EDA).
 
-2.  **Ejecutar los Scripts:**
-    *   Siga el orden descrito en la sección "Flujo de Trabajo y Uso".
-    *   Ejecute los scripts desde la línea de comandos, por ejemplo:
-        ```bash
-        python V2/data_raw_to_parquet.py
-        python V2/data_graph_construction.py
-        # ... y así sucesivamente
-        ```
-    *   Algunos scripts, como `analisis_comunidades.py` o `analisis_dijkstra.py`, pueden tener parámetros o requerir interacción del usuario si se ejecutan directamente (por ejemplo, para ingresar IDs de nodos o seleccionar opciones de análisis). Revise el código de cada script para detalles específicos de ejecución si es necesario.
+### Scripts de visualización
 
-3.  **Consultar Resultados:**
-    *   Los datos procesados se encontrarán en el directorio `data/` en formato Parquet o Pickle.
-    *   Las visualizaciones interactivas (archivos HTML) se guardarán en el directorio `graficos/` y pueden abrirse con cualquier navegador web.
-    *   Revise el archivo `carga.log` para cualquier mensaje informativo o de error durante la ejecución de los scripts.
+* `mapa_comunidad.py`: Muestra los nodos en el mapa según la comunidad a la que pertenecen.
+* `mapa_BFS.py`: Visualiza recorridos BFS.
+* `mapa_por_comunidad.py`: Permite ver en detalle comunidades específicas en un mapa.
 
-Este README proporciona una guía general. Para detalles específicos sobre la lógica o configuración de un script en particular, consulte los comentarios y el código fuente del script correspondiente.
+---
+
+## 🔁 Flujo de trabajo recomendado
+
+Para aprovechar todo el potencial del proyecto, sigue este orden:
+
+1. **Preparar los datos:**
+
+   ```bash
+   python V2/data_raw_to_parquet.py
+   python V2/data_weights_to_parquet.py
+   ```
+
+2. **Construir el grafo:**
+
+   ```bash
+   python V2/data_graph_construction.py
+   ```
+
+3. **Detectar comunidades:**
+
+   ```bash
+   python V2/data_asignar_comunidad.py
+   ```
+
+4. **Analizar y visualizar:**
+
+   ```bash
+   python V2/analisis_comunidades.py
+   python V2/analisis_dijkstra.py
+   python V2/analisis_kruskal.py
+   python V2/mapa_comunidad.py
+   ```
+
+Cada uno de estos scripts generará archivos intermedios en `data/` y visualizaciones en `graficos/`.
+
+---
+
+## ⚙️ ¿Cómo empezar?
+
+1. **Prepara tu entorno:**
+
+   Asegúrate de tener Python 3 instalado. Luego, instala los paquetes necesarios:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Crea los directorios si no existen:**
+
+   ```bash
+   mkdir -p data graficos
+   ```
+
+3. **Ejecuta los scripts siguiendo el flujo de trabajo.**
+
+4. **Consulta los resultados:**
+
+   * Los datos procesados estarán en `data/`.
+   * Las visualizaciones (mapas interactivos en HTML) se guardan en `graficos/` y pueden abrirse en cualquier navegador.
+   * El archivo `carga.log` puede ayudarte a revisar mensajes de error o progreso.
+
+---
