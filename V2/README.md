@@ -1,82 +1,99 @@
-# Proyecto V2 - Análisis de Redes de Transporte
+# Proyecto de Análisis de Redes Espaciales V2
 
-Este directorio contiene la versión 2 del proyecto de análisis de redes de transporte. Se ha estructurado el flujo de trabajo en un script principal (`main.py`) que permite ejecutar diferentes etapas del proceso de forma modular.
+## Descripción del Proyecto
 
-## Flujo de Trabajo
+Este directorio (`V2`) contiene un conjunto de scripts de Python diseñados para realizar un análisis completo de datos de redes espaciales. El flujo de trabajo abarca desde la ingesta y limpieza de datos crudos, la construcción de una representación gráfica de la red, la detección y análisis de comunidades dentro de la red, hasta la aplicación de algoritmos de grafos clásicos como Dijkstra y Kruskal. Además, se incluyen herramientas para la visualización geográfica de los nodos, comunidades y resultados de los análisis.
 
-El proyecto se divide en tres etapas principales, cada una compuesta por varios scripts específicos:
+El proyecto está estructurado para manejar conjuntos de datos potencialmente grandes, utilizando formatos eficientes como Parquet para el almacenamiento intermedio de datos y Pickle para serializar el objeto grafo. Las visualizaciones se generan principalmente con la biblioteca Plotly.
 
-1.  **Carga de Datos**: Esta etapa se encarga de procesar los datos crudos, construir las estructuras de datos necesarias (como grafos) y prepararlos para el análisis.
-2.  **Análisis**: En esta etapa se realizan diversos análisis sobre los datos procesados. Esto incluye análisis exploratorio de datos (EDA), detección de comunidades, y algoritmos de grafos como Dijkstra y Kruskal.
-3.  **Visualizaciones**: Esta etapa genera diferentes mapas y visualizaciones para representar los resultados de los análisis, como la distribución geográfica de comunidades, rutas óptimas, etc.
+## Estructura del Directorio
 
-## `main.py`
+A continuación, se describen los componentes principales y archivos dentro del directorio `V2`:
 
-El script `main.py` es el punto de entrada para ejecutar el flujo de trabajo del proyecto V2. Permite seleccionar qué sección o secciones del proyecto se desean ejecutar.
+*   **`data/` (Directorio)**: Aunque no listado explícitamente en `ls V2`, se infiere que es donde residen los datos crudos (ej: `10_million_location.txt`, `10_million_user.txt`), los datos procesados en formato Parquet (ej: `ubicaciones_limpias.parquet`, `usuarios_conexiones.parquet`, `aristas_completo.parquet`), y los grafos serializados (ej: `grafo_guardado.pkl`, `grafo_con_comunidades.pkl`).
+*   **`graficos/` (Directorio)**: Se infiere que es donde se guardan las visualizaciones generadas, como mapas HTML (ej: `dijkstra/camino_mas_corto.html`, `grafo_top_N_comunidades.html`).
+*   **`__pycache__/` (Directorio)**: Archivos de caché generados por Python.
+*   **`graphObj.py`**: Define la clase `Graph`, la estructura de datos central para representar la red.
+*   **`logger_config.py`**: Script para la configuración del sistema de logging utilizado por otros scripts.
+*   **`requirements.txt`**: Lista las dependencias de Python necesarias para ejecutar el proyecto.
+*   **Scripts de Procesamiento de Datos:**
+    *   `data_raw_to_parquet.py`: Lee datos crudos de ubicación y usuarios, los limpia y los guarda en formato Parquet.
+    *   `data_weights_to_parquet.py`: (Presumiblemente) Calcula o asigna pesos a las conexiones/aristas y guarda el resultado en Parquet.
+    *   `data_graph_construction.py`: Construye el objeto grafo a partir de los archivos Parquet y lo guarda como un archivo Pickle.
+    *   `data_asignar_comunidad.py`: (Presumiblemente) Ejecuta algoritmos de detección de comunidades sobre el grafo y guarda el grafo actualizado con esta información.
+*   **Scripts de Análisis:**
+    *   `analisis_comunidades.py`: Realiza análisis estadísticos sobre las comunidades detectadas en el grafo.
+    *   `analisis_dijkstra.py`: Implementa el algoritmo de Dijkstra para encontrar el camino más corto entre nodos y visualiza el resultado.
+    *   `analisis_kruskal.py`: (Presumiblemente) Implementa el algoritmo de Kruskal, probablemente para encontrar Árboles de Expansión Mínima.
+    *   `analisis_eda.py`: (Presumiblemente) Realiza análisis exploratorio de datos sobre el grafo o sus propiedades.
+*   **Scripts de Visualización:**
+    *   `mapa_comunidad.py`: Genera un mapa interactivo visualizando nodos coloreados por su comunidad.
+    *   `mapa_BFS.py`: (Presumiblemente) Visualiza los resultados de un recorrido BFS (Breadth-First Search) en un mapa.
+    *   `mapa_por_comunidad.py`: (Presumiblemente) Genera visualizaciones de mapa específicas para comunidades individuales.
+*   **`carga.log`**: Archivo de log generado durante la ejecución de los scripts (probablemente por `logger_config.py`).
 
-### Uso
+## Flujo de Trabajo y Uso
 
-Para ejecutar el script `main.py`, navega al directorio `V2` en tu terminal y utiliza el siguiente comando:
+El proyecto sigue un flujo de trabajo secuencial, donde la salida de un script es a menudo la entrada del siguiente:
 
-```bash
-python main.py [seccion]
-```
+1.  **Preparación de Datos:**
+    *   Ejecutar `data_raw_to_parquet.py` para convertir los datos crudos de ubicación y conexiones de usuario en archivos Parquet limpios y estructurados.
+        *   *Entrada*: Archivos de texto con datos crudos (ej: `data/10_million_location.txt`, `data/10_million_user.txt`).
+        *   *Salida*: Archivos Parquet (ej: `data/ubicaciones_limpias.parquet`, `data/usuarios_conexiones.parquet`).
+    *   Ejecutar `data_weights_to_parquet.py` (si es necesario para generar pesos de aristas).
+        *   *Entrada*: Datos de conexiones (posiblemente `data/usuarios_conexiones.parquet`).
+        *   *Salida*: Archivo Parquet con aristas ponderadas (ej: `data/aristas_completo.parquet`).
 
-Donde `[seccion]` puede ser una de las siguientes opciones:
+2.  **Construcción del Grafo:**
+    *   Ejecutar `data_graph_construction.py` para construir el objeto grafo a partir de los datos procesados y guardarlo.
+        *   *Entrada*: Archivos Parquet de ubicaciones y aristas ponderadas (ej: `data/ubicaciones_limpias.parquet`, `data/aristas_completo.parquet`).
+        *   *Salida*: Archivo Pickle del grafo (ej: `data/grafo_guardado.pkl`).
 
-*   `carga`: Ejecuta todos los scripts de la sección de Carga de Datos.
-*   `analisis`: Ejecuta todos los scripts de la sección de Análisis.
-*   `visualizaciones`: Ejecuta todos los scripts de la sección de Visualizaciones.
-*   `todo`: Ejecuta todas las secciones en orden: Carga de Datos, luego Análisis y finalmente Visualizaciones.
+3.  **Detección y Asignación de Comunidades:**
+    *   Ejecutar `data_asignar_comunidad.py` para identificar comunidades dentro del grafo.
+        *   *Entrada*: Archivo Pickle del grafo (ej: `data/grafo_guardado.pkl`).
+        *   *Salida*: Archivo Pickle del grafo con información de comunidades (ej: `data/grafo_con_comunidades.pkl`).
 
-**Ejemplo:**
+4.  **Análisis y Visualización:**
+    *   Una vez que el grafo (con o sin comunidades) está disponible, se pueden ejecutar los diversos scripts de análisis y visualización:
+        *   `analisis_comunidades.py`: Para obtener estadísticas y detalles sobre las comunidades.
+            *   *Entrada*: `data/grafo_con_comunidades.pkl`.
+        *   `analisis_dijkstra.py`: Para encontrar y visualizar caminos más cortos.
+            *   *Entrada*: `data/grafo_con_comunidades.pkl` (o `data/grafo_guardado.pkl` si las comunidades no son relevantes para el camino).
+            *   *Salida*: Visualización HTML en `graficos/dijkstra/`.
+        *   `analisis_kruskal.py`: Para análisis basados en MST.
+            *   *Entrada*: Grafo Pickled.
+        *   `analisis_eda.py`: Para exploración general de datos.
+            *   *Entrada*: Grafo Pickled.
+        *   `mapa_comunidad.py`: Para visualizar la distribución geográfica de las comunidades.
+            *   *Entrada*: `data/grafo_con_comunidades.pkl`.
+            *   *Salida*: Visualización HTML en `graficos/`.
+        *   `mapa_BFS.py`, `mapa_por_comunidad.py`: Para otras visualizaciones específicas.
+            *   *Entrada*: Grafo Pickled.
 
-Para ejecutar solo la sección de análisis:
+## Instrucciones de Uso
 
-```bash
-python main.py analisis
-```
+1.  **Configurar el Entorno:**
+    *   Asegúrese de tener Python 3 instalado.
+    *   Instale las dependencias necesarias ejecutando:
+        ```bash
+        pip install -r requirements.txt
+        ```
+    *   Verifique que los directorios `data/` y `graficos/` existan en la raíz del proyecto `V2/` (créelos si no existen) para almacenar los datos de entrada/salida y las visualizaciones.
 
-Para ejecutar todo el flujo de trabajo:
+2.  **Ejecutar los Scripts:**
+    *   Siga el orden descrito en la sección "Flujo de Trabajo y Uso".
+    *   Ejecute los scripts desde la línea de comandos, por ejemplo:
+        ```bash
+        python V2/data_raw_to_parquet.py
+        python V2/data_graph_construction.py
+        # ... y así sucesivamente
+        ```
+    *   Algunos scripts, como `analisis_comunidades.py` o `analisis_dijkstra.py`, pueden tener parámetros o requerir interacción del usuario si se ejecutan directamente (por ejemplo, para ingresar IDs de nodos o seleccionar opciones de análisis). Revise el código de cada script para detalles específicos de ejecución si es necesario.
 
-```bash
-python main.py todo
-```
+3.  **Consultar Resultados:**
+    *   Los datos procesados se encontrarán en el directorio `data/` en formato Parquet o Pickle.
+    *   Las visualizaciones interactivas (archivos HTML) se guardarán en el directorio `graficos/` y pueden abrirse con cualquier navegador web.
+    *   Revise el archivo `carga.log` para cualquier mensaje informativo o de error durante la ejecución de los scripts.
 
-Durante la ejecución, la consola mostrará información sobre los scripts que se están ejecutando, incluyendo el tiempo que tarda cada script y el tiempo total para cada sección completada.
-
-### Scripts Invocados por `main.py`
-
-A continuación, se describe brevemente cada script que es invocado por `main.py` según la sección seleccionada:
-
-#### Sección: `carga`
-
-*   **`data_raw_to_parquet.py`**: Convierte los datos crudos (presumiblemente CSVs u otros formatos) a formato Parquet para optimizar la lectura y almacenamiento.
-*   **`data_graph_construction.py`**: Construye la estructura del grafo principal a partir de los datos procesados.
-*   **`data_weights_to_parquet.py`**: Calcula y almacena los pesos (costos, distancias, etc.) de las aristas del grafo en formato Parquet.
-*   **`data_asignar_comunidad.py`**: Asigna nodos del grafo a comunidades, posiblemente utilizando algún algoritmo de detección de comunidades o datos preexistentes.
-
-#### Sección: `analisis`
-
-*   **`analisis_eda.py`**: Realiza un Análisis Exploratorio de Datos sobre los datasets generados.
-*   **`analisis_comunidades.py`**: Ejecuta análisis específicos sobre las comunidades detectadas en el grafo.
-*   **`analisis_dijkstra.py`**: Implementa y ejecuta el algoritmo de Dijkstra para encontrar caminos mínimos en el grafo.
-*   **`analisis_kruskal.py`**: Implementa y ejecuta el algoritmo de Kruskal para encontrar el Árbol de Expansión Mínima (MST) del grafo.
-
-#### Sección: `visualizaciones`
-
-*   **`mapa_BFS.py`**: Genera visualizaciones geográficas o de red utilizando los resultados de un recorrido BFS (Breadth-First Search).
-*   **`mapa_comunidad.py`**: Crea mapas que muestran la distribución o estructura de las comunidades identificadas.
-*   **`mapa_por_comunidad.py`**: Genera visualizaciones específicas para cada comunidad o un resumen de ellas.
-
-## Logger
-
-El script `main.py` y los scripts que invoca utilizan un sistema de logging configurado a través de `logger_config.py`. Los logs se guardan en `app.log` (este archivo de log podría estar en el directorio raíz o en `V2/`, dependiendo de la configuración exacta de `logger_config.py` y cómo se ejecutan los scripts). Se recomienda revisar este archivo para obtener detalles sobre la ejecución y posibles errores.
-
-## Requisitos
-
-Asegúrate de tener instaladas todas las dependencias listadas en el archivo `requirements.txt` dentro del directorio `V2`. Puedes instalarlas usando pip:
-
-```bash
-pip install -r requirements.txt
-```
+Este README proporciona una guía general. Para detalles específicos sobre la lógica o configuración de un script en particular, consulte los comentarios y el código fuente del script correspondiente.
