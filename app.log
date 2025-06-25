@@ -46,3 +46,41 @@
 14:19:27 - INFO -  Guardado: graficos/distribucion_geografica.png
 14:19:27 - INFO -  Generando resumen de distribuci�n geogr�fica...
 14:19:27 - INFO -  An�lisis completado con �xito.
+14:35:43 - INFO - Sección seleccionada: carga
+14:35:43 - INFO - Iniciando sección: Carga de Datos
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: data_raw_to_parquet.py en la ruta /app/V2/data_raw_to_parquet.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: data_graph_construction.py en la ruta /app/V2/data_graph_construction.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: data_weights_to_parquet.py en la ruta /app/V2/data_weights_to_parquet.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: data_asignar_comunidad.py en la ruta /app/V2/data_asignar_comunidad.py
+14:35:43 - INFO - Sección Carga de Datos completada.
+14:35:43 - INFO - Sección seleccionada: analisis
+14:35:43 - INFO - Iniciando sección: Análisis
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: analisis_eda.py en la ruta /app/V2/analisis_eda.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: analisis_comunidades.py en la ruta /app/V2/analisis_comunidades.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: analisis_dijkstra.py en la ruta /app/V2/analisis_dijkstra.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: analisis_kruskal.py en la ruta /app/V2/analisis_kruskal.py
+14:35:43 - INFO - Sección Análisis completada.
+14:35:43 - INFO - Sección seleccionada: visualizaciones
+14:35:43 - INFO - Iniciando sección: Visualizaciones
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: mapa_BFS.py en la ruta /app/V2/mapa_BFS.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: mapa_comunidad.py en la ruta /app/V2/mapa_comunidad.py
+14:35:43 - INFO - Simulación: Intentando ejecutar el script: mapa_por_comunidad.py en la ruta /app/V2/mapa_por_comunidad.py
+14:35:43 - INFO - Sección Visualizaciones completada.
+14:35:44 - INFO - Sección seleccionada: todo
+14:35:44 - INFO - Iniciando sección: Carga de Datos
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: data_raw_to_parquet.py en la ruta /app/V2/data_raw_to_parquet.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: data_graph_construction.py en la ruta /app/V2/data_graph_construction.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: data_weights_to_parquet.py en la ruta /app/V2/data_weights_to_parquet.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: data_asignar_comunidad.py en la ruta /app/V2/data_asignar_comunidad.py
+14:35:44 - INFO - Sección Carga de Datos completada.
+14:35:44 - INFO - Iniciando sección: Análisis
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: analisis_eda.py en la ruta /app/V2/analisis_eda.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: analisis_comunidades.py en la ruta /app/V2/analisis_comunidades.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: analisis_dijkstra.py en la ruta /app/V2/analisis_dijkstra.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: analisis_kruskal.py en la ruta /app/V2/analisis_kruskal.py
+14:35:44 - INFO - Sección Análisis completada.
+14:35:44 - INFO - Iniciando sección: Visualizaciones
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: mapa_BFS.py en la ruta /app/V2/mapa_BFS.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: mapa_comunidad.py en la ruta /app/V2/mapa_comunidad.py
+14:35:44 - INFO - Simulación: Intentando ejecutar el script: mapa_por_comunidad.py en la ruta /app/V2/mapa_por_comunidad.py
+14:35:44 - INFO - Sección Visualizaciones completada.
