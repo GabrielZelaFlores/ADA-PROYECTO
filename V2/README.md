@@ -43,6 +43,8 @@ Para ejecutar todo el flujo de trabajo:
 python main.py todo
 ```
 
+Durante la ejecución, la consola mostrará información sobre los scripts que se están ejecutando, incluyendo el tiempo que tarda cada script y el tiempo total para cada sección completada.
+
 ### Scripts Invocados por `main.py`
 
 A continuación, se describe brevemente cada script que es invocado por `main.py` según la sección seleccionada:

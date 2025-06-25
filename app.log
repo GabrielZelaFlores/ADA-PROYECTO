@@ -84,3 +84,14 @@
 14:35:44 - INFO - Simulación: Intentando ejecutar el script: mapa_comunidad.py en la ruta /app/V2/mapa_comunidad.py
 14:35:44 - INFO - Simulación: Intentando ejecutar el script: mapa_por_comunidad.py en la ruta /app/V2/mapa_por_comunidad.py
 14:35:44 - INFO - Sección Visualizaciones completada.
+14:48:03 - INFO - Sección seleccionada: carga
+14:48:03 - INFO - Iniciando sección: Carga de Datos
+14:48:03 - INFO - Simulando ejecución de script: data_raw_to_parquet.py...
+14:48:03 - INFO - Script (simulado) data_raw_to_parquet.py completado exitosamente en 0.10 segundos.
+14:48:03 - INFO - Simulando ejecución de script: data_graph_construction.py...
+14:48:03 - INFO - Script (simulado) data_graph_construction.py completado exitosamente en 0.10 segundos.
+14:48:03 - INFO - Simulando ejecución de script: data_weights_to_parquet.py...
+14:48:04 - INFO - Script (simulado) data_weights_to_parquet.py completado exitosamente en 0.10 segundos.
+14:48:04 - INFO - Simulando ejecución de script: data_asignar_comunidad.py...
+14:48:04 - INFO - Script (simulado) data_asignar_comunidad.py completado exitosamente en 0.10 segundos.
+14:48:04 - INFO - Sección Carga de Datos completada en 0.40 segundos.
